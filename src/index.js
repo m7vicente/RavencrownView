@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import cadastroDeServico from './cadastroDeServico';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<cadastroDeServico />, document.getElementById('root'));

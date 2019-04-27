@@ -92,3 +92,5 @@ function cadastroDeServico() {
 
     )
 }
+
+export default cadastroDeServico;
