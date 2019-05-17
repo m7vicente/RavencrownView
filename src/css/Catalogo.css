@@ -1,0 +1,15 @@
+body {
+    overflow-x: hidden;
+}
+
+.item {
+	padding: 12%;
+	margin-right: -3%;
+	margin-left: -3%;
+}
+
+.item:hover {
+	color: white;
+	transition: 0.4s ease-in-out;
+}
+
