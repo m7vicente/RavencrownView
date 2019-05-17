@@ -1,27 +1,28 @@
 import React from 'react';
 import './cadastroDeServico.css';
+import {Link} from 'react-router-dom';
 
 function cadastroDeServico() {
     return (
         <div>
             <nav class="navbar navbar-dark bg-info navbar-expand text-white">
-                <i class='fas fa-user-circle' style='font-size:36px'></i>
+                <i class='fas fa-user-circle' style={{fontSize:'36px'}}></i>
                 <ul class="navbar-nav navbar-collapse justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Catálogo</a>
+                        <Link class="nav-link" to="#">Catálogo</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Meus serviços.html">Meus Serviços</a>
+                        <Link class="nav-link" to="Meus serviços.html">Meus Serviços</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Meus Contratos</a>
+                        <Link class="nav-link" to="#">Meus Contratos</Link>
                     </li>
                 </ul>
                 <form class="form-inline col-sm-5">
                     <input class="form-control w-75 mt-2 ml-4" type="search" placeholder="O que você está procurando?" />
                     <button class="btn btn-secondary mt-2 " type="submit">Buscar</button>
                 </form>
-                <a href="#menu-toggle" id="menu-toggle" class="navbar-brand"><span class="navbar-toggler-icon"></span></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation" onclick="mostra()"> <span class="navbar-toggler-icon"></span> </button>
+                <Link to="#menu-toggle" id="menu-toggle" class="navbar-brand"><span class="navbar-toggler-icon"></span></Link> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation" onclick="mostra()"> <span class="navbar-toggler-icon"></span> </button>
             </nav>
             <form>
                 <div class="row justify-content-center mt-2">
