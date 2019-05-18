@@ -41,7 +41,7 @@ function Cadastro() {
                         </div>
                     </div>
                     <div className="form-group col-md-4">
-                        <label for="inputState">Estado civil</label>
+                        <label for="inputState" className="text-secondary">Estado civil</label>
                         <select id="inputState" className="form-control">
                             <option selected>Selecione</option>
                             <option>Solteiro(a)</option>

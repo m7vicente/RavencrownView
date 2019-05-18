@@ -9,7 +9,7 @@ function Catalogo() {
     <div class="row" align="center">
         <div class="col">
             <div class="titulo_catalogo text-secondary">
-                <h4>Explore a variedade de serviços.</h4>
+                <h3>Explore a variedade de serviços</h3>
             </div>
         </div>
     </div>
