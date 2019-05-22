@@ -1,9 +1,10 @@
-import $ from "jquery";
+import $ from 'jquery.cookie'
 
-const nome = document.getElementById("name").value.toString();
+function cookie(name, msg){
 
-const parameters = JSON.stringify({ 
-    nome: nome
-});
+    $.cookie(name, msg);
+    console.log( $.cookie());
 
-$.cookie('the_cookie', parameters);
+}
+
+export default cookie;

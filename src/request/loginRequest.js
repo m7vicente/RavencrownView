@@ -1,4 +1,5 @@
 import $ from "jquery";
+import cookie from './cookie';
 
 function request() {
   const email = document.getElementById("txtEmail").value.toString();
@@ -13,15 +14,17 @@ function request() {
     data: parameters
   })
     .done(function(msg) {
-    
-     $.cookie('loginUser', msg);
-      console.log( $.cookie('loginUser'))
+  
       
     })
     .fail(function(jqXHR, textStatus, msg) {
       console.log(jqXHR);
       console.log(textStatus);
       console.log(msg);
+
+      
+      cookie('login', msg);
+     
     });
 }
 
