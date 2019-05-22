@@ -13,7 +13,10 @@ function request() {
     data: parameters
   })
     .done(function(msg) {
-      console.log(msg);
+    
+     $.cookie('loginUser', msg);
+      console.log( $.cookie('loginUser'))
+      
     })
     .fail(function(jqXHR, textStatus, msg) {
       console.log(jqXHR);

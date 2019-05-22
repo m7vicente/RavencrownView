@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/Cadastro.css';
+import cadastroUsuarioRequest from '../request/cadastroUsuarioRequest';
 
 function Cadastro() {
     return (
@@ -15,7 +16,7 @@ function Cadastro() {
                     <div className="col-sm-8">
                         <div className="form-group">
                             <label className="text-secondary">Nome Completo</label>
-                            <input className="form-control" placeholder="João César" />
+                            <input id="name" className="form-control" placeholder="João César" />
                         </div>
                     </div>
                 </div>
@@ -41,8 +42,8 @@ function Cadastro() {
                         </div>
                     </div>
                     <div className="form-group col-md-4">
-                        <label for="inputState" className="text-secondary">Estado civil</label>
-                        <select id="inputState" className="form-control">
+                        <label className="text-secondary">Estado civil</label>
+                        <select id="estadoCivil" className="form-control">
                             <option selected>Selecione</option>
                             <option>Solteiro(a)</option>
                             <option>Casado(a)</option>
@@ -54,11 +55,11 @@ function Cadastro() {
                 <div className="row mb-4 justify-content-center">
                     <div className="col-sm-8">
                         <label className="text-secondary">Sexo</label>
-                        <div className="form-check">
+                        <div id="sexo" className="form-check">
                             <input className="form-check-input" type="radio" />
                             <label className="form-check-label text-secondary">
                                 Masculino
-                      </label>
+                            </label>
                             <input className="form-check-input ml-2" type="radio" />
                             <label className="form-check-label text-secondary ml-4">
                                 Feminino
@@ -75,7 +76,7 @@ function Cadastro() {
                     <div className="col-sm-4">
                         <div className="form-group">
                             <label className="text-secondary">Email</label>
-                            <input type="email" className="form-control" placeholder="exemplo@dominio.com" />
+                            <input id="email" type="email" className="form-control" placeholder="exemplo@dominio.com" />
                         </div>
                     </div>
 
@@ -91,7 +92,7 @@ function Cadastro() {
                     <div className="col-sm-4">
                         <div className="form-group">
                             <label className="text-secondary">Senha</label>
-                            <input type="password" className="form-control" />
+                            <input id="password" type="password" className="form-control" />
                         </div>
                     </div>
 
@@ -112,19 +113,19 @@ function Cadastro() {
                 <div className="row justify-content-center">
                     <div className="col-sm-6">
                         <label className="text-secondary">Rua</label>
-                        <input className="form-control" />
+                        <input id="rua" className="form-control" />
                     </div>
 
                     <div className="col-sm-2">
                         <label className="text-secondary">Número</label>
-                        <input className="form-control" />
+                        <input id="numero" className="form-control" />
                     </div>
                 </div>
 
                 <div className="row justify-content-center">
                     <div className="col-sm-4">
                         <label className="text-secondary">Complemento</label>
-                        <input className="form-control" />
+                        <input id="complemento" className="form-control" />
                     </div>
 
                     <div className="col-sm-4">
@@ -136,30 +137,36 @@ function Cadastro() {
                 <div className="row justify-content-center">
                     <div className="col-sm-4">
                         <label className="text-secondary">Bairro</label>
-                        <input className="form-control" />
+                        <input id="bairro" className="form-control" />
                     </div>
 
                     <div className="col-sm-4">
                         <label className="text-secondary">Cidade</label>
-                        <input className="form-control" />
+                        <input id="cidade" className="form-control" />
                     </div>
                 </div>
 
                 <div className="row justify-content-center mb-5">
                     <div className="col-sm-4">
                         <label className="text-secondary">Estado</label>
-                        <input className="form-control" />
+                        <input id="estado" className="form-control" />
                     </div>
 
                     <div className="col-sm-4">
                         <label className="text-secondary">País</label>
-                        <input className="form-control" />
+                        <input id="pais" className="form-control" />
                     </div>
                 </div>
 
                 <div className="row justify-content-center mt-4 mb-4">
                     <div className="col-sm-4">
-                        <button type="button" className="btn btnCadastro btn-info w-100">Cadastrar</button>
+                        <button
+                        id="botaoLogin"
+                        onClick={cadastroUsuarioRequest}
+                        type="button"
+                        className="btn btnCadastro btn-info w-100">
+                        Cadastrar
+                        </button>
                     </div>
                 </div>
             </div>
