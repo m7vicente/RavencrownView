@@ -4,6 +4,7 @@ import DetalhesDoContrato from './Pages/DetalhesDoContrato';
 import DetalhesDoServico from './Pages/DetalhesDoServico';
 import Login from './Pages/Login';
 import MeusServicos from './Pages/MeusServicos';
+import cadastroDeServico from './Pages/CadastroDeServico';
 
 const routes = [
     {
@@ -40,6 +41,11 @@ const routes = [
         key: 7,
         path:"/MeusServicos",
         component: MeusServicos
+    },
+    {
+        key: 8,
+        path:"/CadastroDeServico",
+        component: cadastroDeServico
     }
 ];
 

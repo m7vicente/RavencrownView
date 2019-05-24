@@ -12,10 +12,10 @@ function Navbar() {
                     <Link to="/Catalogo" class="nav-link">Home</Link>
                     </li>
                     <li class="nav-item">
-                        <Link to="/MeusServicos" class="nav-link">Meus Serviços</Link>
+                    <Link to="/DetalhesDoContrato" class="nav-link">Meus Contratos</Link> 
                     </li>
                     <li class="nav-item">
-                        <Link to="/DetalhesDoContrato" class="nav-link">Meus Contratos</Link>
+                    <Link to="/MeusServicos" id="MeusServicos" class="nav-link">Meus Serviços</Link>
                     </li>
                 </ul>
                 <form class="form-inline col-sm-5 justify-content-end">
@@ -29,6 +29,15 @@ function Navbar() {
     );
 }
 
+function exibeMenu(){
+    var json = JSON.parse(sessionStorage.getItem("login"))
 
+    if(json.prestador != true){
+        const ocultar = document.getElementById("MeusServicos");
+
+        ocultar.style.display='none';
+
+    }
+}
 
 export default Navbar;

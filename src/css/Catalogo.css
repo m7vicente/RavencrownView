@@ -3,7 +3,15 @@ body {
 }
 
 .item:hover {
-	color: white;
-	transition: 0.4s ease-in-out;
+	transition: 0.5s ease-in-out;
+	color: rgb(0,144,200);
+	border: 1px solid;
+	border-radius: 3%;
+}
+
+.item{
+	border: 1px solid;
+	border-radius: 3%;
+	border-color: transparent;
 }
 
