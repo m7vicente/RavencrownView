@@ -8,8 +8,8 @@ function Catalogo() {
         <Navbar/>
     <div class="row" align="center">
         <div class="col">
-            <div class="titulo_catalogo text-secondary">
-                <h3>Explore a variedade de serviços</h3>
+            <div class="titulo_catalogo text-dark">
+                <h5>Explore a variedade de serviços com a facilidade de divisão por categorias.</h5>
             </div>
         </div>
     </div>
