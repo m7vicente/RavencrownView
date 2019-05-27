@@ -11,7 +11,16 @@ function cadastroDeServicoRequest() {
     const cadastrarServico = document.getElementById('cadastrarServico').value.toString();
 
     const parameters = JSON.stringify({
-
+        idServico: null,
+        idUsuario: null,
+        idEndereco: null,
+        idCategoria: null,
+        Imagens: null,
+        nomeServico: nomeServico,
+        descricaoServico: descricaoServico,
+        tempoExecucao: null,
+        precoServico: precoServico,
+        localizacaoFixa: null
     })
 
     $.ajax({
@@ -21,15 +30,15 @@ function cadastroDeServicoRequest() {
         data: parameters
     })
 
-    .done(function(msg) {
-        console.log(msg);
-    })
+        .done(function (msg) {
+            console.log(msg);
+        })
 
-    .fail(function(jqXHR, textStatus, msg) {
-        console.log(jqXHR);
-        console.log(textStatus);
-        console.log(msg);
-    })
+        .fail(function (jqXHR, textStatus, msg) {
+            console.log(jqXHR);
+            console.log(textStatus);
+            console.log(msg);
+        })
 }
 
 export default cadastroDeServicoRequest;
