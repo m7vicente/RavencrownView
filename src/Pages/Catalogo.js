@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import '../css/Catalogo.css';
-import Navbar from './Navbar';
+import Navbar from '../Pages/Components/Navbar';
 
 function Catalogo() {
   return (

@@ -5,14 +5,14 @@ import "../css/Login.css"
 
 function Login() {
     return (
-        <div id="fundoLogin">
-            <div className="container containerLogin mt-5 w-25 h-75 bg-white border border-secondary">
+        <div>
+            <div className="container containerLogin mt-5 w-25 bg-white border border-secondary">
                 <div className="row justify-content-center mt-3">
                     <div className="col-sm-1.5">
                         <i className='fas fa-user-circle text-secondary' style={{ fontSize: '56px' }}></i>
                     </div>
                 </div>
-                <div className="row justify-content-center mt-5 h-100">
+                <div className="row justify-content-center mt-5 ml-2 h-100">
                     <div className="col mt-5">
                         <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label blue-light_blue">
                             <input id="txtEmail" className="input border border-white mdl-textfield__input" type="text" />
@@ -20,7 +20,7 @@ function Login() {
                         </div>
                     </div>
                 </div>
-                <div className="row justify-content-center mt-2 h-100">
+                <div className="row justify-content-center mt-2 ml-2 h-100">
                     <div className="col">
                         <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input id="txtSenha" className="input border border-white mdl-textfield__input" type="password" />
