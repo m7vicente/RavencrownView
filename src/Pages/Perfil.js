@@ -4,13 +4,18 @@ import Navbar from './Components/Navbar';
 
 class Perfil extends React.Component{
 
-    render(){
-        
+               
+    pegaDados() {
+        var nome = JSON.parse(sessionStorage.getItem("login")).nome
         var img = 'data:image/png;base64,' + JSON.parse(sessionStorage.getItem("login")).imagem.image;
+    }
 
-        if(img === null){
+    render(){
+
+
+        //if(img === null){
            var img ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog';
-        }
+        //}
 
         return(
             <Fragment>
@@ -28,9 +33,6 @@ class Perfil extends React.Component{
                                                 <h5>
                                                     Kshiti Ghelani
                                                 </h5>
-                                                <h6>
-                                                    Web Developer and Designer
-                                                </h6>
                                                 <p class="proile-rating">RANKINGS : <span>8/10</span></p>
                                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                                             <li class="nav-item">
