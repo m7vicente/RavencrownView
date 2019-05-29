@@ -28,6 +28,6 @@ class MeusServicos extends React.Component{
     </div>
     </Fragment>
     );
-  }
+  } 
 }
 export default MeusServicos;

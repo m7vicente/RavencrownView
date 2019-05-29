@@ -45,13 +45,13 @@ class Navbar extends React.Component {
                 <li class="nav-item active">
                 <Link to="/Catalogo" class="nav-link">Home</Link>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                 <Link to="/DetalhesDoContrato" class="nav-link">Meus Contratos</Link> 
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                 <Link to="/MeusServicos" style={estilo} id="MeusServicos" class="nav-link">Meus Serviços</Link>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                 <Link to="/Cadastro" id="Cadastro" class="nav-link">Cadastre-se</Link>
                 </li>
             </ul>
