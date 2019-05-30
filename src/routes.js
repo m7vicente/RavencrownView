@@ -5,6 +5,7 @@ import DetalhesDoServico from './Pages/DetalhesDoServico';
 import Login from './Pages/Login';
 import MeusServicos from './Pages/MeusServicos';
 import cadastroDeServico from './Pages/CadastroDeServico';
+import Perfil from './Pages/Perfil'
 import CatalogoEspecifico from './Pages/CatalogoEspecifico';
 
 const routes = [
@@ -50,6 +51,11 @@ const routes = [
     },
     {
         key: 9,
+        path:"/Perfil",
+        component: Perfil
+    },
+    {
+        key: 10,
         path: "/CatalogoEspecifico",
         component: CatalogoEspecifico
     }
