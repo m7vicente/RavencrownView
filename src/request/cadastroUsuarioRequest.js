@@ -4,7 +4,10 @@ function cadastroUsuarioRequest() {
   const nome = document.getElementById("name").value.toString();
   const rg = document.getElementById("rg").value.toString();
   const cpf = document.getElementById("cpf").value.toString();
-  const data= document.getElementById("data").value.toString().split('/');
+  const data = document
+    .getElementById("data")
+    .value.toString()
+    .split("/");
   const dataNasc = data[2] + "-" + data[1] + "-" + data[0];
   const estadoCivil = document.getElementById("estadoCivil").value.toString();
   const sexo = $("#sexo :selected").val();
@@ -22,37 +25,37 @@ function cadastroUsuarioRequest() {
   const estado = document.getElementById("estado").value.toString();
   const pais = document.getElementById("pais").value.toString();
 
-  const parameters = JSON.stringify({ 
+  const parameters = JSON.stringify({
     nome: nome,
-    email: email, 
+    email: email,
     senha: senha,
     id_Usuario: null,
     endereco: {
-    id_Endereco: null, 
-    rua: rua,
-    cep: cep, 
-    complemento: complemento,
-    numero: numero, 
-    referencia: null,
-    bairro: bairro, 
-    cidade: cidade,
-    estado: estado,
-    pais: pais
+      id_Endereco: null,
+      rua: rua,
+      cep: cep,
+      complemento: complemento,
+      numero: numero,
+      referencia: null,
+      bairro: bairro,
+      cidade: cidade,
+      estado: estado,
+      pais: pais
     },
-    imagem: null, 
-    cpfCnpj: cpf, 
-    rg: rg, 
-    telefone: telefone,  
-    prestador: false, 
+    imagem: null,
+    cpfCnpj: cpf,
+    rg: rg,
+    telefone: telefone,
+    prestador: false,
     sexo: "M",
     estadoCivil: estadoCivil,
     data_Nascimento: dataNasc
-    });
+  });
 
   $.ajax({
     type: "post",
     contentType: "application/json;charset=UTF-8",
-    url: "http://localhost:8080/cadastro",
+    url: "https://ravencrownservice.azurewebsites.net/cadastro",
     data: parameters
   })
     .done(function(msg) {
@@ -66,4 +69,3 @@ function cadastroUsuarioRequest() {
 }
 
 export default cadastroUsuarioRequest;
-

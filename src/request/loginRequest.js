@@ -9,7 +9,7 @@ function request() {
   $.ajax({
     type: "post",
     contentType: "application/json;charset=UTF-8",
-    url: "http://localhost:8080/login",
+    url: "https://ravencrownservice.azurewebsites.net/login",
     data: parameters
   })
     .done(function(msg) {
