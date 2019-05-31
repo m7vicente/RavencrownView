@@ -12,7 +12,8 @@ class CardCatalogoEspecifico extends React.Component {
     super();
     this.state.servico = servico.servico;
     try {
-      this.state.imagemBIN = this.state.servico.imagem[0].imagem;
+      this.state.imagemBIN =
+        "data:image/png;base64," + this.state.servico.imagem[0].image;
     } catch (error) {
       console.log(error);
     }
@@ -24,7 +25,7 @@ class CardCatalogoEspecifico extends React.Component {
         <div className="card">
           <div className="card-body" align="center">
             <div className="row w-100 h-25 border border-secondary">
-              <img src={this.props.imagem} />
+              <img src={this.state.imagemBIN} />
             </div>
             <h5 className="card-title">{this.state.servico.nomeServico}</h5>
             <p className="card-text">{this.state.servico.descricaoServico}</p>
