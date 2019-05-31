@@ -27,12 +27,12 @@ function cadastroDeServicoRequest() {
     localizacaoFixa: null
   });
 
-  $.ajax({
-    type: "post",
-    contentType: "application/json;charset=UTF-8",
-    url: "https://ravencrownservice.azurewebsites.net/servicos",
-    data: parameters
-  })
+    $.ajax({
+        type: "post",
+        contentType: "application/json;charset=UTF-8",
+        url: "https://ravencrownservice.azurewebsites.net/servicos",
+        data: parameters
+    })
 
     .done(function(msg) {
       console.log(msg);

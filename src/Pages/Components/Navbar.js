@@ -39,7 +39,7 @@ class Navbar extends React.Component {
 
     return (
         <Fragment>
-        <div class="navbar navbar-dark navbar-expand text-white bg-info" onLoad={this.exibeMenu.bind(this)} style={{ backgroundColor: 'rgb(185, 216, 69)',}}>
+        <div class="navbar navbar-dark navbar-expand text-white" onLoad={this.exibeMenu.bind(this)}>
         <Link to="/Login"><i className='fas fa-user-circle text-light display-4 ml-4 mr-4' style={{ fontSize: '16pt;' }}></i></Link>
             <ul class="navbar-nav navbar-collapse justify-content-center">
                 <li class="nav-item active">

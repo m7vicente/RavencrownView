@@ -25,9 +25,9 @@ function Catalogo() {
               <i class="material-icons" style={{ fontSize: "115px" }}>
                 settings
               </i>
-              <p style={{ fontSize: "20px" }}>Técnico</p>
+              <p className="p" style={{ fontSize: "20px" }}>Aulas</p>
             </div>
-          </div>
+        </div>
         </Link>
         <div class="col-sm-2 mt-3">
           <Link to={{ pathname: "/CatalogoEspecifico", data: 30 }}>

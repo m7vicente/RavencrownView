@@ -7,9 +7,15 @@ body {
 	color: rgb(0,144,200);
 	border: 1px solid;
 	border-radius: 3%;
+	text-decoration: none;
+}
+
+p{
+	text-decoration: none;
 }
 
 .item{
+	color: rgb(48, 48, 48);
 	border: 1px solid;
 	border-radius: 3%;
 	border-color: transparent;
