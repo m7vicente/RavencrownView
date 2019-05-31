@@ -26,7 +26,7 @@ function cadastroDeServicoRequest() {
     $.ajax({
         type: "post",
         contentType: "application/json;charset=UTF-8",
-        url: "http://localhost:8080/servicos",
+        url: "https://ravencrownservice.azurewebsites.net/servicos",
         data: parameters
     })
 
