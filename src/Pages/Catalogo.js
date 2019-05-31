@@ -19,7 +19,7 @@ function Catalogo() {
       </div>
 
       <div class="row ml-0 w-100 h-100 mt-0 mb-1 justify-content-center">
-        <Link to={{ pathname: "/CatalogoEspecifico", data: 29 }}>
+        <Link to={{ pathname: "/CatalogoEspecifico", data: 1 }}>
           <div class="col-sm-2 mt-3">
             <div class="item" align="center">
               <i class="material-icons" style={{ fontSize: "115px" }}>
