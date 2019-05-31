@@ -5,7 +5,7 @@ function getAllServicesById(id) {
     type: "get",
     contentType: "application/json;charset=UTF-8",
     async: false,
-    url: "http://localhost:8080/Servicos/Categoria?categoria=" + id
+    url: https://ravencrownservice.azurewebsites.net/Servicos/Categoria?categoria=" + id
   })
     .done(function(msg) {
       return JSON.stringify(msg);
