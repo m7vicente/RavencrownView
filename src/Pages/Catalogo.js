@@ -1,10 +1,6 @@
 import React, { Fragment } from "react";
 import "../css/Catalogo.css";
-<<<<<<< HEAD
 import Navbar from "./Components/Navbar";
-=======
-import Navbar from "../Pages/Components/Navbar";
->>>>>>> 3b24b22f837de433bd5017389f2e97892e9ffbd5
 import { Link } from "react-router-dom";
 
 function Catalogo() {
