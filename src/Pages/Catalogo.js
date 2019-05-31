@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import "../css/Catalogo.css";
-import Navbar from "./Navbar";
+import Navbar from "./Components/Navbar";
 import { Link } from "react-router-dom";
 
 function Catalogo() {
