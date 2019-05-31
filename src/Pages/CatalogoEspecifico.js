@@ -8,8 +8,13 @@ import { Fragment } from "react";
 
 class CatalogoEspecifico extends React.Component {
   state = {
-    servicos: getAllServicesById(sessionStorage.getItem("IdCatalogo"))
+    servicos: getAllServicesById(
+      this.props.location.data == null
+        ? this.props.history.location.data
+        : this.props.location.data
+    )
   };
+
   render() {
     return (
       <Fragment>

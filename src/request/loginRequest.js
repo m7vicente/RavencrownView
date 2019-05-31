@@ -13,12 +13,12 @@ function request() {
     data: parameters
   })
     .done(function(msg) {
-      sessionStorage.setItem("login",JSON.stringify(msg))
+      sessionStorage.setItem("login", JSON.stringify(msg));
     })
     .fail(function(jqXHR, textStatus, msg) {
       console.log(jqXHR);
       console.log(textStatus);
-      console.log(msg);     
+      console.log(msg);
     });
 }
 
