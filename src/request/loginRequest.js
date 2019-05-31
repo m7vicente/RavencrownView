@@ -6,20 +6,21 @@ function request() {
 
   const parameters = JSON.stringify({ email: email, senha: pass });
 
-  $.ajax({
+  const result = $.ajax({
     type: "post",
     contentType: "application/json;charset=UTF-8",
     url: "https://ravencrownservice.azurewebsites.net/login",
-    data: parameters
+    data: parameters,
+    async: false
   })
-    .done(function(msg) {
-      sessionStorage.setItem("login", JSON.stringify(msg));
-    })
+    .done(function(msg) {})
     .fail(function(jqXHR, textStatus, msg) {
       console.log(jqXHR);
       console.log(textStatus);
       console.log(msg);
     });
+
+  sessionStorage.setItem("login", JSON.stringify(result.responseJSON));
 }
 
 export default request;
