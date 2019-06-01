@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 class CardCatalogoEspecifico extends React.Component {
-  state = {
+    state = {
     servico: null,
     imagemBIN: null
   };
@@ -21,10 +21,10 @@ class CardCatalogoEspecifico extends React.Component {
 
   render() {
     return (
-      <div className="col-sm ml-3 mr-3 mt-4">
-        <div className="card">
+        <div className="col ml-3 mr-5 mt-4 border border-danger">
+        <div className="card h-25">
           <div className="card-body" align="center">
-            <div className="row w-100 h-25 border border-secondary">
+            <div className=" w-100 border border-secondary">
               <img src={this.state.imagemBIN} />
             </div>
             <h5 className="card-title">{this.state.servico.nomeServico}</h5>
@@ -36,6 +36,7 @@ class CardCatalogoEspecifico extends React.Component {
           </div>
         </div>
       </div>
+      
     );
   }
 }
