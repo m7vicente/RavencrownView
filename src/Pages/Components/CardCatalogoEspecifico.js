@@ -1,9 +1,10 @@
-import { Component } from "react";
+import { Component, Fragment } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
+import ModalDetalhesDoServico from "../ModalDetalhesDoServico";
 
 class CardCatalogoEspecifico extends React.Component {
-    state = {
+  state = {
     servico: null,
     imagemBIN: null
   };
@@ -27,16 +28,11 @@ class CardCatalogoEspecifico extends React.Component {
             <div className=" w-100 border border-secondary">
               <img src={this.state.imagemBIN} />
             </div>
-            <h5 className="card-title mt-2">{this.state.servico.nomeServico}</h5>
-            <p className="card-text">{this.state.servico.descricaoServico}</p>
-            <h4>R${this.state.servico.precoServico}</h4>
-            <Link to="/DetalhesDoServico" className="btn btn-primary">
-              Ver detalhes do id {this.state.servico.idServico}
-            </Link>
           </div>
         </div>
-      </div>
-      
+        </div>
+
+
     );
   }
 }

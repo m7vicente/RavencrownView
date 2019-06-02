@@ -1,8 +1,9 @@
 import React from "react";
 import CardCatalogoEspecifico from "./Components/CardCatalogoEspecifico";
 import getAllServicesById from "../request/todosServicosRequest";
-import { Fragment, Component } from "react";
+import { Fragment } from "react";
 import Navbar from "./Components/Navbar";
+
 
 class CatalogoEspecifico extends React.Component {
   state = {
