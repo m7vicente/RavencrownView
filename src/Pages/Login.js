@@ -7,7 +7,7 @@ function Login() {
     return (
         <div className="row bg-info">
             <div className="col bg-info mb-5">
-                <div className="row bg-info mt-5">
+                <div className="row bg-info mt-5 mb-5">
                     <div className="container containerLogin mt-5 mb-5 w-25 h-75 bg-white border border-secondary" style={{borderRadius: '2%'}}>
                         <div className="row justify-content-center mt-3">
                             <div className="col-sm-1.5">
@@ -34,17 +34,18 @@ function Login() {
                             <Link to="#" className="text-info font-weight-bold">Esqueceu sua senha?</Link>
                         </div>
                         <div className="row justify-content-center mt-3 mb-3">
-                            <button
+                        <Link to="/">
+                        <button
                                 id="botao"
                                 type="button"
                                 onClick={request}
                                 style={{ fontSize: "150%;" }}
-                                className="btn btn-primary w-75 bg-info mt-3 font-weight-bold border border-secondary" style=
+                                className="btn btn-primary bg-info mt-3 font-weight-bold border border-secondary" style=
                                 {{fontSize: '18px'}}>
                                 Entrar
-                    </button>
+                        </button></Link>
                         </div>
-                        <div className="row justify-content-center mt-4">
+                        <div className="row justify-content-center mt-4 mb-4">
                             <p>Ainda não possui cadastro? <Link to="/Cadastro" className="text-info font-weight-bold">Cadastre-se!</Link>
                             </p>
                         </div>
@@ -52,6 +53,7 @@ function Login() {
                 </div>
             </div>
         </div>
+        
     );
 }
 
