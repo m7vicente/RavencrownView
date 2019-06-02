@@ -5,6 +5,7 @@ import { Redirect } from "react-router-dom";
 import CardCatalogoEspecifico from "./Cards/CardCatalogoEspecifico";
 import getAllServicesById from "../request/todosServicosRequest";
 import { Fragment } from "react";
+import ModalDetalhesDoServico from "./ModalDetalhesDoServico";
 
 class CatalogoEspecifico extends React.Component {
   state = {
