@@ -14,15 +14,15 @@ function Login() {
                                 <i className='fas fa-user-circle text-secondary' style={{ fontSize: '56px' }}></i>
                             </div>
                         </div>
-                        <div className="row justify-content-center mt-5 h-100">
+                        <div className="row justify-content-center mt-5 ml-4 h-100">
                             <div className="col mt-5">
                                 <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
                                     <input id="txtEmail" className="input border border-white mdl-textfield__input" type="text" />
-                                    <label className="mdl-textfield__label" for="sample3">E-mail</label>
+                                    <label className="mdl-textfield__label">E-mail</label>
                                 </div>
                             </div>
                         </div>
-                        <div className="row justify-content-center mt-2 h-100">
+                        <div className="row justify-content-center mt-2 ml-4 h-100">
                             <div className="col">
                                 <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                     <input id="txtSenha" className="input border border-white mdl-textfield__input" type="password" />

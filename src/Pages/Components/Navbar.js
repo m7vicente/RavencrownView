@@ -20,22 +20,24 @@ class Navbar extends React.Component {
         const prestador = JSON.parse(sessionStorage.getItem("login")).Prestador;
         const nome = JSON.parse(sessionStorage.getItem('login')).nome;
         
+        document.getElementById("login").setAttribute("class", "demo")
         document.getElementById("name").innerHTML = nome;
         
         var img = 'data:image/png;base64,' + JSON.parse(sessionStorage.getItem("login")).imagem.image;
 
         var rmv = document.getElementById("imgUser");
-        var child = document.getElementById("logo");
-        rmv.removeChild(child); 
+        document.getElementById("logo").setAttribute("class", "demo");
 
         var imgTag = document.createElement("img");
         imgTag.src = img;
 
         rmv.appendChild(imgTag);
+        imgTag.setAttribute("class", "imgNav")
 
         if(prestador === true){
             display = 'block';
             document.getElementById("Cadastro").setAttribute('class', 'demo')
+            
         }
         }  else {
             display = 'none';
@@ -70,7 +72,15 @@ class Navbar extends React.Component {
                 <Link to="/CadastroDeServico" style={estilo} id="CadastroDeServiço" class="nav-link">Cadastre seus serviços |</Link>
                 </li>
                 <li class="nav-item active">
-                <Link to="/Login" class="nav-link">Login</Link>
+                <Link to="/Login" Id="login" class="nav-link">Login</Link>
+                </li>
+                <li class="nav-item active">
+                <Link to="/" style={estilo} Id="sair" class="nav-link" onClick={function(){
+                    sessionStorage.removeItem("login");
+                    document.getElementById("logo").removeAttribute("class", "demo");
+                    var rmv = document.getElementById("imgUser");
+                    rmv.removeChild();
+                }}>Sair</Link>
                 </li>
             </ul>
         </div>

@@ -43,8 +43,8 @@ function CadastroDeServico() {
                             </div>
                         </div>
                             
-                        <div className="row justify-content-center">
-                        <div className="col-sm-3">
+                        <div className="row justify-content-center mt-4">
+                        <div className="col-sm-2">
                             <label>Disponível fim de semana?</label>
                                 <div className="form-check mt-0">
                                     <input id="disponivelSim" className="form-check-input" type="radio" />
@@ -76,23 +76,47 @@ function CadastroDeServico() {
                                     </label>
                                 </div>
                             </div>
-                            <div className="col-sm-2">
-                            <div class="profile-img">
-                                    <img src=''/>
-                                    <div class="file btn btn-lg btn-primary">
-                                        Adicionar 
+                            <div className="col-sm-2 ml-4">
+                            <div class="arq-img">
+                                 <div class="file btn btn-lg btn-primary">
+                                        Adicionar recomendações
                                 <input type="file" name="file" />
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="row justify-content-center">
+                        <div className="row justify-content-center mt-4">
+                        
+                        <div class="col-md-4">
+                        <div class="servico-img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                            <div class="file btn btn-lg btn-primary">
+                                Adicionar foto
+                                <input type="file" name="file"/>
+                            </div>
+                        </div>
+                    </div>
+                            
+                        <div className="form-group col-md-2" style={{marginLeft: '-12%', marginRight: '1%'}}>
+                            <label className="text-secondary">Selecione a categoria</label>
+                            <select id="categoria" className="form-control">
+                                <option selected>Selecione</option>
+                                <option value="29">Técnico</option>
+                                <option value="30">Aulas</option>
+                                <option value="31">Auto</option>
+                                <option value="32">Code</option>
+                                <option value="33">Reformas</option>
+                                <option value="34">Culinária</option>
+                                <option value="35">Domésticos</option>
+                                <option value="36">Vestuário</option>
+                            </select>
+                        </div>
                             <div className="col-sm-2">
                                 <button
                                 id="cadastrarServico"
                                 type="button"
                                 onClick={cadastrodeServicoRequest}
-                                className="btn btn-primary w-100">Cadastrar</button>
+                                className="btn btn-primary w-100 ml-5" style={{marginTop: '10%'}}>Cadastrar Serviço</button>
                             </div>
                         </div>
                     </form>

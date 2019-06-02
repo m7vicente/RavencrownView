@@ -21,7 +21,7 @@ class CardCatalogoEspecifico extends React.Component {
 
   render() {
     return (
-        <div className="col-sm-3 ml-5 mr-5 mt-4 border border-rounded">
+        <div className="col-sm-3 ml-5 mr-5 mt-4 ">
         <div className="card h-25">
           <div className="card-body" align="center">
             <div className=" w-100 border border-secondary">
