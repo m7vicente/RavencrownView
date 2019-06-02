@@ -123,6 +123,13 @@ function Cadastro() {
                 </div>
 
                 <div className="row justify-content-center">
+                    <div className="col-sm-8">
+                        <label className="text-secondary">Rua</label>
+                        <input id="referencia" className="form-control" />
+                    </div>
+                </div>
+                
+                <div className="row justify-content-center">
                     <div className="col-sm-4">
                         <label className="text-secondary">Complemento</label>
                         <input id="complemento" className="form-control" />

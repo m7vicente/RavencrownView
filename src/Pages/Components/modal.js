@@ -4,8 +4,6 @@ function Modal() {
     return (
         <div>
             <div className="container">
-                <h6>Preencha as informações do endereço do serviço</h6>
-                <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#myModal">Preencher</button>
                 <div className="modal fade" id="myModal" role="dialog">
                     <div className="modal-dialog">
                         <div className="modal-content">
@@ -34,6 +32,10 @@ function Modal() {
                                     <div className="row-sm-7">
                                         <label className="text-secondary">Complemento</label>
                                         <input id="complemento" className="form-control" />
+                                    </div>
+                                    <div className="row-sm-7">
+                                        <label className="text-secondary">Referência</label>
+                                        <input id="referencia" className="form-control" />
                                     </div>
                                     <div className="row">
                                         <div className="col-sm-6">
