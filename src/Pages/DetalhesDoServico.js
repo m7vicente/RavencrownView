@@ -20,7 +20,7 @@ function DetalhesDoServico() {
 					<div className="col-sm-5">
 						<p className="h4 text-secondary">Descrição do serviço</p>
 						<div className="text-secondary">Lorem ipsum per enim senectus ut odio pretium consectetur conubia bibendum morbi venenatis dictum, blandit enim ipsum className litora posuere imperdiet primis rhoncus venenatis magna. himenaeos sapien praesent tortor facilisis ut, blandit massa lorem consectetur amet, vestibulum commodo aptent vivamus. est mauris nisi senectus himenaeos maecenas className vestibulum ultrices.
-			</div>
+						</div>
 					</div>
 				</div>
 				<div className="row justify-content-center mt-4">

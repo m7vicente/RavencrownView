@@ -1,0 +1,44 @@
+.file {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-left: 5%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+
+.file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+
+.servico-img{
+    text-align: center;
+    margin-left: -55%;
+}
+.servico-img img{
+    width: 45%;
+    height: 100%;
+    margin-left: 4%;
+}
+.servico-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: 0%;
+    margin-left: -45%;
+    width: 45%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+.servico-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}

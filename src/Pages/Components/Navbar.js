@@ -7,26 +7,41 @@ class Navbar extends React.Component {
     constructor(){
         super();
         this.state = {
-            display: 'none'
+            display: ''
         }
     }
 
-    exibeMenu () {
-
+    componentDidMount(){
         let display = this.state.display;
+        let hidden = this.state.hidden;
+        const session = sessionStorage.getItem("login");
+
+        if(session !== null){
+        const prestador = JSON.parse(sessionStorage.getItem("login")).Prestador;
+        const nome = JSON.parse(sessionStorage.getItem('login')).nome;
         
-        var json = JSON.parse(sessionStorage.getItem("login")).prestador
+        document.getElementById("login").setAttribute("class", "demo")
+        document.getElementById("name").innerHTML = nome;
+        
+        var img = 'data:image/png;base64,' + JSON.parse(sessionStorage.getItem("login")).imagem.image;
 
-        if(json === null ){
-            sessionStorage.setItem('login', 0);
-            display = 'none';
-        }
-        if(json === true){
+        var rmv = document.getElementById("imgUser");
+        document.getElementById("logo").setAttribute("class", "demo");
+
+        var imgTag = document.createElement("img");
+        imgTag.src = img;
+
+        rmv.appendChild(imgTag);
+        imgTag.setAttribute("class", "imgNav")
+
+        if(prestador === true){
             display = 'block';
-        } else {
+            document.getElementById("Cadastro").setAttribute('class', 'demo')
+            
+        }
+        }  else {
             display = 'none';
         }
-
         this.setState({
             display: display
         });
@@ -39,20 +54,33 @@ class Navbar extends React.Component {
 
     return (
         <Fragment>
-        <div class="navbar navbar-dark navbar-expand text-white" onLoad={this.exibeMenu.bind(this)}>
-        <Link to="/Login"><i className='fas fa-user-circle text-light display-4 ml-4 mr-4' style={{ fontSize: '16pt;' }}></i></Link>
-            <ul class="navbar-nav navbar-collapse justify-content-center">
+        <div class="navbar navbar-dark navbar-expand text-white">
+        <Link to="/Perfil"><div id="imgUser">
+        <i id="logo" className='fas fa-user-circle text-light display-4 ml-4 mr-4' style={{ fontSize: '16pt;' }}/></div></Link>
+        <h5 id='name' className="mt-3 ml-4"></h5>  
+            <ul class="navbar-nav navbar-collapse justify-content-end">
                 <li class="nav-item active">
-                <Link to="/Catalogo" class="nav-link">Home</Link>
+                <Link to="/Catalogo" class="nav-link">Home |</Link>
                 </li>
                 <li class="nav-item active">
-                <Link to="/DetalhesDoContrato" class="nav-link">Meus Contratos</Link> 
+                <Link to="/MeusServicos" style={estilo} id="MeusServicos" class="nav-link">Meus Serviços |</Link>
                 </li>
                 <li class="nav-item active">
-                <Link to="/MeusServicos" style={estilo} id="MeusServicos" class="nav-link">Meus Serviços</Link>
+                <Link to="/Cadastro" id="Cadastro" class="nav-link">Cadastre-se |</Link>
                 </li>
                 <li class="nav-item active">
-                <Link to="/Cadastro" id="Cadastro" class="nav-link">Cadastre-se</Link>
+                <Link to="/CadastroDeServico" style={estilo} id="CadastroDeServiço" class="nav-link">Cadastre seus serviços |</Link>
+                </li>
+                <li class="nav-item active">
+                <Link to="/Login" Id="login" class="nav-link">Login</Link>
+                </li>
+                <li class="nav-item active">
+                <Link to="/" style={estilo} Id="sair" class="nav-link" onClick={function(){
+                    sessionStorage.removeItem("login");
+                    document.getElementById("logo").removeAttribute("class", "demo");
+                    var rmv = document.getElementById("imgUser");
+                    rmv.removeChild();
+                }}>Sair</Link>
                 </li>
             </ul>
         </div>
