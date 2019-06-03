@@ -6,6 +6,8 @@ function request() {
 
   const parameters = JSON.stringify({ email: email, senha: pass });
 
+  let sucess = false;
+
   const result = $.ajax({
     type: "post",
     contentType: "application/json;charset=UTF-8",
@@ -20,7 +22,12 @@ function request() {
       console.log(msg);
     });
 
-  sessionStorage.setItem("login", JSON.stringify(result.responseJSON));
+  if (result.responseJSON.Id_Usuario > 0) {
+    sessionStorage.setItem("login", JSON.stringify(result.responseJSON));
+    sucess = true;
+  }
+
+  return sucess;
 }
 
 export default request;
