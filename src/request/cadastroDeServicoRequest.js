@@ -2,17 +2,10 @@ import $ from "jquery";
 
 function cadastroDeServicoRequest() {
   const nomeServico = document.getElementById("nomeServico").value.toString();
-  const descricaoServico = document
-    .getElementById("descricaoServico")
-    .value.toString();
-  const disponivelSim = $("#disponivelSim :selected").val();
-  const disponivelNao = $("#disponivelNao :selected").val();
+  const descricaoServico = document.getElementById("descricaoServico").value.toString();
+  const disponivelFds = $("#disponivelFds :selected").val();
   const precoServico = document.getElementById("precoServico").value.toString();
-  const domicilio = $("#domicilio :selected").val();
-  const meuEndereco = $("#meuEndereco :selected").val();
-  const cadastrarServico = document
-    .getElementById("cadastrarServico")
-    .value.toString();
+  const localAtendimento = $("#localAtendimento :selected").val();
 
   const parameters = JSON.stringify({
     idServico: null,
@@ -24,7 +17,9 @@ function cadastroDeServicoRequest() {
     descricaoServico: descricaoServico,
     tempoExecucao: null,
     precoServico: precoServico,
-    localizacaoFixa: null
+    localizacaoFixa: null,
+    disponivelFds: disponivelFds,
+    localAtendimento: localAtendimento
   });
 
     $.ajax({

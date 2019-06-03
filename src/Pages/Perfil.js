@@ -40,41 +40,38 @@ class Perfil extends React.Component {
         return (
             <Fragment>
                 <Navbar></Navbar>
-                <div class="container emp-profile">
+                <div className="container emp-profile">
                     <form method="post">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="profile-img">
+                        <div className="row">
+                            <div className="col-md-4">
+                                <div className="profile-img">
                                     <img src={img} />
-                                    <div class="file btn btn-lg btn-primary">
+                                    <div className="row file btn btn-primary">
                                         Mudar foto
-                                <input type="file" name="file" />
-                                    </div>
+                                    <input type="file" name="file" onClick={Perfil.mudaFoto} />
+                                </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="profile-head">
+                            <div className="col-md-6">
+                                <div className="profile-head">
                                     <h5>
                                         {nome}
                                     </h5>
-                                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>
-                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                    <p className="proile-rating">RANKINGS : <span>8/10</span></p>
+                                    <ul className="nav nav-tabs" id="myTab" role="tablist">
+                                        <li className="nav-item">
+                                            <a className="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
+                                        <li className="nav-item">
+                                            <a className="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-md-2">
-                                <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile" />
-                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="profile-work">
+                        <div className="row">
+                            <div className="col-md-4">
+                                <div className="profile-work">
                                     <p>WORK LINK</p>
                                     <a href="">Website Link</a><br />
                                     <a href="">Bootsnipp Profile</a><br />
@@ -87,95 +84,95 @@ class Perfil extends React.Component {
                                     <a href="">PHP, .Net</a><br />
                                 </div>
                             </div>
-                            <div class="col-md-8">
-                                <div class="tab-content profile-tab" id="myTabContent">
-                                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                        <div class="row">
-                                            <div class="col-md-6">
+                            <div className="col-md-8">
+                                <div className="tab-content profile-tab" id="myTabContent">
+                                    <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div className="row">
+                                            <div className="col-md-6">
                                                 <label>Email</label>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div className="col-md-6">
                                                 <p>
                                                     {email}
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
+                                        <div className="row">
+                                            <div className="col-md-6">
                                                 <label>Name</label>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div className="col-md-6">
                                                 <p>{nome}</p>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
+                                        <div className="row">
+                                            <div className="col-md-6">
                                                 <label>Email</label>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div className="col-md-6">
                                                 <p>{email}</p>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
+                                        <div className="row">
+                                            <div className="col-md-6">
                                                 <label>Phone</label>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div className="col-md-6">
                                                 <p>{telefone}</p>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
+                                        <div className="row">
+                                            <div className="col-md-6">
                                                 <label>Pais</label>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div className="col-md-6">
                                                 <p>{pais}</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                        <div class="row">
-                                            <div class="col-md-6">
+                                    <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div className="row">
+                                            <div className="col-md-6">
                                                 <label>CPF</label>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div className="col-md-6">
                                                 <p>{cpf}</p>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
+                                        <div className="row">
+                                            <div className="col-md-6">
                                                 <label>Price</label>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div className="col-md-6">
                                                 <p>10$/hr</p>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
+                                        <div className="row">
+                                            <div className="col-md-6">
                                                 <label>Age</label>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div className="col-md-6">
                                                 <p>23</p>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
+                                        <div className="row">
+                                            <div className="col-md-6">
                                                 <label>Nacionality</label>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div className="col-md-6">
                                                 <p>Polsky</p>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
+                                        <div className="row">
+                                            <div className="col-md-6">
                                                 <label>Cadastrada</label>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div className="col-md-6">
                                                 <p>6 months</p>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
+                                        <div className="row">
+                                            <div className="col-md-12">
                                                 <label>Your Bio</label><br />
                                                 <p>Your detail deion</p>
                                             </div>

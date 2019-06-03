@@ -4,10 +4,7 @@ function cadastroUsuarioRequest() {
   const nome = document.getElementById("name").value.toString();
   const rg = document.getElementById("rg").value.toString();
   const cpf = document.getElementById("cpf").value.toString();
-  const data = document
-    .getElementById("data")
-    .value.toString()
-    .split("/");
+  const data = document.getElementById("data").value.toString().split("/");
   const dataNasc = data[2] + "-" + data[1] + "-" + data[0];
   const estadoCivil = document.getElementById("estadoCivil").value.toString();
   const sexo = $("#sexo :selected").val();

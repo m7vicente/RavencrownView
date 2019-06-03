@@ -63,7 +63,7 @@ function Cadastro() {
                             <input className="form-check-input ml-2" type="radio" />
                             <label className="form-check-label text-secondary ml-4">
                                 Feminino
-                      </label>
+                            </label>
                         </div>
                     </div>
                 </div>
