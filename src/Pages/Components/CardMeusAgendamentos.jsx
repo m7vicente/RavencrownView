@@ -1,8 +1,5 @@
 import { Component, Fragment } from "react";
 import React from "react";
-import { Link } from "react-router-dom";
-import detalhesDoContrato from "../DetalhesDoContrato";
-import DetalhesDoContrato from "../DetalhesDoContrato";
 
 class CardMeusAgendamentos extends React.Component {
   state = {

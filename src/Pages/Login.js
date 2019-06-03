@@ -51,6 +51,7 @@ class Login extends React.Component {
                                     <button
                                         id="botao"
                                         type="button"
+                                        onClick={this.doLogin}
                                         onClick={request}
                                         style={{ fontSize: "150%;" }}
                                         className="btn btn-primary bg-info mt-3 font-weight-bold border border-secondary" style=
@@ -69,25 +70,6 @@ class Login extends React.Component {
                     <Link to="#" className="text-info font-weight-bold">
                         Esqueceu sua senha?
                 </Link>
-                </div>
-                <div className="row justify-content-center mt-3 mb-3">
-                    <button
-                        id="botao"
-                        type="button"
-                        onClick={this.doLogin}
-                        className="btn btn-primary w-75 bg-info mt-3 font-weight-bold border border-secondary"
-                        style={{ fontSize: "18px" }}
-                    >
-                        Entrar
-                </button>
-                </div>
-                <div className="row justify-content-center mt-4">
-                    <p>
-                        Ainda não possui cadastro?{" "}
-                        <Link to="/Cadastro" className="text-info font-weight-bold">
-                            Cadastre-se!
-                  </Link>
-                    </p>
                 </div>
             </div>
         );

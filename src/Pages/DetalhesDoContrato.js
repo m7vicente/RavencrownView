@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import Navbar from "./Components/Navbar";
+import CardMeusAgendamentos from "./Components/CardMeusAgendamentos"
 
 class DetalhesDoContrato extends React.Component {
   state = {

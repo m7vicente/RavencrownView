@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import '../../css/Navbar.css'
+import NightMode from './nightMode';
 
 class Navbar extends React.Component {
 
@@ -57,7 +58,7 @@ class Navbar extends React.Component {
         <div class="navbar navbar-dark navbar-expand text-white">
         <Link to="/Perfil"><div id="imgUser">
         <i id="logo" className='fas fa-user-circle text-light display-4 ml-4 mr-4' style={{ fontSize: '16pt;' }}/></div></Link>
-        <h5 id='name' className="mt-3 ml-4"></h5>  
+        <h4 id='name' className="mt-3 ml-4"></h4>  
             <ul class="navbar-nav navbar-collapse justify-content-end">
                 <li class="nav-item active">
                 <Link to="/Catalogo" class="nav-link">Home |</Link>
@@ -83,6 +84,10 @@ class Navbar extends React.Component {
                 }}>Sair</Link>
                 </li>
             </ul>
+            <div class="material-switch pull-right ml-4 mt-1">
+                <input id="someSwitchOptionWarning" name="someSwitchOption001" type="checkbox" onLoad={NightMode}/>
+                <label for="someSwitchOptionWarning" class="bg-warning"></label>
+            </div>
         </div>
     </Fragment>
     );
