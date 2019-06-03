@@ -7,7 +7,7 @@ import MeusServicos from "./Pages/MeusServicos";
 import cadastroDeServico from "./Pages/CadastroDeServico";
 import Perfil from "./Pages/Perfil";
 import CatalogoEspecifico from "./Pages/CatalogoEspecifico";
-import Contratos from "./Pages/Contratos";
+import MeusAgendamentos from "./Pages/MeusAgendamentos";
 
 const routes = [
   {
@@ -62,8 +62,8 @@ const routes = [
   },
   {
     key: 11,
-    path: "/Contratos",
-    component: Contratos
+    path: "/MeusAgendamentos",
+    component: MeusAgendamentos
   }
 ];
 
