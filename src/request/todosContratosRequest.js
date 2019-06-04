@@ -9,6 +9,7 @@ function getAllContractById(id) {
       "https://ravencrownservice.azurewebsites.net/Usuario/Contratos?id=" + id
   })
     .done(function(msg) {
+      console.log(msg)
       return JSON.stringify(msg);
     })
 

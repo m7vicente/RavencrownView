@@ -4,6 +4,7 @@ import Modal from './Components/modal';
 import Navbar from './Components/Navbar';
 import '../css/CadastroDeServico.css'
 import cadastrodeServicoRequest from '../request/cadastroDeServicoRequest';
+import mudaImagem from "./AdicionaImagem"
 
 function CadastroDeServico() {
     return (
@@ -81,7 +82,7 @@ function CadastroDeServico() {
                                 <div class="arq-img">
                                     <div class="file btn btn-lg btn-primary">
                                         Adicionar recomendações
-                                <input type="file" name="file" />
+                                <input type="file" name="file"/>
                                     </div>
                                 </div>
                             </div>
@@ -90,16 +91,16 @@ function CadastroDeServico() {
 
                             <div class="col-md-4">
                                 <div class="servico-img">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt="" />
+                                    <img id="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt="" />
                                     <div class="file btn btn-lg btn-primary">
                                         Adicionar foto
-                                <input type="file" name="file" />
+                                <input id="inp" type="file" name="file"  accept='image/*'/>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="form-group col-md-2" style={{ marginLeft: '-12%', marginRight: '1%' }}>
-                                <label className="text-secondary">Selecione a categoria</label>
+                                <label>Selecione a categoria</label>
                                 <select id="categoria" className="form-control">
                                     <option selected>Selecione</option>
                                     <option value="29">Técnico</option>
@@ -116,7 +117,7 @@ function CadastroDeServico() {
                                 <button
                                     id="cadastrarServico"
                                     type="button"
-                                    onClick={cadastrodeServicoRequest}
+                                    onClick={mudaImagem}
                                     className="btn btn-primary w-100 ml-5" style={{ marginTop: '10%' }}>Cadastrar Serviço</button>
                             </div>
                         </div>

@@ -1,10 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-function ModalDetalhesDoServico() {
+class ModalDetalhesDoServico extends React.Component {
+    state = {
+        contract: null
+    };
+    
+    constructor(contract) {
+        super();
+        this.state.contract = contract;
+    }
+
+    render(){
     return (
         <div>
             <div className="container">
-                <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#myModal">Ver detalhes</button>
                 <div className="modal fade" id="myModal" role="dialog">
                     <div className="modal-dialog">
                         <div className="modal-content">
@@ -14,8 +23,8 @@ function ModalDetalhesDoServico() {
                             <div className="modal-body">
                                 <div className="row w-100 justify-content-center">
                                     <div className="justify-content-left">
-                                        <p className="h3">José Pereira Ermelino</p>
-                                        <p className="h4">Reformas de casas</p>
+                                        <p className="h3"></p>
+                                        <p className="h4"></p>
                                     </div>
                                 </div>
                                 <div className="row justify-content-center mt-5 border-top border-bottom">
@@ -64,6 +73,7 @@ function ModalDetalhesDoServico() {
         </div>
 
     )
+}
 }
 
 export default ModalDetalhesDoServico
