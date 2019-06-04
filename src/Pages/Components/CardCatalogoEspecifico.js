@@ -1,7 +1,7 @@
 import { Component, Fragment } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
-import ModalDetalhesDoServico from "../ModalDetalhesDoServico";
+import DetalhesDoContrato from "./DetalhesDoServico";
 
 class CardCatalogoEspecifico extends React.Component {
   state = {
@@ -28,7 +28,7 @@ class CardCatalogoEspecifico extends React.Component {
           <div class="card-body">
              <h5 class="card-title">{this.state.servico.nomeServico}</h5>
              <p class="card-text">{this.state.servico.descricaoServico}</p>
-             <Link to="/DetalhesDoServico">Detalhes</Link>
+             <Link to="/DetalhesDoServico" contract={this.state.servico} >Detalhes</Link>
           </div>
       </div>
       </div>
