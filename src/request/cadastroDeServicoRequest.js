@@ -10,16 +10,25 @@ function cadastroDeServicoRequest() {
   const parameters = JSON.stringify({
     idServico: null,
     idUsuario: null,
-    idEndereco: null,
-    idCategoria: null,
+    Endereco: {
+      id_Endereço: null,
+      rua: "Rua teste",
+      cep: "00000-000",
+      complemento: null,
+      numero: '24',
+      referencia: null,
+      bairro: "Bairro teste",
+      cidade: "Cidade teste",
+      estado: "SP",
+      pais: "Brasil"
+    },
+    idCategoria: "1",
     Imagens: null,
     nomeServico: nomeServico,
     descricaoServico: descricaoServico,
     tempoExecucao: null,
     precoServico: precoServico,
     localizacaoFixa: null,
-    disponivelFds: disponivelFds,
-    localAtendimento: localAtendimento
   });
 
     $.ajax({
