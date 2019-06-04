@@ -65,12 +65,7 @@ class Login extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row justify-content-center mt-5">
-                    <Link to="#" className="text-info font-weight-bold">
-                        Esqueceu sua senha?
-                </Link>
-                </div>
+                </div>      
             </div>
         );
     }
