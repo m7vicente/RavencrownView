@@ -7,9 +7,9 @@ class DetalhesDoServico extends React.Component {
 		servico: null		
 	  };
 
-constructor(){
+constructor(servico){
 	super();
-	
+	this.state.state: servico;
 }
 
 	render(){
