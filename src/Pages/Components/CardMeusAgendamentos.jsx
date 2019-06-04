@@ -1,5 +1,6 @@
 import { Component, Fragment } from "react";
 import React from "react";
+import ModalDetalhesDoContrato from "../ModalDetalhesDoContrato";
 
 class CardMeusAgendamentos extends React.Component {
   state = {
@@ -70,9 +71,10 @@ class CardMeusAgendamentos extends React.Component {
                 className="btn btn-primary"
                 data-toggle="modal"
                 data-target="#myModal"
-              >
+                >
                 Ver Detalhes
-              </a>
+             </a>
+             <ModalDetalhesDoContrato />
             </div>
           </div>
         </div>

@@ -13,13 +13,13 @@ class Navbar extends React.Component {
 
   componentDidMount() {
     let display = this.state.display;
-    let hidden = this.state.hidden;
     const session = sessionStorage.getItem("login");
-
+    
     if (session !== null) {
       const prestador = JSON.parse(sessionStorage.getItem("login")).Prestador;
       const nome = JSON.parse(sessionStorage.getItem("login")).nome;
 
+      document.getElementById("Cadastro").setAttribute("class", "demo");
       document.getElementById("login").setAttribute("class", "demo");
       document.getElementById("name").innerHTML = nome;
 
@@ -45,11 +45,11 @@ class Navbar extends React.Component {
 
       if (prestador === true) {
         display = "block";
-        document.getElementById("Cadastro").setAttribute("class", "demo");
       }
     } else {
       display = "none";
     }
+
     this.setState({
       display: display
     });
@@ -63,17 +63,7 @@ class Navbar extends React.Component {
     return (
       <Fragment>
         <div class="navbar navbar-dark navbar-expand text-white">
-          <Link to="/Perfil">
-            <div id="imgUser">
-              <i
-                id="logo"
-                className="fas fa-user-circle text-light display-4 ml-4 mr-4"
-                style={{ fontSize: "16pt;" }}
-              />
-            </div>
-          </Link>
-          <h4 id="name" className="mt-3 ml-4" />
-          <ul class="navbar-nav navbar-collapse justify-content-end">
+          <ul class="navbar-nav navbar-collapse justify-content-left">
             <li class="nav-item active">
               <Link to="/Catalogo" class="nav-link">
                 Home |
@@ -105,16 +95,42 @@ class Navbar extends React.Component {
               </Link>
             </li>
             <li class="nav-item active">
+              <Link
+                to="/MeusAgendamentos"
+                style={estilo}
+                id="meusAgendamentos"
+                class="nav-link"
+              >
+                Meus Agendamentos
+              </Link>
+            </li>
+            <li class="nav-item active">
               <Link to="/Login" Id="login" class="nav-link">
                 Login
               </Link>
             </li>
-            <li class="nav-item active">
-              <Link
+            <li>
+              
+          <i class="fa fa-moon-o ml-4" style={{fontSize: '16pt'}} 
+          onClick={NightMode}
+          ></i>
+            </li>
+          </ul>
+
+          <div class="dropdown mr-4" style={estilo}>
+             <button class="btn dropdown-toggle" style={{backgroundColor: 'transparent'}}
+              type="button" id="dropdownMenuButton" 
+              data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"
+              >
+           <h4 class="nav-link text-white"id="name"/>
+            </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a  class="dropdown-item"><Link
                 to="/"
                 style={estilo}
                 Id="sair"
-                class="nav-link"
+               
                 onClick={function() {
                   sessionStorage.removeItem("login");
                   document
@@ -125,18 +141,25 @@ class Navbar extends React.Component {
                 }}
               >
                 Sair
-              </Link>
-            </li>
-          </ul>
-          <div class="material-switch pull-right ml-4 mt-1">
-            <input
-              id="someSwitchOptionWarning"
-              name="someSwitchOption001"
-              type="checkbox"
-              onLoad={NightMode}
-            />
-            <label for="someSwitchOptionWarning" class="bg-warning" />
+              </Link> </a> 
+              <a class="dropdown-item">
+                <Link to="/Perfil">
+                  Perfil
+                </Link>
+              </a>
+   
           </div>
+        </div>
+          <Link to="/Perfil">
+            <div id="imgUser">
+              <i
+                id="logo"
+                className="fas fa-user-circle text-light display-4 ml-4 mr-4"
+                style={{ fontSize: "16pt;" }}
+              />
+            </div>
+          </Link>
+        
         </div>
       </Fragment>
     );

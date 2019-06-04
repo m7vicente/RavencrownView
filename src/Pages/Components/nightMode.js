@@ -1,22 +1,28 @@
 function NightMode(){
-
-    var swt = document.getElementById("someSwitchOptionWarning");
-
-    if(swt.checked){
-    document.getElementById("body").setAttribute("class", "body");
-    var label = document.getElementsByTagName('label');
+    localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); 
+    localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')
     
-    for(var i = 0; i < label.length; i++){
-        label[i].setAttribute("class", "font");
+    if(localStorage.getItem('mode') === 'dark'){
+        document.getElementById("configuracoes").setAttribute("class", "font");
+        document.getElementById("aulas").setAttribute("class", "font");
+        document.getElementById("auto").setAttribute("class", "font");
+        document.getElementById("code").setAttribute("class", "font");
+        document.getElementById("reformas").setAttribute("class", "font");
+        document.getElementById("culinaria").setAttribute("class", "font");
+        document.getElementById("domesticos").setAttribute("class", "font");
+        document.getElementById("configuracoes").setAttribute("class", "font");
+        document.getElementById("vestuario").setAttribute("class", "font");
+    } else {
+        document.getElementById("configuracoes").removeAttribute("class", "font");
+        document.getElementById("aulas").removeAttribute("class", "font");
+        document.getElementById("auto").removeAttribute("class", "font");
+        document.getElementById("code").removeAttribute("class", "font");
+        document.getElementById("reformas").removeAttribute("class", "font");
+        document.getElementById("culinaria").removeAttribute("class", "font");
+        document.getElementById("domesticos").removeAttribute("class", "font");
+        document.getElementById("configuracoes").removeAttribute("class", "font");
+        document.getElementById("vestuario").removeAttribute("class", "font");
     }
-
-    var h5 = document.getElementsByTagName("h5");
-
-    for(var i = 0; i < h5.length; i++){
-        h5[i].setAttribute("class", "font");
-    }
-}
-
 }
 
 export default NightMode;

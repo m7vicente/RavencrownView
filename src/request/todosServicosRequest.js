@@ -18,7 +18,7 @@ function getAllServicesById(id) {
       console.log(textStatus);
       console.log(msg);
     });
-
+  
   return retorno.responseJSON;
 }
 
