@@ -64,7 +64,7 @@ class CardMeusAgendamentos extends React.Component {
                     <span class="badge badge-pill badge-danger">
                       Aguardando
                     </span>
-                  )}
+                 Y )}
                 </label>
               </div>
               <a
