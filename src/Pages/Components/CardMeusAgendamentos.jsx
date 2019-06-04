@@ -1,6 +1,6 @@
 import { Component, Fragment } from "react";
 import React from "react";
-import ModalDetalhesDoServico from "../ModalDetalhesDoServico";
+import ModalDetalhesDoContrato from "../ModalDetalhesDoContrato";
 
 class CardMeusAgendamentos extends React.Component {
   state = {
@@ -74,7 +74,7 @@ class CardMeusAgendamentos extends React.Component {
                 >
                 Ver Detalhes
              </a>
-             <ModalDetalhesDoServico />
+             <ModalDetalhesDoContrato />
             </div>
           </div>
         </div>

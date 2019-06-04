@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class ModalDetalhesDoServico extends React.Component {
+class ModalDetalhesDoContrato extends React.Component {
     state = {
         contract: null
     };
@@ -60,4 +60,4 @@ class ModalDetalhesDoServico extends React.Component {
 }
 }
 
-export default ModalDetalhesDoServico
+export default ModalDetalhesDoContrato
