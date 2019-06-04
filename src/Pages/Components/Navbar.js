@@ -123,7 +123,7 @@ class Navbar extends React.Component {
               data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false"
               >
-           <h4 id="name"/>
+           <h4 class="nav-link text-white"id="name"/>
             </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a  class="dropdown-item"><Link

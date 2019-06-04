@@ -73,9 +73,8 @@ class CardMeusAgendamentos extends React.Component {
                 data-target="#myModal"
                 >
                 Ver Detalhes
-        
-              <ModalDetalhesDoServico />
              </a>
+             <ModalDetalhesDoServico />
             </div>
           </div>
         </div>

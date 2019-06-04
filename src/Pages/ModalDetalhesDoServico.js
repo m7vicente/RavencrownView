@@ -21,28 +21,22 @@ class ModalDetalhesDoServico extends React.Component {
                                 <button type="button" className="close" data-dismiss="modal">&times;</button>
                             </div>
                             <div className="modal-body">
-                                <div className="row w-100 justify-content-center">
-                                    <div className="justify-content-left">
-                                        <p className="h3"></p>
-                                        <p className="h4"></p>
-                                    </div>
-                                </div>
-                                <div className="row justify-content-center mt-5 border-top border-bottom">
+                                <div className="row justify-content-center border-bottom">
                                     <div>
-                                        <p className="h4 text-secondary">Descrição do serviço</p>
-                                        <div className="text-secondary">Faço reformas em geral. Troco piso, faço pintura, faço reboco, entre outros serviços. Faça seu orçamento.
+                                        <p className="h4 text-secondary ml-4">Descrição do serviço</p>
+                                        <div className="text-secondary ml-4 mb-4">Faço reformas em geral. Troco piso, faço pintura, faço reboco, entre outros serviços. Faça seu orçamento.
 						            </div>
                                     </div>
                                 </div>
                                 <div className="row w-100 justify-content-left mt-4">
                                     <div className="col-sm-6 mt-2">
-                                        <label className="h4 text-secondary"> Local - </label>
+                                        <label className="h4 text-secondary mr-4"> Local: </label>
                                         <label className="h5 text-primary"> Domicilio</label>
                                     </div>
                                     <div className="col-sm-6 mt-2">
                                         <div className="">
-                                            <label className="h4 text-secondary"> Categoria </label>
-                                            <p className="h5 text-secondary"> Reformas </p>
+                                            <label className="h4 text-secondary mr-4"> Categoria: </label>
+                                            <label className="h5 text-primary"> Reformas </label>
                                         </div>
                                     </div>
                                 </div>
@@ -51,19 +45,9 @@ class ModalDetalhesDoServico extends React.Component {
                                         <label className="h4"> R$ <span className="h1">100,20</span> </label>
                                     </div>
                                 </div>
-                                <div className="row justify-content-center mt-3 border-top">
-                                    <div className="col-sm-7">
-                                        <label className="h5 text-secondary mt-3"> Comentários </label>
-                                    </div>
-                                </div>
-                                <div className="row justify-content-center mt-3 mb-3">
-                                    <div className="w-75">
-                                        <textarea className="form-control" rows="5"></textarea>
-                                    </div>
-                                </div>
                                 <div className="modal-footer">
-                                    <button type="button" className="btn btn-primary w-50">Contratar</button>
-                                    <button type="button" className="btn btn-secondary w-50" data-dismiss="modal">Fechar</button>
+                                    <button type="button" className="btn btn-primary w-50 mt-4">Contratar</button>
+                                    <button type="button" className="btn btn-secondary w-50 mt-4" data-dismiss="modal">Fechar</button>
                                 </div>
                             </div>
                         </div>
