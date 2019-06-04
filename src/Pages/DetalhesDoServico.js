@@ -1,7 +1,18 @@
 import React, { Component, Fragment } from 'react';
 import Navbar from '../Pages/Components/Navbar';
 
-function DetalhesDoServico() {
+class DetalhesDoServico extends React.Component {
+
+	state = {
+		servico: null		
+	  };
+
+constructor(servico){
+	super();
+	this.state.state: servico;
+}
+
+	render(){
 	return (
 		<Fragment>
 			<Navbar />
@@ -55,6 +66,7 @@ function DetalhesDoServico() {
 
 		</Fragment>
 	);
+  }
 }
 
 export default DetalhesDoServico;
