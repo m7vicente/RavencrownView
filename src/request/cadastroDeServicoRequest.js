@@ -26,15 +26,16 @@ function cadastroDeServicoRequest() {
     Imagens: null,
     nomeServico: nomeServico,
     descricaoServico: descricaoServico,
-    tempoExecucao: null,
+    tempoExecucao: '2019-01-01',
     precoServico: precoServico,
-    localizacaoFixa: null,
+    localizacaoFixa: true,
   });
 
     $.ajax({
         type: "post",
         contentType: "application/json;charset=UTF-8",
         url: "https://ravencrownservice.azurewebsites.net/servicos",
+        async:false,
         data: parameters
     })
 
