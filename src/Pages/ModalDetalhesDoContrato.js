@@ -17,12 +17,14 @@ class ModalDetalhesDoContrato extends React.Component {
                 <div className="modal fade" id="myModal" role="dialog">
                     <div className="modal-dialog">
                         <div className="modal-content">
-                            <div className="modal-header">
-                                <button type="button" className="close" data-dismiss="modal">&times;</button>
-                            </div>
                             <div className="modal-body">
                                 <div className="row justify-content-center border-bottom">
-                                    <div>
+                                    <div>Dias: 
+                                    {Object.keys(this.state.contract.datas).map((e, i) => {
+                                            return this.state.contract.datas[i].dtAgendamento + <p>
+                                    });}
+
+
                                         <p className="h4 text-secondary ml-4">Descrição do serviço</p>
                                         <div className="text-secondary ml-4 mb-4">Faço reformas em geral. Troco piso, faço pintura, faço reboco, entre outros serviços. Faça seu orçamento.
 						            </div>
