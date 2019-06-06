@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar';
 import '../css/CadastroDeServico.css'
 import cadastrodeServicoRequest from '../request/cadastroDeServicoRequest';
 import mudaFoto from '../funcoes/mudaFoto';
+import Modalsucesso from './modalSucessoCadastro';
 
 function CadastroDeServico() {
     return (
@@ -14,8 +15,10 @@ function CadastroDeServico() {
                 <div className="row w-100 justify-content-right">
                     <form className="col justify-content-center">
                         <div className="row justify-content-center mt-2">
-                            <h5>Cadastre seu serviço :)</h5>
-                        </div>
+                            <h3>Cadastre seu serviço :)</h3>
+                        </div>          
+                        <button type="button" class="btn" id="mdl" style={{display: 'none'}} data-toggle="modal" data-target="#modalExemplo"></button>         
+                        <Modalsucesso></Modalsucesso>
                         <div className="row justify-content-center mt-1">
                             <div className="col-sm-5" style={{ marginLeft: '-19%' }}>
                                 <div className="form-group">
@@ -65,7 +68,7 @@ function CadastroDeServico() {
                                 <label>Local de atendimento</label>
 
                                 <div id="localAtendimento" className="form-check">
-                                    <input className="row form-check-input" type="radio" />
+                                    <input className="row form-check-input" type="radio" id="casa" />
                                     <label className="form-check-label ml-4" for="exampleRadios1">
                                         Atendimento à domicilio
                                 </label>
@@ -78,10 +81,10 @@ function CadastroDeServico() {
                                     </label>
                                 </div>
                             </div>
-                            <div className="col-sm-2 ml-4">
+                            <div className="col-sm-2">
                                 <div class="arq-img">
-                                    <div class="file btn btn-lg btn-primary">
-                                        Adicionar recomendações
+                                    <div class="file btn btn-lg btn-info">
+                                        Add recomendações
                                 <input type="file" name="file"/>
                                     </div>
                                 </div>
@@ -99,7 +102,7 @@ function CadastroDeServico() {
                                 </div>
                             </div>
 
-                            <div className="form-group col-md-2" style={{ marginLeft: '-12%', marginRight: '1%' }}>
+                            <div className="form-group col-md-2" style={{ marginLeft: '-10%', marginRight: '1%' }}>
                                 <label>Selecione a categoria</label>
                                 <select id="categoria" className="form-control">
                                     <option selected>Selecione</option>
@@ -118,9 +121,11 @@ function CadastroDeServico() {
                                     id="cadastrarServico"
                                     type="button"
                                     onClick={cadastrodeServicoRequest}
-                                    className="btn btn-primary w-100 ml-5" style={{ marginTop: '10%' }}>Cadastrar Serviço</button>
+                                    className="btn btn-primary ml-4 h-25 w-100" style={{ marginTop: '10%', fontSize: '16pt'}}>Cadastrar Serviço</button>
                             </div>
+                                  
                         </div>
+                        
                     </form>
                 </div>
             </div>
