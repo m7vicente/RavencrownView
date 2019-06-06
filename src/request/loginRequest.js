@@ -15,7 +15,9 @@ function request() {
     data: parameters,
     async: false
   })
-    .done(function(msg) {})
+    .done(function(msg) {
+
+    })
     .fail(function(jqXHR, textStatus, msg) {
       console.log(jqXHR);
       console.log(textStatus);

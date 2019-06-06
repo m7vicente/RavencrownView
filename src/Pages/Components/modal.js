@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 
 function Modal() {
     return (
@@ -9,7 +10,7 @@ function Modal() {
                         <div className="modal-content">
                             <div className="modal-header">
                                 <h5>Dados do endereço para prestação do serviço</h5>
-                                <button type="button" className="close" data-dismiss="modal">&times;</button>
+                                <button type="button" id='btnclose' className="close" data-dismiss="modal">&times;</button>
                             </div>
                             <div className="modal-body">
                                 <div className="col justify-content-center">
@@ -58,7 +59,12 @@ function Modal() {
                                 </div>
                             </div>
                             <div className="modal-footer">
-                                <button type="button" className="btn btn-primary w-50">Cadastrar</button>
+                                <button type="button" className="btn btn-primary w-50" onClick={
+                                     $(function () {
+                                        $('#btnclose').trigger('click');
+                                        //deixar funcional
+                                    })
+                                }>Salvar</button>
                                 <button type="button" className="btn btn-secondary w-50" data-dismiss="modal">Fechar</button>
                             </div>
                         </div>
