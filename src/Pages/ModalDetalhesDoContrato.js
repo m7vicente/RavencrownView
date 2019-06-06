@@ -26,16 +26,16 @@ class ModalDetalhesDoContrato extends React.Component {
                     </div>
                   </div>
                   <div className="row w-100 justify-content-left mt-4">
-                  <div className="col-sm-6 mt-2">
-                  <div className="">
+                    <div className="col-sm-6 mt-2">
+                      <div className="">
                         <label className="h4 text-primary mr-4">
                           {" "}
                           Categoria{" "}
                         </label>
                         <label className="h4 text-secondary"> Reformas </label>
                       </div>
+                    </div>
                   </div>
-                  </div>  
                   <div className="row w-100 justify-content-left mt-1">
                     <div className="col-sm-6 mt-2">
                       <label className="h4 text-primary mr-4">
@@ -82,10 +82,10 @@ class ModalDetalhesDoContrato extends React.Component {
                           </label>
                         </div>
                       ) : (
-                        <div />
-                      )}
+                          <div />
+                        )}
                     </div>
-                  
+
                   </div>
                   <div className="row w-100 justify-content-left mt-4">
                     <div className="col-sm-6 mt-2">
@@ -103,9 +103,22 @@ class ModalDetalhesDoContrato extends React.Component {
                     </div>
                   </div>
                   <div className="modal-footer">
-                    <button type="button" className="btn btn-primary w-50 mt-4">
-                      Confirmar
+
+                    {
+                      !this.state.contract.aprovado_Consumidor ?
+                        <button type="button" className="btn btn-primary w-50 mt-4">
+                          Confirmar
                     </button>
+                        :
+                        <div>{
+                          this.state.contract.aprovado_Prestador &&
+                            this.state.contract.aprovado_Consumidor ?
+                            <span className="label label-succes w-50 mt-4">Confirmado</span>
+                            :
+                            <span className="label label-danger w-50 mt-4">Não Confimado</span>
+                        }
+                        </div>
+                    }
                     <button
                       type="button"
                       className="btn btn-secondary w-50 mt-4"
