@@ -71,10 +71,10 @@ class CardMeusAgendamentos extends React.Component {
                 className="btn btn-primary"
                 data-toggle="modal"
                 data-target="#myModal"
-                >
+              >
                 Ver Detalhes
-             </a>
-             <ModalDetalhesDoContrato />
+              </a>
+              <ModalDetalhesDoContrato contract={this.state.contract} />
             </div>
           </div>
         </div>
