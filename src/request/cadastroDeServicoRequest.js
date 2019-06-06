@@ -1,6 +1,4 @@
 import $ from "jquery";
-import pegaDadosDom from "../Pages/CadastroDeServico";
-import pegaDadosEnd from "../Pages/Components/modal";
 
 function cadastroDeServicoRequest() {
   var rua;
@@ -66,7 +64,6 @@ else{
     localizacaoFixa: "true"
   });
 
-console.log(parameters)
 
   $.ajax({
     type: "post",
