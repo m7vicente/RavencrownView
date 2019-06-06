@@ -1,21 +1,45 @@
 import React, { Component, Fragment } from 'react';
 import Navbar from '../Pages/Components/Navbar';
+import $ from "jquery";
 
 class DetalhesDoServico extends React.Component {
 
 	state = {
-		servico: null		
-	  };
+		servico: null,
+		prestador: null 
+	};
 
-constructor(servico){
-	super();
-	this.state.state: servico;
-}
+	constructor(servico){
+		super();
+		
+		this.state.servico = servico;
+			
+	}
 
+	obterPrestador(id){
+	const retorno = $.ajax({
+    type: "get",
+    contentType: "application/json;charset=UTF-8",
+    async: false,
+    url:
+      "https://ravencrownservice.azurewebsites.net/Usuario?id=" +
+      id})
+    .done(function(msg) {
+      //return JSON.stringify(msg);
+    })
+
+    .fail(function(jqXHR, textStatus, msg) {
+      console.log(jqXHR);
+      console.log(textStatus);
+      console.log(msg);	
+	});  
+  return retorno.responseJSON;	
+	}
 	render(){
 	return (
 		<Fragment>
 			<Navbar />
+			{console.log(this.state.servico)}
 			<div className="content mt-4">
 				<div className="row justify-content-center">
 					<div className="col-sm-1">
@@ -23,7 +47,7 @@ constructor(servico){
 					</div>
 
 					<div className="col-sm-4 justify-content-left">
-						<p className="h3">José Pereira Ermelino</p>
+						<p className="h3"></p>
 						<p className="h4">Reformas de casas</p>
 					</div>
 				</div>
