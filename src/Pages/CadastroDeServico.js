@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar';
 import '../css/CadastroDeServico.css'
 import cadastrodeServicoRequest from '../request/cadastroDeServicoRequest';
 import mudaFoto from '../funcoes/mudaFoto';
+import Modalsucesso from './modalSucessoCadastro';
 
 function CadastroDeServico() {
     return (
@@ -15,7 +16,9 @@ function CadastroDeServico() {
                     <form className="col justify-content-center">
                         <div className="row justify-content-center mt-2">
                             <h3>Cadastre seu serviço :)</h3>
-                        </div>
+                        </div>          
+                        <button type="button" class="btn" id="mdl" style={{display: 'none'}} data-toggle="modal" data-target="#modalExemplo"></button>         
+                        <Modalsucesso></Modalsucesso>
                         <div className="row justify-content-center mt-1">
                             <div className="col-sm-5" style={{ marginLeft: '-19%' }}>
                                 <div className="form-group">
@@ -65,7 +68,7 @@ function CadastroDeServico() {
                                 <label>Local de atendimento</label>
 
                                 <div id="localAtendimento" className="form-check">
-                                    <input className="row form-check-input" type="radio" />
+                                    <input className="row form-check-input" type="radio" id="casa" />
                                     <label className="form-check-label ml-4" for="exampleRadios1">
                                         Atendimento à domicilio
                                 </label>
@@ -120,7 +123,9 @@ function CadastroDeServico() {
                                     onClick={cadastrodeServicoRequest}
                                     className="btn btn-primary ml-4 h-25 w-100" style={{ marginTop: '10%', fontSize: '16pt'}}>Cadastrar Serviço</button>
                             </div>
+                                  
                         </div>
+                        
                     </form>
                 </div>
             </div>
