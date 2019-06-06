@@ -21,7 +21,7 @@ class Navbar extends React.Component {
 
       document.getElementById("Cadastro").setAttribute("class", "demo");
       document.getElementById("login").setAttribute("class", "demo");
-      document.getElementById("name").innerHTML = nome;
+      document.getElementById("dropdownMenuButton").innerText = nome;
 
       var img = "";
 
@@ -69,16 +69,7 @@ class Navbar extends React.Component {
                 Home |
               </Link>
             </li>
-            <li class="nav-item active">
-              <Link
-                to="/MeusServicos"
-                style={estilo}
-                id="MeusServicos"
-                class="nav-link"
-              >
-                Meus Serviços |
-              </Link>
-            </li>
+          
             <li class="nav-item active">
               <Link to="/Cadastro" id="Cadastro" class="nav-link">
                 Cadastre-se |
@@ -118,19 +109,23 @@ class Navbar extends React.Component {
           </ul>
 
           <div class="dropdown mr-4" style={estilo}>
-             <button class="btn dropdown-toggle" style={{backgroundColor: 'transparent'}}
+             <button class="btn dropdown-toggle text-white" style={{backgroundColor: 'transparent', fontSize: '14pt'}}
               type="button" id="dropdownMenuButton" 
               data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false"
               >
-           <h4 class="nav-link text-white"id="name"/>
             </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a  class="dropdown-item"><Link
+              <a class="dropdown-item" style={{fontSize: '14pt'}}>
+                <Link to="/Perfil">
+                  Perfil
+                </Link>
+              </a>
+              <a  class="dropdown-item" style={{fontSize: '13pt'}}><Link
                 to="/"
                 style={estilo}
                 Id="sair"
-               
+                className="text-danger"
                 onClick={function() {
                   sessionStorage.removeItem("login");
                   document
@@ -142,12 +137,6 @@ class Navbar extends React.Component {
               >
                 Sair
               </Link> </a> 
-              <a class="dropdown-item">
-                <Link to="/Perfil">
-                  Perfil
-                </Link>
-              </a>
-   
           </div>
         </div>
           <Link to="/Perfil">

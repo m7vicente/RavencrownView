@@ -14,9 +14,9 @@ class CardMeusAgendamentos extends React.Component {
 
   render() {
     return (
-      <div className="col-lg-4  mt-1 mb-3 d-flex align-items-stretch ">
+      <div className="col-lg-4  mt-1 mb-3 d-flex align-items-stretch">
         <div className="card h-100 w-100">
-          <div className="card">
+          <div className="card border border-rounded">
             <div className="card-header">
               <h5>
                 Dia:
@@ -29,34 +29,37 @@ class CardMeusAgendamentos extends React.Component {
             </div>
             <div className="card-body">
               <div>
-                <label>
-                  Prestador: {this.state.contract.contract.prestador.nome}
+                <label className="text-secondary">Prestador: {" "}
+                 <span className="h4 text-dark">  {this.state.contract.contract.prestador.nome}</span>
                 </label>
               </div>
               <div>
-                <label>
-                  Serviço:{" "}
-                  {this.state.contract.contract.servicoModel.nomeServico}
+                <label className="text-secondary">
+                  Serviço:{" "}<span  className="text-dark">
+                  {this.state.contract.contract.servicoModel.nomeServico}</span>
                 </label>
               </div>
               <div>
                 {this.state.contract.contract.pago ? (
                   "Serviço pago"
                 ) : (
-                  <label>
-                    Valor Combinado: {this.state.contract.contract.valor_Final}
+                  <label className="text-secondary">
+                    Valor Combinado: {" "} <span className="text-dark"> {this.state.contract.contract.valor_Final}</span>
                   </label>
                 )}
               </div>
               <div>
-                <label>Endereço: </label>
-                {this.state.contract.contract.endereco != null
+                <label className="text-secondary">Endereço: {" "} 
+                <span className="text-dark"> 
+                  {this.state.contract.contract.endereco != null
                   ? this.state.contract.contract.endereco.rua
                   : this.state.contract.contract.servicoModel.endereco.rua}
+                  </span>
+                  </label>
               </div>
               <div>
-                <label>
-                  Aprovação:
+                <label className="text-secondary">
+                  Aprovação:{" "}
                   {this.state.contract.contract.aprovado_Prestador &&
                   this.state.contract.contract.aprovado_Consumidor ? (
                     <span class="badge badge-pill badge-success">OK</span>
@@ -68,7 +71,7 @@ class CardMeusAgendamentos extends React.Component {
                 </label>
               </div>
               <a
-                className="btn btn-primary"
+                className="btn btn-info"
                 data-toggle="modal"
                 data-target="#myModal"
               >

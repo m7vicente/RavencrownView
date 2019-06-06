@@ -26,17 +26,32 @@ class ModalDetalhesDoContrato extends React.Component {
                     </div>
                   </div>
                   <div className="row w-100 justify-content-left mt-4">
+                  <div className="col-sm-6 mt-2">
+                  <div className="">
+                        <label className="h4 text-primary mr-4">
+                          {" "}
+                          Categoria{" "}
+                        </label>
+                        <label className="h4 text-secondary"> Reformas </label>
+                      </div>
+                  </div>
+                  </div>  
+                  <div className="row w-100 justify-content-left mt-1">
                     <div className="col-sm-6 mt-2">
                       <label className="h4 text-primary mr-4">
                         {" "}
-                        Local de Atendimento:{" "}
+                        Local de Atendimento{" "}
                       </label>
 
                       {this.state.contract.endereco != null ? (
                         <div>
                           <span>
-                            <label className="text-secondary">Rua:</label>
+                            <label className="text-secondary">Rua:</label>{" "}
                             {this.state.contract.endereco.rua}
+                          </span>
+                          <span>
+                            <label className="text-secondary ml-5">Nº</label>{" "}
+                            {this.state.contract.endereco.numero}
                           </span>
                           <p />
                           <span>
@@ -51,12 +66,12 @@ class ModalDetalhesDoContrato extends React.Component {
                           </span>
                           <p />
                           <span>
-                            <label className="text-secondary">CEP:</label>
+                            <label className="text-secondary">CEP:</label>{" "}
                             {this.state.contract.endereco.cep}
                           </span>
                           <p />
                           <span>
-                            <label className="text-secondary">Bairro:</label>
+                            <label className="text-secondary">Bairro:</label>{" "}
                             {this.state.contract.endereco.bairro}
                           </span>
                           <p />
@@ -70,19 +85,11 @@ class ModalDetalhesDoContrato extends React.Component {
                         <div />
                       )}
                     </div>
-                    <div className="col-sm-6 mt-2">
-                      <div className="">
-                        <label className="h4 text-secondary mr-4">
-                          {" "}
-                          Categoria:{" "}
-                        </label>
-                        <label className="h5 text-primary"> Reformas </label>
-                      </div>
-                    </div>
+                  
                   </div>
                   <div className="row w-100 justify-content-left mt-4">
                     <div className="col-sm-6 mt-2">
-                      <label className="h4 text-secondary mr-4"> Datas: </label>
+                      <label className="h4 text-secondary"> Datas: </label>
                       {Object.keys(this.state.contract.datas).map((e, i) => {
                         return (
                           <p className="h4 text-secondary ml-4">
@@ -96,7 +103,7 @@ class ModalDetalhesDoContrato extends React.Component {
                     </div>
                   </div>
                   <div className="modal-footer">
-                    <button type="button" className="btn btn-primary w-24 mt-4">
+                    <button type="button" className="btn btn-primary w-50 mt-4">
                       Confirmar
                     </button>
                     <button

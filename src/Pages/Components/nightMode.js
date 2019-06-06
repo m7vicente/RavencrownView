@@ -13,7 +13,7 @@ function NightMode(){
         document.getElementById("configuracoes").setAttribute("class", "font");
         document.getElementById("vestuario").setAttribute("class", "font");
     } else {
-        document.getElementById("configuracoes").removeAttribute("class", "font");
+        document.getElementById("configuracoes").setAttribute("class", "font");
         document.getElementById("aulas").removeAttribute("class", "font");
         document.getElementById("auto").removeAttribute("class", "font");
         document.getElementById("code").removeAttribute("class", "font");

@@ -10,15 +10,15 @@ function Catalogo() {
       <div class="row" align="center">
         <div class="col">
           <div class="titulo_catalogo text-dark">
-            <h5>
+            <h3>
               Explore a variedade de serviços com a facilidade de divisão por
-              categorias.
-            </h5>
+              categorias 
+            </h3>
           </div>
         </div>
       </div>
 
-      <div class="row ml-0 w-100 h-100 mt-0 mb-1 justify-content-center">
+      <div class="row ml-0 w-100 h-100 mt-5 justify-content-center">
         <div class="col-sm-2 mt-3">
           <Link to={{ pathname: "/CatalogoEspecifico", data: 1 }}>
             <div class="item" align="center" id="configuracoes">

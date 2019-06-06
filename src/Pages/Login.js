@@ -50,7 +50,7 @@ class Login extends React.Component {
                                 <Link to="/">
                                     <button
                                         id="botao"
-                                        type="button"
+                                        type="button"                                       
                                         onClick={this.doLogin}
                                         onClick={request}
                                         style={{ fontSize: "150%;" }}

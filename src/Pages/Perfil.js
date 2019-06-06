@@ -3,26 +3,7 @@ import "../css/Perfil.css";
 import Navbar from "./Components/Navbar";
 
 class Perfil extends React.Component {
-  mudaFoto() {
-    var currentImgIndex = 1;
-    var ImgSrcArray = [
-      //caminho das suas imgs aqui
-      "img/gods/agni.jpg",
-      "img/gods/agni2.jpg",
-      "img/gods/agni3.jpg",
-      "img/gods/agni4.jpg"
-    ];
-
-    function trocar() {
-      if (currentImgIndex == ImgSrcArray.length) {
-        //reseta quando o contatador for igual ao tamanho da array e volta a 1° img
-        currentImgIndex = 0;
-      }
-      document.getElementById("agni").src = ImgSrcArray[currentImgIndex]; //altera a img do elemento "agni" de acordo com o indice
-      currentImgIndex++; // incrementa a nossa referencia
-    }
-  }
-
+  
   render() {
     var nome = JSON.parse(sessionStorage.getItem("login")).nome;
     var img = "";
@@ -37,10 +18,15 @@ class Perfil extends React.Component {
     }
     var email = JSON.parse(sessionStorage.getItem("login")).email;
     var telefone = JSON.parse(sessionStorage.getItem("login")).telefone;
-    var Rua = JSON.parse(sessionStorage.getItem("login")).endereco.Rua;
+    var rua = JSON.parse(sessionStorage.getItem("login")).endereco.rua;
     var numero = JSON.parse(sessionStorage.getItem("login")).endereco.numero;
+    var bairro= JSON.parse(sessionStorage.getItem("login")).endereco.bairro;
+    var cidade = JSON.parse(sessionStorage.getItem("login")).endereco.cidade;
+    var complemento= JSON.parse(sessionStorage.getItem("login")).endereco.complemento;
+    var estado = JSON.parse(sessionStorage.getItem("login")).endereco.estado;
+    var rg = JSON.parse(sessionStorage.getItem("login")).rg;
     var cpf = JSON.parse(sessionStorage.getItem("login")).cpf;
-    var pais = JSON.parse(sessionStorage.getItem("login")).pais;
+    var cnpj = JSON.parse(sessionStorage.getItem("login")).cnpj;
 
     return (
       <Fragment>
@@ -51,175 +37,65 @@ class Perfil extends React.Component {
               <div className="col-md-4">
                 <div className="profile-img">
                   <img src={img} />
-                  <div className="row file btn btn-primary">
-                    Mudar foto
-                    <input type="file" name="file" onClick={Perfil.mudaFoto} />
-                  </div>
+                  
                 </div>
               </div>
               <div className="col-md-6">
                 <div className="profile-head">
-                  <h5>{nome}</h5>
-                  <p className="proile-rating">
-                    RANKINGS : <span>8/10</span>
-                  </p>
-                  <ul className="nav nav-tabs" id="myTab" role="tablist">
-                    <li className="nav-item">
-                      <a
-                        className="nav-link active"
-                        id="home-tab"
-                        data-toggle="tab"
-                        href="#home"
-                        role="tab"
-                        aria-controls="home"
-                        aria-selected="true"
-                      >
-                        About
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a
-                        className="nav-link"
-                        id="profile-tab"
-                        data-toggle="tab"
-                        href="#profile"
-                        role="tab"
-                        aria-controls="profile"
-                        aria-selected="false"
-                      >
-                        Timeline
-                      </a>
-                    </li>
-                  </ul>
+                  <h3>Olá, {nome}</h3>
                 </div>
               </div>
             </div>
             <div className="row">
+              
               <div className="col-md-4">
                 <div className="profile-work">
-                  <p>WORK LINK</p>
-                  <a href="">Website Link</a>
+                  <p>Contato</p>
+                  <a href=""><i class="fas fa-envelope-open-text"></i> {"   "}  {email}</a>
                   <br />
-                  <a href="">Bootsnipp Profile</a>
+                  <a href=""><i class="fas fa-phone-square"></i>{"   "} {telefone}</a>
                   <br />
-                  <a href="">Bootply Profile</a>
-                  <p>SKILLS</p>
-                  <a href="">Web Designer</a>
-                  <br />
-                  <a href="">Web Developer</a>
-                  <br />
-                  <a href="">WordPress</a>
-                  <br />
-                  <a href="">WooCommerce</a>
-                  <br />
-                  <a href="">PHP, .Net</a>
-                  <br />
-                </div>
+                 </div>
               </div>
-              <div className="col-md-8">
-                <div className="tab-content profile-tab" id="myTabContent">
-                  <div
-                    className="tab-pane fade show active"
-                    id="home"
-                    role="tabpanel"
-                    aria-labelledby="home-tab"
-                  >
-                    <div className="row">
-                      <div className="col-md-6">
-                        <label>Email</label>
-                      </div>
-                      <div className="col-md-6">
-                        <p>{email}</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-6">
-                        <label>Name</label>
-                      </div>
-                      <div className="col-md-6">
-                        <p>{nome}</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-6">
-                        <label>Email</label>
-                      </div>
-                      <div className="col-md-6">
-                        <p>{email}</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-6">
-                        <label>Phone</label>
-                      </div>
-                      <div className="col-md-6">
-                        <p>{telefone}</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-6">
-                        <label>Pais</label>
-                      </div>
-                      <div className="col-md-6">
-                        <p>{pais}</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="tab-pane fade"
-                    id="profile"
-                    role="tabpanel"
-                    aria-labelledby="profile-tab"
-                  >
-                    <div className="row">
-                      <div className="col-md-6">
-                        <label>CPF</label>
-                      </div>
-                      <div className="col-md-6">
-                        <p>{cpf}</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-6">
-                        <label>Price</label>
-                      </div>
-                      <div className="col-md-6">
-                        <p>10$/hr</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-6">
-                        <label>Age</label>
-                      </div>
-                      <div className="col-md-6">
-                        <p>23</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-6">
-                        <label>Nacionality</label>
-                      </div>
-                      <div className="col-md-6">
-                        <p>Polsky</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-6">
-                        <label>Cadastrada</label>
-                      </div>
-                      <div className="col-md-6">
-                        <p>6 months</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-12">
-                        <label>Your Bio</label>
-                        <br />
-                        <p>Your detail deion</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              
+              <div className="col-md-6">
+              <ul className="nav nav-tabs justify-content-center" style={{marginTop: '-35%', marginLeft: '30%'}}>
+                <li className="nav-item">
+                    <a className="nav-link text-dark" href="#info" data-toggle="tab">Informações Pessoais</a>
+                </li>
+                <li className="nav-item active">
+                    <a className="nav-link text-dark"  href="#ende" data-toggle="tab">Endereço</a>
+                </li>
+              </ul>
+              <div className="tab-content">
+    
+              <div className=" tab-pane mt-4" id="info">
+                <label className="h4">RG: {" "} {rg} </label><p/>
+                <label className="h4">CPF: {" "} {cpf} </label> {" "}
+                <label className="h4">CNPJ: {" "} {cnpj} </label><p/>
+                <label className="h4">RG: {" "} {rg} </label>
+
+
+
+              </div>
+
+              <div className="tab-pane mt-5 active" id="ende" >
+              <label className="h4">Rua:  {" "} {rua}  </label>
+              <label className="h4 ml-3">
+              <span className="h4">Nº</span> {" "} {numero}  </label>
+              <p/>
+              <label className="h4">Bairro: {" "} {bairro}  </label>
+              <p/>
+              <label className="h4">Complemento: {" "} {complemento}  </label>
+              <p/>
+              <label className="h4">Cidade: {" "} {cidade}  </label>
+              <p/>
+              <label className="h4">Estado: {" "} {estado}  </label>
+
+             </div>
+    
+    </div>
+   
               </div>
             </div>
           </form>
