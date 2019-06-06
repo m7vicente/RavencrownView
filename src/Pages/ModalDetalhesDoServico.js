@@ -1,18 +1,19 @@
 import React, { Component, Fragment } from 'react';
 import $ from 'jquery';
+import '../css/ModalDetalhesDoServico.css';
+import contratoRequest from '../request/contratoRequest';
 
 class ModalDetalhesDoServico extends React.Component {
 
     state = {
         servico: null,
-        prestador: null
+        prestador: null,
     };
 
     constructor(servico) {
         super();
 
-        this.state.servico = servico
-
+        this.state.servico = servico.servico
     }
 
     obterPrestador(id) {
@@ -40,7 +41,7 @@ class ModalDetalhesDoServico extends React.Component {
             <Fragment>
                 {console.log(this.state.servico)}
                 <div>
-                    <div className="container w-50">
+                    <div className="container">
                         <div className="modal fade" id="myModal" role="dialog">
                             <div className="modal-dialog">
                                 <div className="modal-content">
@@ -49,49 +50,62 @@ class ModalDetalhesDoServico extends React.Component {
                                     </div>
                                     <div className="modal-body">
                                         <div className="row w-100 justify-content-center">
-                                            <div className="">
+                                            <div className="col-sm-1 ml-3">
                                                 <i className='fas fa-user-circle' style={{ fontSize: '72px' }}></i>
                                             </div>
 
-                                            <div className="col-sm-4 justify-content-left">
-                                                <p className="h3"></p>
-                                                <p className="h4">Reformas de casas</p>
+                                            <div className="col-sm-7 justify-content-left">
+                                                <label id="IdServico" className="h3 invisivel">{this.state.servico.idServico}</label>
+                                                <label id="IdUsuario" className="h3 invisivel">{this.state.servico.idUsuario}</label>
+                                                <p className="h4 mt-4">{this.state.servico.nomeServico}</p>
                                             </div>
                                         </div>
                                         <div className="row w-100 border-top border-bottom justify-content-center mt-5">
                                             <div className="">
                                                 <p className="h4 text-secondary">Descrição do serviço</p>
-                                                <div className="text-secondary">Lorem ipsum per enim senectus ut odio pretium consectetur conubia bibendum morbi venenatis dictum, blandit enim ipsum className litora posuere imperdiet primis rhoncus venenatis magna. himenaeos sapien praesent tortor facilisis ut, blandit massa lorem consectetur amet, vestibulum commodo aptent vivamus. est mauris nisi senectus himenaeos maecenas className vestibulum ultrices.
-						                        </div>
+                                                <div className="text-secondary">{this.state.servico.descricaoServico}</div>
                                             </div>
                                         </div>
                                         <div className="row w-100 justify-content-left mt-4">
                                             <div className="ml-5">
-                                                <label className="h4 text-secondary"> Local -  </label>
+                                                <label className="h4 text-secondary"> Local: </label>{" "}
                                                 <label className="h5 text-primary">Domicilio</label>
                                             </div>
                                             <div className="col mr-5" align="right">
-                                                <label className="h4 text-secondary"> Categoria </label>
-                                                <p className="h5 text-secondary"> Reformas </p>
+                                                <label className="h4 text-secondary"> Categoria: </label>{" "}
+                                                <label className="h5 text-primary"> Reformas </label>
                                             </div>
                                         </div>
                                         <div className="row w-100 justify-content-center mt-4">
                                             <div className="">
-                                                <label className="h4" align="right"> R$ <span className="h1">100,20</span> </label>
+                                                <label className="h4" align="right"> R$ <span id="valor" className="h1">{this.state.servico.precoServico}</span> </label>
                                             </div>
                                         </div>
-                                        <div className="row w-75 justify-content-center mt-3 border-top">
-                                            <div className="col-sm-7">
-                                                <label className="h5 text-secondary mt-3"> Comentários </label>
+                                        <div className="row w-100 justify-content-center mt-4 mb-2"><a 
+                                                style={{fontSize: '12pt', cursor: 'pointer'}}
+                                                className="link text-danger"  onClick={ function(event){
+                                                document.getElementById("datas").removeAttribute("class", "invisivel")
+                                                event.preventDefault();
+                                            }}>Escolher datas</a>
+                                            </div> 
+                                        <div id='datas' class="invisivel">
+                                        <div className="row w-100 border-top border-bottom justify-content-center mt-2">
+                                            
+                                            <div className="form-group mt-4">
+                                                <label>Início</label>
+                                                <input id="inicio" className="form-control text-secondary" placeholder="23/05/2019" />
                                             </div>
-                                        </div>
-                                        <div className="row justify-content-center mt-3 mb-3">
-                                            <div className="col-sm-7">
-                                                <textarea className="form-control" rows="5"></textarea>
+
+                                            <div className="form-group ml-5 mt-4">
+                                                <label>Fim</label>
+                                                <input id="fim" className="form-control text-secondary" placeholder="24/05/2019" />
                                             </div>
+                                          
+                                          </div>
+
                                         </div>
                                         <div className="modal-footer">
-                                            <button type="button" className="btn btn-primary w-50 mt-4">Contratar</button>
+                                            <button type="button" className="btn btn-primary w-50 mt-4" onClick={contratoRequest}>Contratar</button>
                                             <button type="button" className="btn btn-secondary w-50 mt-4" data-dismiss="modal">Fechar</button>
                                         </div>
                                     </div>

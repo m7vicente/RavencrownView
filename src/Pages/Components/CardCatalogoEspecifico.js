@@ -31,14 +31,14 @@ class CardCatalogoEspecifico extends React.Component {
             <h5 class="card-title">{this.state.servico.nomeServico}</h5>
             <p class="card-text">{this.state.servico.descricaoServico}</p>
             <a 
-              className="btn btn-primary"
+              className="btn btn-info"
               data-toggle="modal"
               data-target="#myModal" 
               to={{data: this.state.servico }}>
               
               Detalhes
               </a>
-          <ModalDetalhesDoServico></ModalDetalhesDoServico>
+          <ModalDetalhesDoServico servico={this.state.servico}></ModalDetalhesDoServico>
           </div>
         </div>
       </div>
