@@ -73,10 +73,6 @@ class Perfil extends React.Component {
                 <label className="h4">RG: {" "} {rg} </label><p/>
                 <label className="h4">CPF: {" "} {cpf} </label> {" "}
                 <label className="h4">CNPJ: {" "} {cnpj} </label><p/>
-                <label className="h4">RG: {" "} {rg} </label>
-
-
-
               </div>
 
               <div className="tab-pane mt-5 active" id="ende" >
