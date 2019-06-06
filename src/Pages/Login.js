@@ -18,8 +18,9 @@ class Login extends React.Component {
     
     render() {
         return (
-            <div className="row bg-info">
-                <div className="col bg-info mb-5 mt-5">
+            <div className="bg-info">
+                <div className="row h-100 p-5 bg-info">
+                <div className="col bg-info mb-2 mt-5">
                     <div className="row bg-info mt-5 mb-5 justify-content-center">
                         <div className="justify-content-left container containerLogin mt-5 mb-5 w-25 h-75 bg-white border border-secondary" style={{ borderRadius: '2%' }}>
                             <div className="row justify-content-center mt-3">
@@ -67,6 +68,8 @@ class Login extends React.Component {
                     </div>
                 </div>      
             </div>
+            </div>
+            
         );
     }
 }

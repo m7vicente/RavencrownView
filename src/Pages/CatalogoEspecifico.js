@@ -7,7 +7,7 @@ import {Link} from "react-dom";
 
 class CatalogoEspecifico extends React.Component {
   state = {
-    servicos: getAllServicesById(1)
+    servicos: getAllServicesById(this.props.location.data)
   };
 
   render() {
