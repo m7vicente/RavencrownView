@@ -2,10 +2,10 @@ import $ from 'jquery';
 
 function contratoRequest(){
 
-  const idServico = document.getElementById('IdServico').value;
-  const idUsuario = document.getElementById('IdUsuario').value;
+  const idServico = document.getElementById('servico1').value;
+  const idUsuario = document.getElementById('usuario1').value;
   const idConsumidor = JSON.parse(sessionStorage.getItem("login")).Id_Usuario;
-  const valorFinal = document.getElementById("valor").value; 
+  const valorFinal = document.getElementById("valorFinal").value;
   const data = document.getElementById('inicio').value.toString().split("/");
   var dataAgend1 = data[2] + "-" + data[1] + "-" + data[0];
 
@@ -22,7 +22,7 @@ function contratoRequest(){
   const cidade = JSON.parse(sessionStorage.getItem("login")).endereco.cidade;
   const estado = JSON.parse(sessionStorage.getItem("login")).endereco.estado;
 
-  const parameters = JSON.stringify({
+  let parameters = JSON.stringify({
     idContrato: null,
     idServico: idServico,
     endereco: {
@@ -30,7 +30,7 @@ function contratoRequest(){
         cep: cep,
         complemento: complemento,
         pais: 'Brasil',
-        id_Endereco: idEndereco,
+        id_Endereco: null,
         numero: numero,
         referencia: referencia,
         bairro: bairro,
@@ -54,16 +54,6 @@ function contratoRequest(){
             idContrato: null,
             idDataAgendamento: 0,
             idPrestador: 0
-        },
-        {
-            idDemanda: 0,
-            dtAgendamento: dataAgend2,
-            tipoReserva: 'T',
-            idServico: idServico,
-            idConsumidor: idConsumidor,
-            idContrato: null,
-            idDataAgendamento: 0,
-            idPrestador: 0
         }
     ]
     
@@ -81,8 +71,8 @@ $.ajax({
 
     .done(function (msg) {
       $(function () {
-          console.log(msg)
-    })
+          console.log(msg);
+    })})
 
     .fail(function (jqXHR, textStatus, msg) {
       console.log(jqXHR);
@@ -90,7 +80,7 @@ $.ajax({
       console.log(msg);
     });
 
-})
+
 
 
 }

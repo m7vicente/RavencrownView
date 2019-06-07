@@ -25,7 +25,7 @@ function Catalogo() {
               <i class="material-icons" style={{ fontSize: "115px" }}>
                 settings
               </i>
-              <p style={{ fontSize: "20px" }}>Configurações</p>
+              <p style={{ fontSize: "20px" }}>Técnico</p>
             </div>
           </Link>
         </div>

@@ -55,8 +55,9 @@ class ModalDetalhesDoServico extends React.Component {
                                             </div>
 
                                             <div className="col-sm-7 justify-content-left">
-                                                <label id="IdServico" className="h3 invisivel">{this.state.servico.idServico}</label>
-                                                <label id="IdUsuario" className="h3 invisivel">{this.state.servico.idUsuario}</label>
+                                                <input type="hidden" id="servico1" value={this.state.servico.idServico}/>
+                                                <input type="hidden" id="usuario1" value={this.state.servico.idUsuario}/>
+                                                <input type="hidden" id="valorFinal" value={this.state.servico.precoServico}/>
                                                 <p className="h4 mt-4">{this.state.servico.nomeServico}</p>
                                             </div>
                                         </div>
