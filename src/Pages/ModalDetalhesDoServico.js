@@ -36,6 +36,15 @@ class ModalDetalhesDoServico extends React.Component {
             });
         return retorno.responseJSON;
     }
+
+    habilitarBotao(){
+        document.getElementById("btnContratar").removeAttribute("disabled");
+    }
+
+  /*  dataValida(data){
+        alert(this.props.idServico);
+    }*/
+
     render() {
         return (
             <Fragment>
@@ -93,20 +102,22 @@ class ModalDetalhesDoServico extends React.Component {
                                         <div className="row w-100 border-top border-bottom justify-content-center mt-2">
                                             
                                             <div className="form-group mt-4">
-                                                <label>Início</label>
-                                                <input id="inicio" className="form-control text-secondary" placeholder="23/05/2019" />
+                                                <label>Data</label>
+                                                <input id="inicio" type="datetime-local" className="form-control text-secondary" placeholder="23/05/2019" onBlur={
+                                                    function(a){
+                                                        const data = document.getElementById("inicio").value;
+                                                        if(data){
+                                                            this.habilitarBotao();
+                                                        }else{
+                                                            alert("invalido");
+                                                        }
+                                                    }
+                                                }/>
                                             </div>
-
-                                            <div className="form-group ml-5 mt-4">
-                                                <label>Fim</label>
-                                                <input id="fim" className="form-control text-secondary" placeholder="24/05/2019" />
-                                            </div>
-                                          
                                           </div>
-
                                         </div>
                                         <div className="modal-footer">
-                                            <button type="button" className="btn btn-primary w-50 mt-4" onClick={contratoRequest}>Contratar</button>
+                                            <button type="button" className="btn btn-primary w-50 mt-4" disabled id="btnContratar" onClick={contratoRequest}>Contratar</button>
                                             <button type="button" className="btn btn-secondary w-50 mt-4" data-dismiss="modal">Fechar</button>
                                         </div>
                                     </div>
