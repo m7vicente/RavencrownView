@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import $ from 'jquery';
 import '../css/ModalDetalhesDoServico.css';
 import contratoRequest from '../request/contratoRequest';
+import ValidaDataEscolhida from '../request/DatasRequest';
 
 class ModalDetalhesDoServico extends React.Component {
 
@@ -12,7 +13,6 @@ class ModalDetalhesDoServico extends React.Component {
 
     constructor(servico) {
         super();
-
         this.state.servico = servico.servico
     }
 
@@ -41,9 +41,15 @@ class ModalDetalhesDoServico extends React.Component {
         document.getElementById("btnContratar").removeAttribute("disabled");
     }
 
-  /*  dataValida(data){
-        alert(this.props.idServico);
-    }*/
+    dataValida(data,idServico){
+        let respose = ValidaDataEscolhida(data,idServico);
+
+        if(respose){
+            this.habilitarBotao();
+        }else{
+            alert("Data Indisponivel");
+        }
+    }
 
     render() {
         return (
@@ -103,13 +109,13 @@ class ModalDetalhesDoServico extends React.Component {
                                             
                                             <div className="form-group mt-4">
                                                 <label>Data</label>
-                                                <input id="inicio" type="datetime-local" className="form-control text-secondary" placeholder="23/05/2019" onBlur={
+                                                <input id="inicio" type="text" className="form-control text-secondary" placeholder="23/05/2019" onBlur={
                                                     function(a){
                                                         const data = document.getElementById("inicio").value;
-                                                        if(data){
-                                                            this.habilitarBotao();
+                                                        if(data != null){
+                                                            this.dataValida(data);
                                                         }else{
-                                                            alert("invalido");
+                                                            alert("Data Invalida");
                                                         }
                                                     }
                                                 }/>
