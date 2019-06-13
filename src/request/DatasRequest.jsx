@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-function ValidaDataEscolhida(Data, IdServico) {
+function ValidaDataEscolhida(Data, IdServico, buttom) {
 
     var disponivel = false;
 
@@ -15,7 +15,6 @@ function ValidaDataEscolhida(Data, IdServico) {
         "tipoReserva": "T"
     });
 
-
     const response = (
         $.ajax({
             type: "post",
@@ -23,25 +22,37 @@ function ValidaDataEscolhida(Data, IdServico) {
             url: "https://ravencrownservice.azurewebsites.net/Datas/Validar",
             async: false,
             data: parameters
+        }).done(function (msg) {
+            $(function () {
+                if (msg == "Disponivel") {
+                    disponivel = true;
+                    buttom.removeAttribute("disabled");
+                }else{
+                    alert("Data Indisponivel");
+                    buttom.setAttribute("disabled", "disabled");
+                }
+            })
+        }).fail(function (jqXHR, textStatus, msg) {
+            console.log(jqXHR);
+            console.log(textStatus);
+            console.log(msg);
         })
-
-            .done(function (msg) {
-                $(function () {
-                    console.log(msg);
-                })
-            })
-
-            .fail(function (jqXHR, textStatus, msg) {
-                console.log(jqXHR);
-                console.log(textStatus);
-                console.log(msg);
-            })
     ).responseJSON;
 
-    if (response == "disponivel") {
-        disponivel = true;
-    }
+    console.log(parameters);
+    console.log(response);    
 
     return disponivel
 }
+
+function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+      if ((new Date().getTime() - start) > milliseconds){
+        break;
+      }
+    }  
+}
+
+
 export default ValidaDataEscolhida;
