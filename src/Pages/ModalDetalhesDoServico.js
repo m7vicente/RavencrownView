@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react';
 import $ from 'jquery';
 import '../css/ModalDetalhesDoServico.css';
 import contratoRequest from '../request/contratoRequest';
+import ValidaDataEscolhida from '../request/DatasRequest';
+import sleep from '../request/DatasRequest';
 
 class ModalDetalhesDoServico extends React.Component {
 
@@ -12,8 +14,8 @@ class ModalDetalhesDoServico extends React.Component {
 
     constructor(servico) {
         super();
-
-        this.state.servico = servico.servico
+        this.state.servico = servico.servico;
+        this.dataValida = this.dataValida.bind(this);
     }
 
     obterPrestador(id) {
@@ -36,6 +38,17 @@ class ModalDetalhesDoServico extends React.Component {
             });
         return retorno.responseJSON;
     }
+
+
+    dataValida() {
+        const data = document.getElementById("dtData").value;
+        alert(data);
+        const idServico = document.getElementById("servico1").value;
+        if (data != null) {
+            const respose = ValidaDataEscolhida(data, idServico, document.getElementById("btnContratar"));
+        }
+    }
+
     render() {
         return (
             <Fragment>
@@ -55,9 +68,9 @@ class ModalDetalhesDoServico extends React.Component {
                                             </div>
 
                                             <div className="col-sm-7 justify-content-left">
-                                                <input type="hidden" id="servico1" value={this.state.servico.idServico}/>
-                                                <input type="hidden" id="usuario1" value={this.state.servico.idUsuario}/>
-                                                <input type="hidden" id="valorFinal" value={this.state.servico.precoServico}/>
+                                                <input type="hidden" id="servico1" value={this.state.servico.idServico} />
+                                                <input type="hidden" id="usuario1" value={this.state.servico.idUsuario} />
+                                                <input type="hidden" id="valorFinal" value={this.state.servico.precoServico} />
                                                 <p className="h4 mt-4">{this.state.servico.nomeServico}</p>
                                             </div>
                                         </div>
@@ -82,31 +95,24 @@ class ModalDetalhesDoServico extends React.Component {
                                                 <label className="h4" align="right"> R$ <span id="valor" className="h1">{this.state.servico.precoServico}</span> </label>
                                             </div>
                                         </div>
-                                        <div className="row w-100 justify-content-center mt-4 mb-2"><a 
-                                                style={{fontSize: '12pt', cursor: 'pointer'}}
-                                                className="link text-danger"  onClick={ function(event){
+                                        <div className="row w-100 justify-content-center mt-4 mb-2"><a
+                                            style={{ fontSize: '12pt', cursor: 'pointer' }}
+                                            className="link text-danger" onClick={function (event) {
                                                 document.getElementById("datas").removeAttribute("class", "invisivel")
                                                 event.preventDefault();
                                             }}>Escolher datas</a>
-                                            </div> 
+                                        </div>
                                         <div id='datas' class="invisivel">
-                                        <div className="row w-100 border-top border-bottom justify-content-center mt-2">
-                                            
-                                            <div className="form-group mt-4">
-                                                <label>Início</label>
-                                                <input id="inicio" className="form-control text-secondary" placeholder="23/05/2019" />
-                                            </div>
+                                            <div className="row w-100 border-top border-bottom justify-content-center mt-2">
 
-                                            <div className="form-group ml-5 mt-4">
-                                                <label>Fim</label>
-                                                <input id="fim" className="form-control text-secondary" placeholder="24/05/2019" />
+                                                <div className="form-group mt-4">
+                                                    <label>Data</label>
+                                                    <input id="dtData" type="datetime-local" className="form-control text-secondary" placeholder="23/05/2019" onBlur={this.dataValida} />
+                                                </div>
                                             </div>
-                                          
-                                          </div>
-
                                         </div>
                                         <div className="modal-footer">
-                                            <button type="button" className="btn btn-primary w-50 mt-4" onClick={contratoRequest}>Contratar</button>
+                                            <button type="button" className="btn btn-primary w-50 mt-4" disabled id="btnContratar" onClick={contratoRequest}>Contratar</button>
                                             <button type="button" className="btn btn-secondary w-50 mt-4" data-dismiss="modal">Fechar</button>
                                         </div>
                                     </div>
