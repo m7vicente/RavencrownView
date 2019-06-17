@@ -17,6 +17,7 @@ function ValidaDataEscolhida(Data, IdServico, buttom) {
   const response = $.ajax({
     type: "post",
     contentType: "application/json;charset=UTF-8",
+    //url: "https://ravencrownservice.azurewebsites.net/Datas/Validar",
     url: "https://ravencrownservice.azurewebsites.net/Datas/Validar",
     async: true,
     data: parameters

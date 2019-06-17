@@ -18,8 +18,7 @@ function perfilRequest() {
     imagem: null,
     cpfCnpj: cpf,
     telefone: telefone,
-    sexo: "M",
-  
+    sexo: "M"
   });
 
   $.ajax({
