@@ -124,7 +124,7 @@ function Cadastro() {
 
                 <div className="row justify-content-center">
                     <div className="col-sm-8">
-                        <label className="text-secondary">Rua</label>
+                        <label className="text-secondary">Referência</label>
                         <input id="referencia" className="form-control" />
                     </div>
                 </div>

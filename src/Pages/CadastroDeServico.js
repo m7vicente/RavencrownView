@@ -62,10 +62,10 @@ function CadastroDeServico() {
                 </div>
 
                 <div className="form-group">
-                  <label>Tempo médio de resposta</label>
+                  <label>Tempo de execução</label>
                   <input
                     id="tempoDeServico"
-                    type="time"
+                    type="datetime-local"
                     className="form-control"
                   />
                 </div>
@@ -155,14 +155,14 @@ function CadastroDeServico() {
                 <label>Selecione a categoria</label>
                 <select id="categoria" className="form-control">
                   <option selected>Selecione</option>
-                  <option value="29">Técnico</option>
-                  <option value="30">Aulas</option>
-                  <option value="31">Auto</option>
-                  <option value="32">Code</option>
-                  <option value="33">Reformas</option>
-                  <option value="34">Culinária</option>
-                  <option value="35">Domésticos</option>
-                  <option value="36">Vestuário</option>
+                  <option value="13">Técnico</option>
+                  <option value="14">Aulas</option>
+                  <option value="15">Auto</option>
+                  <option value="16">Code</option>
+                  <option value="17">Reformas</option>
+                  <option value="18">Culinária</option>
+                  <option value="19">Domésticos</option>
+                  <option value="20">Vestuário</option>
                 </select>
               </div>
               <div className="col-sm-2">

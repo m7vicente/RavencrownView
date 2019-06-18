@@ -1,4 +1,5 @@
 import $ from "jquery";
+import service from "../Pages/Components/ConnectionString";
 
 function cadastroDeServicoRequest() {
   var rua;
@@ -43,6 +44,8 @@ function cadastroDeServicoRequest() {
   const precoServico = parseFloat(a);
   const idUsuario = JSON.parse(sessionStorage.getItem("login")).Id_Usuario;
   const idCategoria = $("#categoria option:selected").val();
+  const tempo = document.getElementById("tempoDeServico").value;
+  console.log(tempo);
 
   const parameters = JSON.stringify({
     idServico: null,
@@ -63,7 +66,7 @@ function cadastroDeServicoRequest() {
     Imagens: null,
     nomeServico: nomeServico,
     descricaoServico: descricaoServico,
-    tempoExecucao: "2019-06-04T23:18:24",
+    tempoExecucao: tempo,
     precoServico: precoServico,
     localizacaoFixa: "true"
   });
@@ -73,7 +76,7 @@ function cadastroDeServicoRequest() {
   $.ajax({
     type: "post",
     contentType: "application/json;charset=UTF-8",
-    url: "https://ravencrownservice.azurewebsites.net/Servico",
+    url: service() + "/Servico",
     async: false,
     data: parameters
   })

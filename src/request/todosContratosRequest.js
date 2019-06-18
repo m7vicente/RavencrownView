@@ -1,4 +1,5 @@
 import $ from "jquery";
+import service from "../Pages/Components/ConnectionString";
 
 function getAllContractById(id) {
   const retorno = $.ajax({
@@ -6,7 +7,7 @@ function getAllContractById(id) {
     contentType: "application/json;charset=UTF-8",
     async: false,
     url:
-      "https://ravencrownservice.azurewebsites.net/Usuario/Contratos?id=" + id
+      service() + "/Usuario/Contratos?id=" + id
   })
     .done(function(msg) {
       console.log(msg);

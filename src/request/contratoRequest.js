@@ -1,4 +1,5 @@
 import $ from "jquery";
+import service from "../Pages/Components/ConnectionString";
 
 function contratoRequest() {
   const idServico = document.getElementById("servico1").value;
@@ -71,7 +72,7 @@ function contratoRequest() {
   $.ajax({
     type: "post",
     contentType: "application/json;charset=UTF-8",
-    url: "https://ravencrownservice.azurewebsites.net/Servico/Agendar",
+    url: service() + "/Servico/Agendar",
     async: false,
     data: parameters
   })

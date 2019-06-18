@@ -1,4 +1,5 @@
 import $ from "jquery";
+import service from "../Pages/Components/ConnectionString";
 
 function ValidaDataEscolhida(Data, IdServico, buttom) {
   var disponivel = false;
@@ -18,7 +19,7 @@ function ValidaDataEscolhida(Data, IdServico, buttom) {
     type: "post",
     contentType: "application/json;charset=UTF-8",
     //url: "https://ravencrownservice.azurewebsites.net/Datas/Validar",
-    url: "https://ravencrownservice.azurewebsites.net/Datas/Validar",
+    url: service() + "/Datas/Validar",
     async: true,
     data: parameters
   })
