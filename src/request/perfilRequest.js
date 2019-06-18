@@ -1,4 +1,5 @@
 import $ from "jquery";
+import service from "../Pages/Components/ConnectionString";
 
 function perfilRequest() {
   const nome = document.getElementById("name").value.toString();
@@ -18,14 +19,13 @@ function perfilRequest() {
     imagem: null,
     cpfCnpj: cpf,
     telefone: telefone,
-    sexo: "M",
-  
+    sexo: "M"
   });
 
   $.ajax({
     type: "put",
     contentType: "application/json;charset=UTF-8",
-    url: "https://ravencrownservice.azurewebsites.net/cadastro",
+    url: service() + "/cadastro",
     data: parameters
   })
     .done(function(msg) {

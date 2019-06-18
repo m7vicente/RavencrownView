@@ -1,10 +1,14 @@
 import $ from "jquery";
+import service from "../Pages/Components/ConnectionString";
 
 function cadastroUsuarioRequest() {
   const nome = document.getElementById("name").value.toString();
   const rg = document.getElementById("rg").value.toString();
   const cpf = document.getElementById("cpf").value.toString();
-  const data = document.getElementById("data").value.toString().split("/");
+  const data = document
+    .getElementById("data")
+    .value.toString()
+    .split("/");
   const dataNasc = data[2] + "-" + data[1] + "-" + data[0];
   const estadoCivil = document.getElementById("estadoCivil").value.toString();
   const sexo = $("#sexo :selected").val();
@@ -52,7 +56,7 @@ function cadastroUsuarioRequest() {
   $.ajax({
     type: "post",
     contentType: "application/json;charset=UTF-8",
-    url: "https://ravencrownservice.azurewebsites.net/cadastro",
+    url: service() + "/Cadastro",
     data: parameters
   })
     .done(function(msg) {

@@ -38,7 +38,7 @@ function Cadastro() {
                     <div className="col-sm-4">
                         <div className="form-group">
                             <label className="text-secondary">Data de nascimento</label>
-                            <input id="data" className="form-control text-secondary" placeholder="23/03/1998" />
+                            <input id="data" type="date" className="form-control text-secondary" placeholder="23/03/1998" />
                         </div>
                     </div>
                     <div className="form-group col-md-4">
@@ -124,7 +124,7 @@ function Cadastro() {
 
                 <div className="row justify-content-center">
                     <div className="col-sm-8">
-                        <label className="text-secondary">Rua</label>
+                        <label className="text-secondary">Referência</label>
                         <input id="referencia" className="form-control" />
                     </div>
                 </div>
