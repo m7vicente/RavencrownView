@@ -1,5 +1,5 @@
 import $ from "jquery";
-import service from "../Pages/Components/ConnectionString";
+import service from "./ConnectionString";
 
 function contratoRequest() {
   const idServico = document.getElementById("servico1").value;
@@ -77,13 +77,13 @@ function contratoRequest() {
     data: parameters
   })
 
-    .done(function(msg) {
-      $(function() {
+    .done(function (msg) {
+      $(function () {
         console.log(msg);
       });
     })
 
-    .fail(function(jqXHR, textStatus, msg) {
+    .fail(function (jqXHR, textStatus, msg) {
       console.log(jqXHR);
       console.log(textStatus);
       console.log(msg);

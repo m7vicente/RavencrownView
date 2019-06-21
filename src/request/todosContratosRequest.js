@@ -1,5 +1,5 @@
 import $ from "jquery";
-import service from "../Pages/Components/ConnectionString";
+import service from "./ConnectionString";
 
 function getAllContractById(id) {
   const retorno = $.ajax({
@@ -9,12 +9,12 @@ function getAllContractById(id) {
     url:
       service() + "/Usuario/Contratos?id=" + id
   })
-    .done(function(msg) {
+    .done(function (msg) {
       console.log(msg);
       return JSON.stringify(msg);
     })
 
-    .fail(function(jqXHR, textStatus, msg) {
+    .fail(function (jqXHR, textStatus, msg) {
       console.log(jqXHR);
       console.log(textStatus);
       console.log(msg);

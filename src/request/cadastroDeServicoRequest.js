@@ -1,5 +1,5 @@
 import $ from "jquery";
-import service from "../Pages/Components/ConnectionString";
+import service from "./ConnectionString";
 
 function cadastroDeServicoRequest() {
   var rua;
@@ -81,18 +81,18 @@ function cadastroDeServicoRequest() {
     data: parameters
   })
 
-    .done(function(msg) {
+    .done(function (msg) {
       if (document.getElementById("iptRecomendacao").files[0] != null) {
         inserirCSV();
       }
 
-      $(function() {
+      $(function () {
         $("#mdl").trigger("click");
       });
       //document.getElementById("mdl").click();
     })
 
-    .fail(function(jqXHR, textStatus, msg) {
+    .fail(function (jqXHR, textStatus, msg) {
       console.log(jqXHR);
       console.log(textStatus);
       console.log(msg);
@@ -117,11 +117,11 @@ function inserirCSV() {
     data: form
   })
 
-    .done(function(msg) {
+    .done(function (msg) {
       console.log(msg);
     })
 
-    .fail(function(jqXHR, textStatus, msg) {
+    .fail(function (jqXHR, textStatus, msg) {
       console.log(jqXHR);
       console.log(textStatus);
       console.log(msg);

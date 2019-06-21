@@ -1,5 +1,5 @@
 import $ from "jquery";
-import service from "../Pages/Components/ConnectionString";
+import service from "./ConnectionString";
 
 function ValidaDataEscolhida(Data, IdServico, buttom) {
   var disponivel = false;
@@ -23,8 +23,8 @@ function ValidaDataEscolhida(Data, IdServico, buttom) {
     async: true,
     data: parameters
   })
-    .done(function(msg) {
-      $(function() {
+    .done(function (msg) {
+      $(function () {
         if (msg == "Disponivel") {
           disponivel = true;
           buttom.removeAttribute("disabled");
@@ -34,7 +34,7 @@ function ValidaDataEscolhida(Data, IdServico, buttom) {
         }
       });
     })
-    .fail(function(jqXHR, textStatus, msg) {
+    .fail(function (jqXHR, textStatus, msg) {
       console.log(jqXHR);
       console.log(textStatus);
       console.log(msg);

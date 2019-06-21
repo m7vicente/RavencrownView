@@ -1,5 +1,5 @@
 import $ from "jquery";
-import service from "../Pages/Components/ConnectionString";
+import service from "./ConnectionString";
 
 function getAllServicesById(id) {
   const retorno = $.ajax({
@@ -8,13 +8,13 @@ function getAllServicesById(id) {
     async: false,
     url:
       service() + "/Servicos/Categoria?categoria=" +
-      id
+      id + "prestador=" + sessionStorage.getItem("login").Id_Usuario
   })
-    .done(function(msg) {
+    .done(function (msg) {
       return JSON.stringify(msg);
     })
 
-    .fail(function(jqXHR, textStatus, msg) {
+    .fail(function (jqXHR, textStatus, msg) {
       console.log(jqXHR);
       console.log(textStatus);
       console.log(msg);

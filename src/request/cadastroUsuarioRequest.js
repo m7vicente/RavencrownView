@@ -1,5 +1,5 @@
 import $ from "jquery";
-import service from "../Pages/Components/ConnectionString";
+import service from "./ConnectionString";
 
 function cadastroUsuarioRequest() {
   const nome = document.getElementById("name").value.toString();
@@ -59,10 +59,10 @@ function cadastroUsuarioRequest() {
     url: service() + "/Cadastro",
     data: parameters
   })
-    .done(function(msg) {
+    .done(function (msg) {
       console.log(msg);
     })
-    .fail(function(jqXHR, textStatus, msg) {
+    .fail(function (jqXHR, textStatus, msg) {
       console.log(jqXHR);
       console.log(textStatus);
       console.log(msg);

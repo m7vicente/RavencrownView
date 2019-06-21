@@ -1,5 +1,5 @@
 import $ from "jquery";
-import service from "../Pages/Components/ConnectionString";
+import service from "./ConnectionString";
 
 function request() {
   const email = document.getElementById("txtEmail").value.toString();
@@ -9,26 +9,24 @@ function request() {
 
   let sucess = false;
 
+  const url = service() + "/login";
+
   const result = $.ajax({
     type: "post",
     contentType: "application/json;charset=UTF-8",
-    url: "https://ravencrownapp.azurewebsites.net/login",
+    url: url,
     data: parameters,
     async: false
-  }
-  ).done(function (msg) {
-    console.log(msg);
-   }
-  
-  ).fail(function (jqXHR, textStatus, msg) {
-      console.log(jqXHR);
-      console.log(textStatus);
-      console.log(msg);
   });
 
-  if(result.responseJSON.Id_Usuario > 0) {
-    sessionStorage.setItem("login", JSON.stringify(result.responseJSON));
-    sucess = true;
+  if (result.status == 200) {
+    if (result.responseJSON.Id_Usuario > 0) {
+      sessionStorage.setItem("login", JSON.stringify(result.responseJSON));
+      sucess = true;
+    }
+  } else {
+    sessionStorage.setItem("postback", "true");
+    alert("Login ou Senha Invalidos");
   }
 
   return sucess;

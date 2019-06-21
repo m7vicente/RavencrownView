@@ -5,14 +5,10 @@ import "../css/Login.css";
 import { Redirect } from "react-router-dom";
 import image from "../images/logo.jpg"
 class Login extends React.Component {
+    
     componentDidMount() {
         if (JSON.parse(sessionStorage.getItem("login")) != null) {
             this.props.history.push("/");
-        }
-    }
-    doLogin() {
-        if (!request()) {
-            alert("Usuario ou senha invalidos");
         }
     }
 
@@ -70,7 +66,6 @@ class Login extends React.Component {
                                     <button
                                         id="botao"
                                         type="button"
-                                        onClick={this.doLogin}
                                         onClick={request}
                                         className="btn btnlogin sub mt-3" style=
                                         {{ fontSize: '18pt', width: "250%", marginLeft: "-70%", color: '#776d6d', boxShadow:" 5px 10px rgb(198, 196, 196, 0.3)"}}>
