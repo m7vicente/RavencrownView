@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import $ from 'jquery';
 import '../css/ModalDetalhesDoServico.css';
 import contratoRequest from '../request/contratoRequest';
-import ValidaDataEscolhida from '../request/datasRequest';
+import ValidaDataEscolhida from '../request/DatasRequest';
 
 class ModalDetalhesDoServico extends React.Component {
 

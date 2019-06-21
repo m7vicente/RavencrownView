@@ -22,31 +22,24 @@ class CardCatalogoEspecifico extends React.Component {
     }
   }
 
-
-
   render() {
     return (
       <div className="col-sm-3 ml-5 mr-5 mt-4 ">
         <div class="card" >
-          <a
-            data-toggle="modal"
-            data-target="#myModal"
-            to={{ data: this.state.servico }}>
-
-            <div class="card-body">
-              <h3 class="card-title"><b>{this.state.servico.nomeServico}</b></h3>
-              <p class="card-text"
-                style={{
-                  'overflow': 'hidden',
-                  'text-overflow': 'ellipsis',
-                  'height': '124px'
-                }}>
-                {this.state.servico.descricaoServico}
-              </p>
-            </div>
-          </a>
+          {/* <img class="card-img-top" src={this.state.imagemBIN} alt="Card image cap"/> */}
+          <div class="card-body">
+            <h5 class="card-title">{this.state.servico.nomeServico}</h5>
+            <p class="card-text">{this.state.servico.descricaoServico}</p>
+            <a 
+              className="btn btn-info"
+              data-toggle="modal"
+              data-target="#myModal" 
+              to={{data: this.state.servico }}>
+              
+              Detalhes
+              </a>
           <ModalDetalhesDoServico servico={this.state.servico}></ModalDetalhesDoServico>
-
+          </div>
         </div>
       </div>
     );

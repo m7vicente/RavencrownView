@@ -4,7 +4,7 @@ import Navbar from "./Components/Navbar";
 import "../css/CadastroDeServico.css";
 import cadastrodeServicoRequest from "../request/cadastroDeServicoRequest";
 import mudaFoto from "../funcoes/mudaFoto";
-import Modalsucesso from "./ModalSucessoCadastro";
+import Modalsucesso from "./modalSucessoCadastro";
 
 function CadastroDeServico() {
   return (

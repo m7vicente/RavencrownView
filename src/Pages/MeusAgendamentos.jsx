@@ -19,7 +19,13 @@ class MeusAgendamentos extends React.Component {
     
     if (session !== null) {
       const nome = JSON.parse(sessionStorage.getItem("login")).nome;
-      document.getElementById("nome").innerText = nome;
+      if(this.state.contracts > 0){
+      document.getElementById("frase").innerText = nome +  ', aqui estão seus serviços agendados:' ;
+      }
+      else {
+        document.getElementById("frase").innerText = nome +  ', você ainda não tem serviços agendados :(' ; 
+        document.getElementById("frase").setAttribute("class", 'fraseSad')
+      }
     }
 
   }
@@ -29,7 +35,7 @@ class MeusAgendamentos extends React.Component {
       <Fragment>
         <Navbar />
         <h4 className="row sub ml-4 mt-2 justify-content-center" align="center">
-         <span id='nome'></span>, aqui estão seus serviços agendados:
+        <div id="frase"> </div>
         </h4>
         <div className="row ml-1 mr-1 mt-4">
           {Object.keys(this.state.contracts).map((e, i) => {
