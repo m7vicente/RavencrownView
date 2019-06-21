@@ -14,8 +14,8 @@ function CadastroDeServico() {
         <Navbar />
         <div className="row w-100 justify-content-right">
           <form className="col justify-content-center">
-            <div className="row justify-content-center mt-2">
-              <h3>Cadastre seu serviço :)</h3>
+            <div className="row justify-content-center">
+              <h3 class="sub">Cadastre seu serviço :)</h3>
             </div>
             <button
               type="button"
@@ -29,7 +29,7 @@ function CadastroDeServico() {
             <div className="row justify-content-center mt-1">
               <div className="col-sm-5" style={{ marginLeft: "-19%" }}>
                 <div className="form-group">
-                  <label>Nome do serviço</label>
+                  <label class="sub">Nome do serviço</label>
                   <input
                     id="nomeServico"
                     type="text"
@@ -42,7 +42,7 @@ function CadastroDeServico() {
             <div className="row justify-content-center mt-3">
               <div className="col-sm-5">
                 <div className="form-group">
-                  <label>Descrição do serviço</label>
+                  <label class="sub">Descrição do serviço</label>
                   <textarea
                     id="descricaoServico"
                     className="form-control"
@@ -52,7 +52,7 @@ function CadastroDeServico() {
               </div>
               <div className="col-sm-2 ml-5">
                 <div className="form-group">
-                  <label>Preço do serviço</label>
+                  <label class="sub">Preço do serviço</label>
                   <input
                     id="precoServico"
                     type="text"
@@ -62,7 +62,7 @@ function CadastroDeServico() {
                 </div>
 
                 <div className="form-group">
-                  <label>Tempo de execução</label>
+                  <label class="sub">Tempo de execução</label>
                   <input
                     id="tempoDeServico"
                     type="datetime-local"
@@ -74,18 +74,18 @@ function CadastroDeServico() {
 
             <div className="row justify-content-center mt-4">
               <div className="col-sm-2">
-                <label>Disponível fim de semana?</label>
+                <label class="sub">Disponível fim de semana?</label>
                 <div id="disponivelFds" className="row form-check mt-0">
                   <input className="col form-check-input" type="radio" />
                   <label
-                    className="col form-check-label ml-4"
+                    className="sub col form-check-label ml-4"
                     for="exampleRadios1"
                   >
                     Sim
                   </label>
                   <input className="col form-check-input" type="radio" />
                   <label
-                    className="col form-check-label ml-4"
+                    className="sub col form-check-label ml-4"
                     for="exampleRadios1"
                   >
                     Não
@@ -94,7 +94,7 @@ function CadastroDeServico() {
                 <div className="form-check" />
               </div>
               <div className="col-sm-3">
-                <label>Local de atendimento</label>
+                <label class="sub">Local de atendimento</label>
 
                 <div id="localAtendimento" className="form-check">
                   <input
@@ -102,7 +102,7 @@ function CadastroDeServico() {
                     type="radio"
                     id="casa"
                   />
-                  <label className="form-check-label ml-4" for="exampleRadios1">
+                  <label className="sub form-check-label ml-4" for="exampleRadios1">
                     Atendimento à domicilio
                   </label>
                 </div>
@@ -113,7 +113,7 @@ function CadastroDeServico() {
                     data-toggle="modal"
                     data-target="#myModal"
                   />
-                  <label className="form-check-label ml-4" for="exampleRadios1">
+                  <label className="sub form-check-label ml-4" for="exampleRadios1">
                     Atendimento no meu endereço
                     <Modal />
                   </label>
@@ -121,7 +121,7 @@ function CadastroDeServico() {
               </div>
               <div className="col-sm-2">
                 <div class="arq-img">
-                  <div class="file btn btn-lg btn-info">
+                  <div class="file sub btn btn-lg btn-info">
                     Add recomendações
                     <input
                       type="file"
@@ -141,7 +141,7 @@ function CadastroDeServico() {
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog"
                     alt=""
                   />
-                  <div class="file btn btn-lg btn-primary">
+                  <div class="file sub btn btn-lg btn-primary">
                     Adicionar foto
                     <input type="file" name="file" onClick={mudaFoto} />
                   </div>
@@ -152,7 +152,7 @@ function CadastroDeServico() {
                 className="form-group col-md-2"
                 style={{ marginLeft: "-10%", marginRight: "1%" }}
               >
-                <label>Selecione a categoria</label>
+                <label class="sub">Selecione a categoria</label>
                 <select id="categoria" className="form-control">
                   <option selected>Selecione</option>
                   <option value="13">Técnico</option>
@@ -170,7 +170,7 @@ function CadastroDeServico() {
                   id="cadastrarServico"
                   type="button"
                   onClick={cadastrodeServicoRequest}
-                  className="btn btn-primary ml-4 h-25 w-100"
+                  className="sub btn btn-primary ml-4 h-25 w-100"
                   style={{ marginTop: "10%", fontSize: "16pt" }}
                 >
                   Cadastrar Serviço

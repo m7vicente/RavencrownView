@@ -62,8 +62,11 @@ class Navbar extends React.Component {
 
     return (
       <Fragment>
-        <div class="navbar navbar-dark navbar-expand text-white">
-          <ul class="navbar-nav navbar-collapse justify-content-left">
+        <div class="navbar navbar-expand">
+        <img src="/rv.png" style={{height: "100px", width: "210px", marginTop: 
+          '-1.5%', marginBottom: "-2%"}}></img>
+          <ul class="navbar-nav navbar-collapse justify-content-center">
+            
             <li class="nav-item active">
               <Link to="/Catalogo" class="nav-link">
                 Home |
@@ -102,14 +105,14 @@ class Navbar extends React.Component {
             </li>
             <li>
               
-          <i class="fa fa-moon-o ml-4" style={{fontSize: '16pt'}} 
+          <i class="fa fa-moon-o lua ml-4" style={{fontSize: '18pt'}} 
           onClick={NightMode}
           ></i>
             </li>
           </ul>
 
           <div class="dropdown mr-4" style={estilo}>
-             <button class="btn dropdown-toggle text-white" style={{backgroundColor: 'transparent', fontSize: '14pt'}}
+             <button class="btn dropdown-toggle nav-link sub1" style={{backgroundColor: 'transparent', fontSize: '14pt'}}
               type="button" id="dropdownMenuButton" 
               data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false"

@@ -1,5 +1,7 @@
 #loginContainer{
     width: 30%;
+    padding: 1% 0 2% 0;
+    box-shadow: 5px 10px rgb(198, 196, 196, 0.3)
 }
 
 input{
@@ -12,4 +14,16 @@ input:focus{
     outline: none;
     border-bottom: 1px solid rgb(30,144,255);
     transition: 0.9s;
+}
+
+.sub {
+    font-family: 'Roboto', sans-serif;
+}
+
+.btnlogin {
+    background-color: rgb(255,204,0);    
+}
+
+#botao:hover{
+    background-color:rgb(71, 206, 224);
 }

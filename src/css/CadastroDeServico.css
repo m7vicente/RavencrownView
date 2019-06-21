@@ -1,3 +1,7 @@
+.sub{
+    font-family: 'Roboto', sans-serif;
+}
+
 .file {
     position: relative;
     overflow: hidden;

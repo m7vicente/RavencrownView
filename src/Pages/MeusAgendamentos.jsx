@@ -28,7 +28,7 @@ class MeusAgendamentos extends React.Component {
     return (
       <Fragment>
         <Navbar />
-        <h4 className="row ml-4 mt-2 justify-content-center" align="center">
+        <h4 className="row sub ml-4 mt-2 justify-content-center" align="center">
          <span id='nome'></span>, aqui estão seus serviços agendados:
         </h4>
         <div className="row ml-1 mr-1 mt-4">

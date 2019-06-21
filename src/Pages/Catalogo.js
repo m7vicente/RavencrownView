@@ -8,11 +8,11 @@ function Catalogo() {
     <Fragment>
       <Navbar />
       <div class="row" align="center">
-        <div class="col">
-          <div class="titulo_catalogo text-dark">
+        <div class="col mt-4">
+          <div class="titulo_catalogo sub text-dark">
             <h3>
               Explore a variedade de serviços com a facilidade de divisão por
-              categorias 
+              categorias =D
             </h3>
           </div>
         </div>
@@ -21,41 +21,41 @@ function Catalogo() {
       <div class="row ml-0 w-100 h-100 mt-5 justify-content-center">
         <div class="col-sm-2 mt-3">
           <Link to={{ pathname: "/CatalogoEspecifico", data: 1 }}>
-            <div class="item" align="center" id="configuracoes">
+            <div class="item" align="center" id="configuracoes" style={{backgroundImage: 'url(/tecnico.jpeg)'}}>
               <i class="material-icons" style={{ fontSize: "115px" }}>
                 settings
               </i>
-              <p style={{ fontSize: "20px" }}>Técnico</p>
+              <p class="sub" style={{ fontSize: "20pt"}}>Técnico</p>
             </div>
           </Link>
         </div>
         <div class="col-sm-2 mt-3">
           <Link to={{ pathname: "/CatalogoEspecifico", data: 30 }}>
-            <div class="item" align="center" id="aulas">
+            <div class="item" align="center" id="aulas" style={{backgroundImage: 'url(/aulas.jpg)'}}>
               <i class="material-icons" style={{ fontSize: "115px" }}>
                 grade
               </i>
-              <p style={{ fontSize: "20px" }}>Aulas</p>
+              <p class="sub" style={{ fontSize: "20pt" }}>Aulas</p>
             </div>
           </Link>
         </div>
         <div class="col-sm-2 mt-3">
           <Link to={{ pathname: "/CatalogoEspecifico", data: 31 }}>
-            <div class="item" align="center" id="auto">
+            <div class="item" align="center" id="auto"  style={{backgroundImage: 'url(/auto.jpg)'}}>
               <i class="material-icons" style={{ fontSize: "115px" }}>
                 directions_car
               </i>
-              <p style={{ fontSize: "20px" }}>Auto</p>
+              <p class="sub" style={{ fontSize: "20pt" }}>Auto</p>
             </div>
           </Link>
         </div>
         <div class="col-sm-2 mt-3">
           <Link to={{ pathname: "/CatalogoEspecifico", data: 32 }}>
-            <div class="item" align="center" id="code">
+            <div class="item" align="center" id="code"  style={{backgroundImage: 'url(/code.jpeg)'}}>
               <i class="material-icons" style={{ fontSize: "115px" }}>
                 code
               </i>
-              <p style={{ fontSize: "20px" }}>Code</p>
+              <p class="sub" style={{ fontSize: "20pt" }}>Code</p>
             </div>
           </Link>
         </div>
@@ -63,41 +63,41 @@ function Catalogo() {
       <div class="row mt-5 ml-0 w-100 justify-content-center">
         <div class="col-sm-2 mt-3">
           <Link to={{ pathname: "/CatalogoEspecifico", data: 33 }}>
-            <div class="item" align="center" id="reformas">
+            <div class="item" align="center" id="reformas" style={{backgroundImage: 'url(/reforma.jpeg)'}}>
               <i class="material-icons" style={{ fontSize: "120px" }}>
                 build
               </i>
-              <p style={{ fontSize: "20px" }}>Reformas</p>
+              <p class="sub" style={{ fontSize: "20pt" }}>Reformas</p>
             </div>
           </Link>
         </div>
         <div class="col-sm-2 mt-3">
           <Link to={{ pathname: "/CatalogoEspecifico", data: 34 }}>
-            <div class="item" align="center" id="culinaria">
+            <div class="item" align="center" id="culinaria"  style={{backgroundImage: 'url(/culinaria.jpg)'}}>
               <i class="material-icons" style={{ fontSize: "120px" }}>
                 cake
               </i>
-              <p style={{ fontSize: "20px" }}>Culinária</p>
+              <p class="sub" style={{ fontSize: "20pt" }}>Culinária</p>
             </div>
           </Link>
         </div>
         <div class="col-sm-2 mt-3">
           <Link to={{ pathname: "/CatalogoEspecifico", data: 35 }}>
-            <div class="item" align="center" id="domesticos">
+            <div class="item" align="center" id="domesticos" style={{backgroundImage: 'url(/domesticos.jpeg)'}}>
               <i class="material-icons" style={{ fontSize: "120px" }}>
                 home
               </i>
-              <p style={{ fontSize: "20px" }}>Domésticos</p>
+              <p class="sub" style={{ fontSize: "20pt" }}>Domésticos</p>
             </div>
           </Link>
         </div>
         <div class="col-sm-2 mt-3">
           <Link to={{ pathname: "/CatalogoEspecifico", data: 36 }}>
-            <div class="item" align="center" id="vestuario">
+            <div class="item" align="center" id="vestuario" style={{backgroundImage: 'url(/vestuario.jpg)'}}>
               <i class="material-icons" style={{ fontSize: "120px" }}>
                 store
               </i>
-              <p style={{ fontSize: "20px" }}>Vestuário</p>
+              <p class="sub" style={{ fontSize: "20pt" }}>Vestuário</p>
             </div>
           </Link>
         </div>

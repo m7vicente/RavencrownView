@@ -1,5 +1,14 @@
 .nav-item {
-    font-size: 14pt;
+    font-size: 16pt;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.nav-link {
+    color: black;
+}
+
+.sub1 {
+    font-family: 'Work Sans', sans-serif;
 }
 
 .navbar {
@@ -36,4 +45,16 @@
 
 .dark {
     color: rgb(196, 196, 196);  
+}
+
+.lua{
+    color: rgb(255,204,0)
+}
+
+.dark .lua{
+    color: black;
+}
+
+.dark .modal-header .modal-body .modal-footer .emp-profile {
+    background-color:rgb(51, 51, 51);
 }
