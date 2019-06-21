@@ -24,9 +24,6 @@ function request() {
       sessionStorage.setItem("login", JSON.stringify(result.responseJSON));
       sucess = true;
     }
-  } else {
-    sessionStorage.setItem("postback", "true");
-    alert("Login ou Senha Invalidos");
   }
 
   return sucess;
