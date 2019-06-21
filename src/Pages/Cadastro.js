@@ -54,17 +54,9 @@ function Cadastro() {
                 </div>
                 <div className="row mb-4 justify-content-center">
                     <div className="col-sm-8">
-                        <label className="text-secondary">Sexo</label>
-                        <div id="sexo" className="form-check">
-                            <input className="form-check-input" type="radio" />
-                            <label className="form-check-label text-secondary">
-                                Masculino
-                            </label>
-                            <input className="form-check-input ml-2" type="radio" />
-                            <label className="form-check-label text-secondary ml-4">
-                                Feminino
-                            </label>
-                        </div>
+                        <label className="text-secondary">Sexo</label> <br/>
+                            <input className="col-sm-1" type="radio" name="sexo" />Masculino <br/>
+                            <input className="col-sm-1" type="radio" name="sexo" />Feminino
                     </div>
                 </div>
                 <div className="row justify-content-center">
@@ -128,7 +120,7 @@ function Cadastro() {
                         <input id="referencia" className="form-control" />
                     </div>
                 </div>
-                
+
                 <div className="row justify-content-center">
                     <div className="col-sm-4">
                         <label className="text-secondary">Complemento</label>
@@ -168,11 +160,11 @@ function Cadastro() {
                 <div className="row justify-content-center mt-4 mb-4">
                     <div className="col-sm-4">
                         <button
-                        id="botaoLogin"
-                        onClick={cadastroUsuarioRequest}
-                        type="button"
-                        className="btn btnCadastro btn-info w-100">
-                        Cadastrar
+                            id="botaoLogin"
+                            onClick={cadastroUsuarioRequest}
+                            type="button"
+                            className="btn btnCadastro btn-info w-100">
+                            Cadastrar
                         </button>
                     </div>
                 </div>
