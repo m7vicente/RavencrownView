@@ -9,7 +9,7 @@ function getAllServicesById(id) {
   const ServerResponse = $.ajax({
     type: "get",
     contentType: "application/json;charset=UTF-8",
-    async: true,
+    async: false,
     url: url
   });
 
