@@ -1,11 +1,10 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
 import Modal from "./Components/modal";
 import Navbar from "./Components/Navbar";
 import "../css/CadastroDeServico.css";
 import cadastrodeServicoRequest from "../request/cadastroDeServicoRequest";
 import mudaFoto from "../funcoes/mudaFoto";
-import Modalsucesso from "./modalSucessoCadastro";
+import Modalsucesso from "./ModalSucessoCadastro";
 
 function CadastroDeServico() {
   return (

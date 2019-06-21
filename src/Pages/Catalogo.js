@@ -20,7 +20,7 @@ function Catalogo() {
 
       <div class="row ml-0 w-100 h-100 mt-5 justify-content-center">
         <div class="col-sm-2 mt-3">
-          <Link to={{ pathname: "/CatalogoEspecifico1" }}>
+          <Link to={{ pathname: "/CatalogoEspecifico13" }}>
             <div class="item" align="center" id="configuracoes" style={{ backgroundImage: 'url(/tecnico.jpeg)' }}>
               <i class="material-icons" style={{ fontSize: "115px" }}>
                 settings
@@ -30,7 +30,7 @@ function Catalogo() {
           </Link>
         </div>
         <div class="col-sm-2 mt-3">
-          <Link to={{ pathname: "/CatalogoEspecifico30" }}>
+          <Link to={{ pathname: "/CatalogoEspecifico14" }}>
             <div class="item" align="center" id="aulas" style={{ backgroundImage: 'url(/aulas.jpg)' }}>
               <i class="material-icons" style={{ fontSize: "115px" }}>
                 grade
@@ -40,7 +40,7 @@ function Catalogo() {
           </Link>
         </div>
         <div class="col-sm-2 mt-3">
-          <Link to={{ pathname: "/CatalogoEspecifico31" }}>
+          <Link to={{ pathname: "/CatalogoEspecifico15" }}>
             <div class="item" align="center" id="auto" style={{ backgroundImage: 'url(/auto.jpg)' }}>
               <i class="material-icons" style={{ fontSize: "115px" }}>
                 directions_car
@@ -50,7 +50,7 @@ function Catalogo() {
           </Link>
         </div>
         <div class="col-sm-2 mt-3">
-          <Link to={{ pathname: "/CatalogoEspecifico32" }}>
+          <Link to={{ pathname: "/CatalogoEspecifico16" }}>
             <div class="item" align="center" id="code" style={{ backgroundImage: 'url(/code.jpeg)' }}>
               <i class="material-icons" style={{ fontSize: "115px" }}>
                 code
@@ -62,7 +62,7 @@ function Catalogo() {
       </div>
       <div class="row mt-5 ml-0 w-100 justify-content-center">
         <div class="col-sm-2 mt-3">
-          <Link to={{ pathname: "/CatalogoEspecifico33" }}>
+          <Link to={{ pathname: "/CatalogoEspecifico17" }}>
             <div class="item" align="center" id="reformas" style={{ backgroundImage: 'url(/reforma.jpeg)' }}>
               <i class="material-icons" style={{ fontSize: "120px" }}>
                 build
@@ -72,7 +72,7 @@ function Catalogo() {
           </Link>
         </div>
         <div class="col-sm-2 mt-3">
-          <Link to={{ pathname: "/CatalogoEspecifico34" }}>
+          <Link to={{ pathname: "/CatalogoEspecifico18" }}>
             <div class="item" align="center" id="culinaria" style={{ backgroundImage: 'url(/culinaria.jpg)' }}>
               <i class="material-icons" style={{ fontSize: "120px" }}>
                 cake
@@ -82,7 +82,7 @@ function Catalogo() {
           </Link>
         </div>
         <div class="col-sm-2 mt-3">
-          <Link to={{ pathname: "/CatalogoEspecifico35" }}>
+          <Link to={{ pathname: "/CatalogoEspecifico19" }}>
             <div class="item" align="center" id="domesticos" style={{ backgroundImage: 'url(/domesticos.jpeg)' }}>
               <i class="material-icons" style={{ fontSize: "120px" }}>
                 home
@@ -92,7 +92,7 @@ function Catalogo() {
           </Link>
         </div>
         <div class="col-sm-2 mt-3">
-          <Link to={{ pathname: "/CatalogoEspecifico36" }}>
+          <Link to={{ pathname: "/CatalogoEspecifico20" }}>
             <div class="item" align="center" id="vestuario" style={{ backgroundImage: 'url(/vestuario.jpg)' }}>
               <i class="material-icons" style={{ fontSize: "120px" }}>
                 store
