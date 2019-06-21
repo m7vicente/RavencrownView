@@ -2,25 +2,20 @@ import $ from "jquery";
 import service from "./ConnectionString";
 
 function getAllServicesById(id) {
-  const retorno = $.ajax({
+
+  const url = service() + "/Servicos/Categoria?categoria=" +
+    id + "&login=" + JSON.parse(sessionStorage.getItem("login")).id_Usuario;
+
+  const ServerResponse = $.ajax({
     type: "get",
     contentType: "application/json;charset=UTF-8",
-    async: false,
-    url:
-      service() + "/Servicos/Categoria?categoria=" +
-      id + "prestador=" + sessionStorage.getItem("login").Id_Usuario
-  })
-    .done(function (msg) {
-      return JSON.stringify(msg);
-    })
+    async: true,
+    url: url
+  });
 
-    .fail(function (jqXHR, textStatus, msg) {
-      console.log(jqXHR);
-      console.log(textStatus);
-      console.log(msg);
-    });
-
-  return retorno.responseJSON;
+  if (ServerResponse.status == 200) {
+    return ServerResponse.responseJSON;
+  }
 }
 
 export default getAllServicesById;

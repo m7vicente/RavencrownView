@@ -20,18 +20,18 @@ function Catalogo() {
 
       <div class="row ml-0 w-100 h-100 mt-5 justify-content-center">
         <div class="col-sm-2 mt-3">
-          <Link to={{ pathname: "/CatalogoEspecifico", data: 1 }}>
-            <div class="item" align="center" id="configuracoes" style={{backgroundImage: 'url(/tecnico.jpeg)'}}>
+          <Link to={{ pathname: "/CatalogoEspecifico1" }}>
+            <div class="item" align="center" id="configuracoes" style={{ backgroundImage: 'url(/tecnico.jpeg)' }}>
               <i class="material-icons" style={{ fontSize: "115px" }}>
                 settings
               </i>
-              <p class="sub" style={{ fontSize: "20pt"}}>Técnico</p>
+              <p class="sub" style={{ fontSize: "20pt" }}>Técnico</p>
             </div>
           </Link>
         </div>
         <div class="col-sm-2 mt-3">
-          <Link to={{ pathname: "/CatalogoEspecifico", data: 30 }}>
-            <div class="item" align="center" id="aulas" style={{backgroundImage: 'url(/aulas.jpg)'}}>
+          <Link to={{ pathname: "/CatalogoEspecifico30" }}>
+            <div class="item" align="center" id="aulas" style={{ backgroundImage: 'url(/aulas.jpg)' }}>
               <i class="material-icons" style={{ fontSize: "115px" }}>
                 grade
               </i>
@@ -40,8 +40,8 @@ function Catalogo() {
           </Link>
         </div>
         <div class="col-sm-2 mt-3">
-          <Link to={{ pathname: "/CatalogoEspecifico", data: 31 }}>
-            <div class="item" align="center" id="auto"  style={{backgroundImage: 'url(/auto.jpg)'}}>
+          <Link to={{ pathname: "/CatalogoEspecifico31" }}>
+            <div class="item" align="center" id="auto" style={{ backgroundImage: 'url(/auto.jpg)' }}>
               <i class="material-icons" style={{ fontSize: "115px" }}>
                 directions_car
               </i>
@@ -50,8 +50,8 @@ function Catalogo() {
           </Link>
         </div>
         <div class="col-sm-2 mt-3">
-          <Link to={{ pathname: "/CatalogoEspecifico", data: 32 }}>
-            <div class="item" align="center" id="code"  style={{backgroundImage: 'url(/code.jpeg)'}}>
+          <Link to={{ pathname: "/CatalogoEspecifico32" }}>
+            <div class="item" align="center" id="code" style={{ backgroundImage: 'url(/code.jpeg)' }}>
               <i class="material-icons" style={{ fontSize: "115px" }}>
                 code
               </i>
@@ -62,8 +62,8 @@ function Catalogo() {
       </div>
       <div class="row mt-5 ml-0 w-100 justify-content-center">
         <div class="col-sm-2 mt-3">
-          <Link to={{ pathname: "/CatalogoEspecifico", data: 33 }}>
-            <div class="item" align="center" id="reformas" style={{backgroundImage: 'url(/reforma.jpeg)'}}>
+          <Link to={{ pathname: "/CatalogoEspecifico33" }}>
+            <div class="item" align="center" id="reformas" style={{ backgroundImage: 'url(/reforma.jpeg)' }}>
               <i class="material-icons" style={{ fontSize: "120px" }}>
                 build
               </i>
@@ -72,8 +72,8 @@ function Catalogo() {
           </Link>
         </div>
         <div class="col-sm-2 mt-3">
-          <Link to={{ pathname: "/CatalogoEspecifico", data: 34 }}>
-            <div class="item" align="center" id="culinaria"  style={{backgroundImage: 'url(/culinaria.jpg)'}}>
+          <Link to={{ pathname: "/CatalogoEspecifico34" }}>
+            <div class="item" align="center" id="culinaria" style={{ backgroundImage: 'url(/culinaria.jpg)' }}>
               <i class="material-icons" style={{ fontSize: "120px" }}>
                 cake
               </i>
@@ -82,8 +82,8 @@ function Catalogo() {
           </Link>
         </div>
         <div class="col-sm-2 mt-3">
-          <Link to={{ pathname: "/CatalogoEspecifico", data: 35 }}>
-            <div class="item" align="center" id="domesticos" style={{backgroundImage: 'url(/domesticos.jpeg)'}}>
+          <Link to={{ pathname: "/CatalogoEspecifico35" }}>
+            <div class="item" align="center" id="domesticos" style={{ backgroundImage: 'url(/domesticos.jpeg)' }}>
               <i class="material-icons" style={{ fontSize: "120px" }}>
                 home
               </i>
@@ -92,8 +92,8 @@ function Catalogo() {
           </Link>
         </div>
         <div class="col-sm-2 mt-3">
-          <Link to={{ pathname: "/CatalogoEspecifico", data: 36 }}>
-            <div class="item" align="center" id="vestuario" style={{backgroundImage: 'url(/vestuario.jpg)'}}>
+          <Link to={{ pathname: "/CatalogoEspecifico36" }}>
+            <div class="item" align="center" id="vestuario" style={{ backgroundImage: 'url(/vestuario.jpg)' }}>
               <i class="material-icons" style={{ fontSize: "120px" }}>
                 store
               </i>

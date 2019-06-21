@@ -57,7 +57,7 @@ const routes = [
   },
   {
     key: 10,
-    path: "/CatalogoEspecifico",
+    path: "/CatalogoEspecifico:id",
     component: CatalogoEspecifico
   },
   {
