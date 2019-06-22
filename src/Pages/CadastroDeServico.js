@@ -73,50 +73,15 @@ function CadastroDeServico() {
 
             <div className="row justify-content-center mt-4">
               <div className="col-sm-2">
-                <label class="sub">Disponível fim de semana?</label>
-                <div id="disponivelFds" className="row form-check mt-0">
-                  <input className="col form-check-input" type="radio" />
-                  <label
-                    className="sub col form-check-label ml-4"
-                    for="exampleRadios1"
-                  >
-                    Sim
-                  </label>
-                  <input className="col form-check-input" type="radio" />
-                  <label
-                    className="sub col form-check-label ml-4"
-                    for="exampleRadios1"
-                  >
-                    Não
-                  </label>
-                </div>
-                <div className="form-check" />
+                <label class="sub">Disponível fim de semana?</label> <br/>
+                  <input className="col-sm-2 form-check-input" type="radio" name="disponivelFds"/>Sim <br/>
+                  <input className="col-sm-2 form-check-input" type="radio" name="disponivelFds"/>Não
               </div>
               <div className="col-sm-3">
-                <label class="sub">Local de atendimento</label>
-
-                <div id="localAtendimento" className="form-check">
-                  <input
-                    className="row form-check-input"
-                    type="radio"
-                    id="casa"
-                  />
-                  <label className="sub form-check-label ml-4" for="exampleRadios1">
-                    Atendimento à domicilio
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="radio"
-                    data-toggle="modal"
-                    data-target="#myModal"
-                  />
-                  <label className="sub form-check-label ml-4" for="exampleRadios1">
-                    Atendimento no meu endereço
+                <label class="sub">Local de atendimento</label> <br/>
+                  <input className="col-sm-2 form-check-input" type="radio" id="casa" name="localAtendimento"/>Atendimento à domicilio <br/>
+                  <input className="col-sm-2 form-check-input" type="radio" data-toggle="modal" data-target="#myModal" name="localAtendimento"/>Atendimento no meu endereço <br/>
                     <Modal />
-                  </label>
-                </div>
               </div>
               <div className="col-sm-2">
                 <div class="arq-img">
