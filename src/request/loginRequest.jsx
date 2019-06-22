@@ -16,7 +16,7 @@ function request() {
     contentType: "application/json;charset=UTF-8",
     url: url,
     data: parameters,
-    async: true
+    async: false
   });
 
   if (result.status == 200) {
