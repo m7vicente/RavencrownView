@@ -75,7 +75,7 @@ class Login extends React.Component {
                                     type="button"
                                     onClick={this.doLogin}
                                     className="btn btnlogin sub mt-3" style=
-                                    {{ fontSize: '18pt', width: "90%", color: '#776d6d', boxShadow: " 5px 10px rgb(198, 196, 196, 0.3)" }}>
+                                    {{ fontSize: '18pt', width: "70%", color: '#776d6d', boxShadow: " 5px 10px rgb(198, 196, 196, 0.3)" }}>
                                     Entrar
                         </button>
                             </div>

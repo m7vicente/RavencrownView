@@ -13,7 +13,7 @@ function CadastroDeServico() {
         <Navbar />
         <div className="row w-100 justify-content-right">
           <form className="col justify-content-center">
-            <div className="row justify-content-center">
+            <div className="row justify-content-center border-bottom">
               <h3 class="sub">Cadastre seu serviço :)</h3>
             </div>
             <button

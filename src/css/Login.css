@@ -6,13 +6,13 @@
 
 input{
     height: 15%;
-    width: 100%;
+    width: 80%;
     border-bottom: 1px solid transparent;
 }
 
 input:focus{
     outline: none;
-    border-bottom: 1px solid rgb(30,144,255);
+    border-bottom: 1px solid rgb(71, 206, 224);
     transition: 0.9s;
 }
 

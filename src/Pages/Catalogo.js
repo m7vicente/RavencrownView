@@ -9,7 +9,7 @@ function Catalogo() {
       <Navbar />
       <div class="row" align="center">
         <div class="col mt-4">
-          <div class="titulo_catalogo sub text-dark">
+          <div class="titulo_catalogo sub text-dark border-bottom">
             <h3>
               Explore a variedade de serviços com a facilidade de divisão por
               categorias =D
