@@ -27,8 +27,7 @@ class ModalDetalhesDoServico extends React.Component {
 
     render() {
         return (
-            <Fragment>
-                {console.log(this.state.servico)}
+            <Fragment>                
                 <input type="hidden" id="servico1" value={this.state.servico.idServico} />
                 <input type="hidden" id="usuario1" value={this.state.servico.idUsuario} />
                 <input type="hidden" id="valorFinal" value={this.state.servico.precoServico} />
@@ -69,7 +68,7 @@ class ModalDetalhesDoServico extends React.Component {
                                         </div>
 
 
-                                        {this.state.servico.imagem.lenght > 0 ?
+                                        {this.state.servico.imagem.length > 0 ?
                                             <div className="row w-100 border-top-50" align="left">
                                                 <div className="col col-lg-12">
                                                     <label className="h4 text-secondary"> Imagens: </label><p />
@@ -78,6 +77,7 @@ class ModalDetalhesDoServico extends React.Component {
                                                         <div class="carousel-inner">
 
                                                             {Object.keys(this.state.servico.imagem).map((e, i) => {
+                                                                console.log(this.state.servico.imagem[e]);
                                                                 return (
                                                                     <CreateCarrousselImages
                                                                         image={this.state.servico.imagem[i]}
@@ -150,6 +150,7 @@ function FixedLocation(props) {
 }
 
 function CreateCarrousselImages(image) {
+    console.log(image);
     let img;
     try {
         img =
