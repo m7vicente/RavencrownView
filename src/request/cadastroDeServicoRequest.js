@@ -1,24 +1,9 @@
 import $ from "jquery";
 import service from "./ConnectionString";
 
-function cadastroDeServicoRequest(servico, endereco) {
-  // console.log(tempo);
-  const parameters = null;
-  // const parameters = JSON.stringify({
-  //   idServico: null,
-  //   idUsuario: idUsuario,
-  //   endereco: endereco,
-  //   idCategoria: idCategoria,
-  //   Imagens: null,
-  //   nomeServico: nomeServico,
-  //   descricaoServico: descricaoServico,
-  //   tempoExecucao: tempo,
-  //   precoServico: precoServico,
-  //   localizacaoFixa: endereco == null
-  // });
-
-  // console.log(endereco);
-  // console.log(parameters);
+function cadastroDeServicoRequest(servico) {
+  const parameters = JSON.stringify(servico);
+  console.log(parameters);
 
   $.ajax({
     type: "post",

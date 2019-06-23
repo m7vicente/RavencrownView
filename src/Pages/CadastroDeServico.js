@@ -3,8 +3,8 @@ import Modal from "./Components/modal";
 import Navbar from "./Components/Navbar";
 import "../css/CadastroDeServico.css";
 import cadastrodeServicoRequest from "../request/cadastroDeServicoRequest";
-import mudaFoto from "../funcoes/mudaFoto";
 import Modalsucesso from "./modalSucessoCadastro";
+import $ from "jquery";
 
 class CadastroDeServico extends React.Component {
   render() {
@@ -110,6 +110,7 @@ class CadastroDeServico extends React.Component {
                     name="localAtendimento"
                   />
                   Atendimento no meu endereço <br />
+                  <Modal />
                 </div>
 
                 <div class="col-md-3">
@@ -117,7 +118,12 @@ class CadastroDeServico extends React.Component {
                     <img id="img" src="./terceirizado.jpg" alt="" />
                     <div class="file sub btn btn-lg btn-primary">
                       Adicionar foto
-                      <input type="file" id="iptImages" name="file" />
+                      <input
+                        type="file"
+                        id="iptImages"
+                        name="file"
+                        accept=".png"
+                      />
                     </div>
                   </div>
                 </div>
@@ -130,7 +136,6 @@ class CadastroDeServico extends React.Component {
                       name="file"
                       id="iptRecomendacao"
                       accept=".csv"
-                      style={{ marginTop: "10%", fontSize: "16pt" }}
                     />
                   </div>
 
@@ -139,7 +144,6 @@ class CadastroDeServico extends React.Component {
                     type="button"
                     onClick={this.cadastrarServico}
                     className="sub btn btn-primary ml-4 h-25 w-100"
-                    style={{ marginTop: "10%", fontSize: "16pt" }}
                   >
                     Cadastrar Serviço
                   </button>
@@ -153,52 +157,60 @@ class CadastroDeServico extends React.Component {
   }
 
   cadastrarServico() {
-    const endereco = {
-      rua: document.getElementById("rua").value.toString(),
-      cep: document.getElementById("cep").value.toString(),
-      complemento: document.getElementById("complemento").value.toString(),
-      numero: document.getElementById("numero").value.toString(),
-      referencia: document.getElementById("referencia").value.toString(),
-      bairro: document.getElementById("bairro").value.toString(),
-      cidade: document.getElementById("cidade").value.toString(),
-      estado: document.getElementById("estado").value.toString(),
-      Id_Usuario: JSON.parse(sessionStorage.getItem("login")).Id_Usuario
-    };
+    let endereco = null;
+    if (!$("#casa").is(":checked")) {
+      endereco = {
+        rua: document.getElementById("rua").value.toString(),
+        cep: document.getElementById("cep").value.toString(),
+        complemento: document.getElementById("complemento").value.toString(),
+        numero: document.getElementById("numero").value.toString(),
+        referencia: document.getElementById("referencia").value.toString(),
+        bairro: document.getElementById("bairro").value.toString(),
+        cidade: document.getElementById("cidade").value.toString(),
+        estado: document.getElementById("estado").value.toString(),
+        Id_Usuario: JSON.parse(sessionStorage.getItem("login")).Id_Usuario
+      };
+    }
+
+    const imagem = createImageObject(document.getElementById("iptImages"));
 
     const servico = {
+      idServico: null,
+      idUsuario: JSON.parse(sessionStorage.getItem("login")).id_Usuario,
+      endereco: endereco,
       idCategoria: document.getElementById("ddlCategoria").options[
         document.getElementById("ddlCategoria").selectedIndex
       ].value,
-
+      Imagem: imagem,
       nomeServico: document.getElementById("nomeServico").value.toString(),
       descricaoServico: document
         .getElementById("descricaoServico")
         .value.toString(),
-
+      tempoExecucao: document.getElementById("tempoDeServico").value,
       precoServico: parseFloat(document.getElementById("precoServico").value),
-      idUsuario: JSON.parse(sessionStorage.getItem("login")).id_Usuario,
-
-      tempo: document.getElementById("tempoDeServico").value,
-      image: createImageObject(document.getElementById("iptImages").files)
+      localizacaoFixa: endereco != null
     };
 
-    cadastrodeServicoRequest(servico, endereco);
+    sleep(1000).then(() => {
+      cadastrodeServicoRequest(servico);
+    });
   }
 }
 
 function createImageObject(input) {
-  console.log(input);
+  console.log(input.files);
   let images = [];
   if (input != null) {
-    for (let file in input.file) {
+    for (let file = 0; file < input.files.length; file++) {
       let image = {
         image: null,
-        id_Usuario: JSON.parse(sessionStorage.getItem("login")).Id_Usuario,
-        imagem_Url: null,
-        imagem_Id: null
+        idUsuario: JSON.parse(sessionStorage.getItem("login")).Id_Usuario,
+        imagemURL: null,
+        idImagemServico: null,
+        idServico: null
       };
       var reader = new FileReader();
-      reader.readAsDataURL(file);
+      reader.readAsDataURL(input.files[file]);
       reader.onload = function() {
         console.log(reader.result);
         image.image = reader.result;
@@ -209,9 +221,11 @@ function createImageObject(input) {
       console.log(image);
       images.push(image);
     }
-    console.log(images);
     return images;
   }
+}
+function sleep(time) {
+  return new Promise(resolve => setTimeout(resolve, time));
 }
 
 export default CadastroDeServico;
