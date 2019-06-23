@@ -181,7 +181,7 @@ class CadastroDeServico extends React.Component {
       idCategoria: document.getElementById("ddlCategoria").options[
         document.getElementById("ddlCategoria").selectedIndex
       ].value,
-      Imagem: imagem,
+      imagem: imagem,
       nomeServico: document.getElementById("nomeServico").value.toString(),
       descricaoServico: document
         .getElementById("descricaoServico")
@@ -203,22 +203,19 @@ function createImageObject(input) {
   if (input != null) {
     for (let file = 0; file < input.files.length; file++) {
       let image = {
-        image: null,
+        idServico: null,
         idUsuario: JSON.parse(sessionStorage.getItem("login")).Id_Usuario,
         imagemURL: null,
-        idImagemServico: null,
-        idServico: null
+        image: null
       };
       var reader = new FileReader();
       reader.readAsDataURL(input.files[file]);
       reader.onload = function() {
-        console.log(reader.result);
-        image.image = reader.result;
+        image.image = reader.result.replace("data:image/png;base64,", "");
       };
       reader.onerror = function(error) {
         return;
       };
-      console.log(image);
       images.push(image);
     }
     return images;
