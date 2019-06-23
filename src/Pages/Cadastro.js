@@ -55,8 +55,8 @@ function Cadastro() {
                 <div className="row mb-4 justify-content-center">
                     <div className="col-sm-8">
                         <label className="text-secondary">Sexo</label> <br/>
-                            <input className="col-sm-1" type="radio" id="sexoM" />Masculino <br/>
-                            <input className="col-sm-1" type="radio" />Feminino
+                            <input className="col-sm-1" type="radio" id="sexoM" name="sexo"/>Masculino <br/>
+                            <input className="col-sm-1" type="radio" name="sexo"/>Feminino
                     </div>
                 </div>
                 <div className="row justify-content-center">
