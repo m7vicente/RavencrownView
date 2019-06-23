@@ -40,7 +40,7 @@ class ModalDetalhesDoServico extends React.Component {
                                 <div class="modal-content">
 
                                     <div class="modal-header">
-                                        <h3 class="modal-title" id="TituloModalCentralizado">{this.state.servico.nomeServico}</h3>
+                                        <h3 class="modal-title sub ml-4" id="TituloModalCentralizado">{this.state.servico.nomeServico}</h3>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -49,30 +49,32 @@ class ModalDetalhesDoServico extends React.Component {
                                     <div className="modal-body">
 
                                         <div className="row w-100 border-top-0" >
-                                            <span className="h5 text-dark"><span className="text-secondary">Descrição do serviço:</span> {this.state.servico.descricaoServico}</span>
-                                            <div className="text-dark"></div>
+                                            <span className="h4 ml-4 text-dark sub"><span className="text-secondary">Descrição do serviço:</span> {this.state.servico.descricaoServico}</span>
+                            
                                         </div>
 
-                                        <div className="row w-100 border-top-50" align="left">
+                                        <div className="row w-100 border-top-50 mt-1 border-bottom" align="left">
                                             <div className="col col-lg-6">
-                                                <label className="h4 text-secondary"> Localização: </label>
+                                                <label className="h4 sub text-secondary"> Localização: </label>
 
-                                                {this.state.servico.localizacaoFixa == true ? <FixedLocation endereco={this.state.servico.endereco} /> : <label className="h5 text-primary">Domicilio</label>}
+                                                {this.state.servico.localizacaoFixa == true ? <FixedLocation endereco={this.state.servico.endereco} /> : <label className="h4 sub text-primary"> Domicílio</label>}
                                             </div>
+                                        </div>
 
-
-                                            <div className="col-lg-6">
-                                                <label className="h4 text-secondary"> Sobre: </label><p />
-                                                <label className="h4" align="right">Valor: <span id="valor" cclassName=".text-muted">{'R$' + this.state.servico.precoServico}</span> </label>
-                                                <label className="h4" align="right">Estimativa: <span id="valor" className=".text-muted">{this.state.servico.tempoExecucao}</span> </label>
+                                        <div className="row w-100 border-bottom mb-4" align="left">
+                                            <div className="col-lg-12">
+                                                <label className="h4 text-dark sub" style={{marginLeft: "42%"}}> Sobre o serviço </label><br />
+                                                <label className="h4 text-secondary sub">Valor: <span id="valor" className="text-primary">{'R$' + this.state.servico.precoServico}</span> </label><br/>
+                                                <label className="h4 text-secondary sub">Estimativa: <span id="valor" className="text-primary">{this.state.servico.tempoExecucao}</span> </label>
                                             </div>
+                                    
                                         </div>
 
 
                                         {this.state.servico.imagem.lenght > 0 ?
                                             <div className="row w-100 border-top-50" align="left">
                                                 <div className="col col-lg-12">
-                                                    <label className="h4 text-secondary"> Imagens: </label><p />
+                                                <label className=" text-primary sub " style={{marginLeft: "45%", fontSize: "16pt"}}> Imagens </label><p />
 
                                                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                                                         <div class="carousel-inner">
@@ -91,24 +93,24 @@ class ModalDetalhesDoServico extends React.Component {
                                             :
                                             <div className="row w-100 border-top-50" align="left">
                                                 <div className="col col-lg-12">
-                                                    <label className="h4 text-secondary"> Imagens: </label><p />
-                                                    <img class="d-block h-50 w-50" src="https://static1.squarespace.com/static/5ae340fe31d4df5e5f0ed912/t/5b23f08d0e2e7291eacf0db8/1557291866488/?format=1500w" />
+                                                    <label className=" text-primary sub " style={{marginLeft: "45%", fontSize: "16pt"}}> Imagens </label><p />
+                                                    <img class="d-block w-50 h-75"  style={{marginLeft: "25%"}} src="https://static1.squarespace.com/static/5ae340fe31d4df5e5f0ed912/t/5b23f08d0e2e7291eacf0db8/1557291866488/?format=1500w" />
                                                 </div>
                                             </div>
                                         }
 
-                                        <div className="row w-100 justify-content-center mt-4 mb-2"><a
+                                        <div className="row w-100 justify-content-center mb-2"><a
                                             style={{ fontSize: '12pt', cursor: 'pointer' }}
                                             className="link text-danger" onClick={function (event) {
                                                 document.getElementById("datas").removeAttribute("class", "invisivel")
                                                 event.preventDefault();
-                                            }}>Escolher datas</a>
+                                            }}>Escolher data</a>
                                         </div>
                                         <div id='datas' class="invisivel">
                                             <div className="row w-100 border-top border-bottom-0ottom justify-content-center mt-2">
 
                                                 <div className="form-group mt-4">
-                                                    <label>Data</label>
+                                                    <label class="sub">Data</label>
                                                     <input id="dtData" type="time" className="form-control text-secondary" placeholder="23/05/2019" onBlur={this.dataValida} />
                                                 </div>
                                             </div>
