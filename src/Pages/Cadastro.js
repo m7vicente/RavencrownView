@@ -163,7 +163,7 @@ function Cadastro() {
                             id="botaoLogin"
                             onClick={cadastroUsuarioRequest}
                             type="button"
-                            className="btn btnCadastro btn-info w-100">
+                            className="btn btnCadastro btn-info w-100 h-100">
                             Cadastrar
                         </button>
                     </div>
