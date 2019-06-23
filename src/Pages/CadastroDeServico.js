@@ -89,53 +89,35 @@ class CadastroDeServico extends React.Component {
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div className="row justify-content-center mt-4">
-                  <div className="col-sm-2">
-                    <label class="sub">Local de atendimento</label>
-
-                    <div id="localAtendimento" className="form-check">
-                      <label
-                        className="sub form-check-label ml-4"
-                        for="exampleRadios1"
-                      >
-                        Atendimento à domicilio
-                      </label>
-                      <input
-                        className="form-check-input"
-                        type="radio"
-                        id="casa"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="form-check">
-                    <label
-                      className="sub form-check-label ml-4"
-                      for="exampleRadios1"
-                    >
-                      Atendimento no meu endereço
-                    </label>
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      data-toggle="modal"
-                      data-target="#myModal"
-                    />
-                    <Modal />
-                  </div>
+              <div className="row justify-content-center mt-4">
+                <div className="col-sm-3">
+                  <label class="sub">Local de atendimento</label>
+                  <br />
+                  <input
+                    className="col-sm-2 form-check-input"
+                    type="radio"
+                    id="casa"
+                    name="localAtendimento"
+                  />
+                  Atendimento à domicilio <p />
+                  <input
+                    className="col-sm-2 form-check-input"
+                    type="radio"
+                    data-toggle="modal"
+                    data-target="#myModal"
+                    name="localAtendimento"
+                  />
+                  Atendimento no meu endereço <br />
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <div class="servico-img">
-                    <img
-                      id="img"
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog"
-                      alt=""
-                    />
+                    <img id="img" src="./terceirizado.jpg" alt="" />
                     <div class="file sub btn btn-lg btn-primary">
                       Adicionar foto
-                      <input type="file" name="file" onClick={mudaFoto} />
+                      <input type="file" id="iptImages" name="file" />
                     </div>
                   </div>
                 </div>
@@ -196,9 +178,39 @@ class CadastroDeServico extends React.Component {
       precoServico: parseFloat(document.getElementById("precoServico").value),
       idUsuario: JSON.parse(sessionStorage.getItem("login")).id_Usuario,
 
-      tempo: document.getElementById("tempoDeServico").value
+      tempo: document.getElementById("tempoDeServico").value,
+      image: createImageObject(document.getElementById("iptImages").files)
     };
-    //cadastrodeServicoRequest(servico,endereco);
+
+    cadastrodeServicoRequest(servico, endereco);
+  }
+}
+
+function createImageObject(input) {
+  console.log(input);
+  let images = [];
+  if (input != null) {
+    for (let file in input.file) {
+      let image = {
+        image: null,
+        id_Usuario: JSON.parse(sessionStorage.getItem("login")).Id_Usuario,
+        imagem_Url: null,
+        imagem_Id: null
+      };
+      var reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = function() {
+        console.log(reader.result);
+        image.image = reader.result;
+      };
+      reader.onerror = function(error) {
+        return;
+      };
+      console.log(image);
+      images.push(image);
+    }
+    console.log(images);
+    return images;
   }
 }
 
