@@ -9,9 +9,16 @@ function cadastroUsuarioRequest() {
     .getElementById("data")
     .value.toString()
     .split("/");
-  const dataNasc = data[2] + "-" + data[1] + "-" + data[0];
+  //const dataNasc = data[2] + "-" + data[1] + "-" + data[0];
+  const timee = document.getElementById("data").value;
   const estadoCivil = document.getElementById("estadoCivil").value.toString();
-  const sexo = $("#sexo :selected").val();
+  var sexo;
+
+  if ($("#sexoM").is(":checked")) {
+    sexo = 'M'
+  } else  {
+    sexo = 'F'
+  }
 
   const email = document.getElementById("email").value.toString();
   const telefone = document.getElementById("telefone").value.toString();
@@ -30,33 +37,37 @@ function cadastroUsuarioRequest() {
     nome: nome,
     email: email,
     senha: senha,
-    id_Usuario: null,
+    Id_Usuario: null,
     endereco: {
       id_Endereco: null,
+      cidade: cidade,
       rua: rua,
-      cep: cep,
       complemento: complemento,
+      cep: cep,
       numero: numero,
       referencia: null,
       bairro: bairro,
-      cidade: cidade,
-      estado: estado,
-      pais: pais
+      pais: pais,
+      estado: estado      
     },
-    imagem: null,
+    imagem: 
+    {},
     cpfCnpj: cpf,
-    rg: rg,
+    RG: rg,
     telefone: telefone,
-    prestador: false,
-    sexo: "M",
+    sexo: sexo,
     estadoCivil: estadoCivil,
-    data_Nascimento: dataNasc
+    data_Nascimento: timee,
+    prestador: false    
   });
+
+console.log(parameters)
 
   $.ajax({
     type: "post",
     contentType: "application/json;charset=UTF-8",
     url: service() + "/Cadastro",
+    async: false,
     data: parameters
   })
     .done(function (msg) {

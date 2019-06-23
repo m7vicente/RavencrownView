@@ -146,7 +146,7 @@ class Navbar extends React.Component {
             <div id="imgUser">
               <i
                 id="logo"
-                className="fas fa-user-circle text-light display-4 ml-4 mr-4"
+                className="fas fa-user-circle text-dark display-4 ml-4 mr-4"
                 style={{ fontSize: "16pt;" }}
               />
             </div>
