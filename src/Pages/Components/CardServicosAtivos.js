@@ -8,26 +8,27 @@ class CardServicosAtivos extends React.Component {
 
   constructor(service) {
     super();
-    this.state.service = service;
+    this.state.service = service.service;
   }
-
 
   render() {
     return (
       <div className="col-sm-3 ml-5 mr-5 mt-4 ">
-        <div class="card" >
+        <div class="card">
           {/* <img class="card-img-top" src={this.state.imagemBIN} alt="Card image cap"/> */}
           <div class="card-body">
-            <h5 class="card-title">{console.log(this.state.service.nomeServico)}</h5>
+            <h5 class="card-title">
+              {console.log(this.state.service.nomeServico)}
+            </h5>
             <p class="card-text">{this.state.service.descricaoServico}</p>
-            <a 
+            <a
               className="btn btn-info"
               data-toggle="modal"
-              data-target="#myModal" 
-              to={{data: this.state.service }}>
-              
+              data-target="#myModal"
+              to={{ data: this.state.service }}
+            >
               Detalhes
-              </a>
+            </a>
           </div>
         </div>
       </div>
