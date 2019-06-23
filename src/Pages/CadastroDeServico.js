@@ -15,7 +15,7 @@ class CadastroDeServico extends React.Component {
           <div className="row w-100 justify-content-right">
             <form className="col justify-content-center">
               <div className="row justify-content-center border-bottom">
-                <h3 class="sub">Cadastre seu serviço :)</h3>
+                <h3 class="sub mb-4">Cadastre seu serviço :)</h3>
               </div>
               <button
                 type="button"
@@ -27,7 +27,7 @@ class CadastroDeServico extends React.Component {
               />
               <Modalsucesso />
 
-              <div className="row justify-content-center mt-1">
+              <div className="row justify-content-center mt-5">
                 <div className="col-sm-6">
                   <div className="form-group">
                     <label class="sub">Nome do serviço</label>
@@ -96,14 +96,14 @@ class CadastroDeServico extends React.Component {
                   <label class="sub">Local de atendimento</label>
                   <br />
                   <input
-                    className="col-sm-2 form-check-input"
+                    className="col-sm-2 form-check-input inp"
                     type="radio"
                     id="casa"
                     name="localAtendimento"
                   />
                   Atendimento à domicilio <p />
                   <input
-                    className="col-sm-2 form-check-input"
+                    className="col-sm-2 form-check-input inp"
                     type="radio"
                     data-toggle="modal"
                     data-target="#myModal"
@@ -143,7 +143,8 @@ class CadastroDeServico extends React.Component {
                     id="cadastrarServico"
                     type="button"
                     onClick={this.cadastrarServico}
-                    className="sub btn btn-primary ml-4 h-25 w-100"
+                    style={{fontSize: "14pt"}}
+                    className="sub btnCadastro btn btn-primary ml-3 mt-4 w-100"
                   >
                     Cadastrar Serviço
                   </button>

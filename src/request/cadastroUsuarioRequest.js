@@ -66,7 +66,7 @@ console.log(parameters)
   $.ajax({
     type: "post",
     contentType: "application/json;charset=UTF-8",
-    url: service() + "/Cadastro",
+    url: service() + "/cadastro",
     async: false,
     data: parameters
   })
