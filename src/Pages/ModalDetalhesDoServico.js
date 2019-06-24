@@ -61,14 +61,14 @@ class ModalDetalhesDoServico extends React.Component {
           Aprovado_consumidor: null,
           Aprovado_Prestador: null,
           datas: [{
-            IdDataAgendamento: null,
-            IdPrestador: document.getElementById("usuario1").value,
-            IdConsumidor: JSON.parse(sessionStorage.getItem("login")).Id_Usuario,
-            IdServico: document.getElementById("servico1").value,
-            IdContrato: null,
-            IdDemanda: null,
-            DtAgendamento: document.getElementById("dtData").value,
-            TipoReserva: "T"
+            idDataAgendamento: null,
+            idPrestador: document.getElementById("usuario1").value,
+            idConsumidor: JSON.parse(sessionStorage.getItem("login")).Id_Usuario,
+            idServico: document.getElementById("servico1").value,
+            idContrato: null,
+            idDemanda: null,
+            dtAgendamento: document.getElementById("dtData").value,
+            tipoReserva: "T"
           }]
         }
         contratoRequest(contrato);
