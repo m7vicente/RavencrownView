@@ -80,16 +80,6 @@ class Navbar extends React.Component {
             </li>
             <li class="nav-item active">
               <Link
-                to="/CadastroDeServico"
-                style={estilo}
-                id="CadastroDeServiço"
-                class="nav-link"
-              >
-                Cadastre seus serviços |
-              </Link>
-            </li>
-            <li class="nav-item active">
-              <Link
                 to="/MeusServicos"
                 style={estilo}
                 id="meusServicos"
