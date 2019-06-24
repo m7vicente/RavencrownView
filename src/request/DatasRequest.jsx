@@ -39,7 +39,7 @@ function ValidaDataEscolhida(Data, IdServico, buttom) {
     .fail(function (jqXHR, textStatus, msg) {
       console.log(jqXHR);
       console.log(textStatus);
-      console.log(msg + "a");
+      console.log(msg);
     }).responseJSON;
 
   console.log(parameters);
