@@ -112,7 +112,7 @@ class ModalDetalhesDoServico extends React.Component {
 
                                                 <div className="form-group mt-4">
                                                     <label class="sub">Data</label>
-                                                    <input id="dtData" type="time" className="form-control text-secondary" placeholder="23/05/2019" onBlur={this.dataValida} />
+                                                    <input id="dtData" type="datetime-local" className="form-control text-secondary" placeholder="23/05/2019" onBlur={this.dataValida} />
                                                 </div>
                                             </div>
                                         </div>
