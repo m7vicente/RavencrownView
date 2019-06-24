@@ -80,6 +80,7 @@ function contratoRequest() {
     .done(function (msg) {
       $(function () {
         console.log(msg);
+        console.log("Cadastrou")
       });
     })
 
