@@ -39,7 +39,7 @@ class MeusServicos extends React.Component {
         <div className="tab-content">
           <div className=" tab-pane active" id="ServicosAtivos">
             <h4
-              className="row sub ml-4 mt-2 justify-content-center"
+              className="row sub ml-4 mt-2 justify-content-left"
               align="center"
             >
               <div id="frase"> </div>

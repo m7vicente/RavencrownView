@@ -39,6 +39,7 @@ class MeusAgendamentos extends React.Component {
         </h4>
         <div className="row ml-1 mr-1 mt-4">
           {Object.keys(this.state.contracts).map((e, i) => {
+            {console.log(this.state.contracts[i])}
             return (
               <CardMeusAgendametos key={i} contract={this.state.contracts[i]} />
             );

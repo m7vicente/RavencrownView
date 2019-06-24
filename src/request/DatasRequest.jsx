@@ -3,13 +3,15 @@ import service from "./ConnectionString";
 
 function ValidaDataEscolhida(Data, IdServico, buttom) {
   var disponivel = false;
+  const idUsuario = document.getElementById("usuario1").value;
+  const idConsumidor = JSON.parse(sessionStorage.getItem("login")).Id_Usuario;
 
   const parameters = JSON.stringify({
     idDataAgendamento: null,
-    idPrestador: null,
+    idPrestador: idUsuario,
     idServico: IdServico,
     idContrato: null,
-    idConsumidor: null,
+    idConsumidor: idConsumidor,
     idDemanda: null,
     dtAgendamento: Data,
     tipoReserva: "T"

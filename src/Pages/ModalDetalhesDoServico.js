@@ -165,7 +165,7 @@ function CreateCarrousselImages(image) {
     }
 
     return <div class="carousel-item active">
-        <img class="d-block w-100" src={img} alt={image.image.imageURL} />
+        <img class="d-block w-100" style={{maxHeight: "200px", maxWidth: "250px"}} src={img} alt={image.image.imageURL} />
     </div>
 }
 

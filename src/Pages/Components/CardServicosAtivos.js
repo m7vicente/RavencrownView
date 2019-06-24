@@ -15,7 +15,7 @@ class CardServicosAtivos extends React.Component {
     return (
       <div className="col-sm-3 ml-5 mr-5 mt-4 ">
         <div class="card">
-          {/* <img class="card-img-top" src={this.state.imagemBIN} alt="Card image cap"/> */}
+          {<img class="card-img-top" src={this.state.imagemBIN} alt="Card image cap"/> }
           <div class="card-body">
             <h5 class="card-title">
               {console.log(this.state.service.nomeServico)}
