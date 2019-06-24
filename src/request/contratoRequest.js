@@ -20,13 +20,10 @@ function contratoRequest() {
 
   const rua = JSON.parse(sessionStorage.getItem("login")).endereco.rua;
   const cep = JSON.parse(sessionStorage.getItem("login")).endereco.cep;
-  const complemento = JSON.parse(sessionStorage.getItem("login")).endereco
-    .complemento;
+  const complemento = JSON.parse(sessionStorage.getItem("login")).endereco.complemento;
   const numero = JSON.parse(sessionStorage.getItem("login")).endereco.numero;
-  const idEndereco = JSON.parse(sessionStorage.getItem("login")).endereco
-    .id_Endereco;
-  const referencia = JSON.parse(sessionStorage.getItem("login")).endereco
-    .referencia;
+  const idEndereco = JSON.parse(sessionStorage.getItem("login")).endereco.id_Endereco;
+  const referencia = JSON.parse(sessionStorage.getItem("login")).endereco.referencia;
   const bairro = JSON.parse(sessionStorage.getItem("login")).endereco.bairro;
   const cidade = JSON.parse(sessionStorage.getItem("login")).endereco.cidade;
   const estado = JSON.parse(sessionStorage.getItem("login")).endereco.estado;
@@ -80,7 +77,7 @@ function contratoRequest() {
     .done(function (msg) {
       $(function () {
         console.log(msg);
-        console.log("Cadastrou")
+        console.log()
       });
     })
 
