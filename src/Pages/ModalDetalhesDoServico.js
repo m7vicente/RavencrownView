@@ -18,11 +18,61 @@ class ModalDetalhesDoServico extends React.Component {
 
     dataValida() {
         const data = document.getElementById("dtData").value;
-        alert(data);
         const idServico = document.getElementById("servico1").value;
         if (data != null) {
             const respose = ValidaDataEscolhida(data, idServico, document.getElementById("btnContratar"));
+            document.getElementById("btnContratar").onclick = this.criarContrato;
         }
+    }
+
+    criarContrato(){
+        const data = {
+            idDataAgendamento: null,
+            idPrestador: document.getElementById("usuario1").value,
+            idServico: document.getElementById("servico1").value,
+            idContrato: null,
+            idConsumidor: JSON.parse(sessionStorage.getItem("login")).Id_Usuario,
+            idDemanda: null,
+            dtAgendamento: document.getElementById("dtData").value,
+            tipoReserva: "T"
+          };
+
+          const endereco = {
+                rua: JSON.parse(sessionStorage.getItem("login")).endereco.rua,
+                cep: JSON.parse(sessionStorage.getItem("login")).endereco.cep,
+                complemento: JSON.parse(sessionStorage.getItem("login")).enderecoomplemento,
+                numero: JSON.parse(sessionStorage.getItem("login")).endereco.numero,
+                idEndereco: null,
+                referencia: JSON.parse(sessionStorage.getItem("login")).endereco.referencia,
+                bairro: JSON.parse(sessionStorage.getItem("login")).endereco.bairro,
+                cidade: JSON.parse(sessionStorage.getItem("login")).endereco.cidade,
+                estado: JSON.parse(sessionStorage.getItem("login")).endereco.estado          
+          }
+        
+         const contrato = {
+          idContrato:null,
+          idServico: document.getElementById("servico1").value,
+          Endereco: endereco,
+          idPrestador: document.getElementById("usuario1").value,
+          idConsumidor: JSON.parse(sessionStorage.getItem("login")).Id_Usuario,
+          idDemanda:null,
+          valorFinal: document.getElementById("valorFinal").value,
+          Pago: null,
+          Aprovado_consumidor: null,
+          Aprovado_Prestador: null,
+          datas: [{
+            IdDataAgendamento: null,
+            IdPrestador: document.getElementById("usuario1").value,
+            IdConsumidor: JSON.parse(sessionStorage.getItem("login")).Id_Usuario,
+            IdServico: document.getElementById("servico1").value,
+            IdContrato: null,
+            IdDemanda: null,
+            DtAgendamento: document.getElementById("dtData").value,
+            TipoReserva: "T"
+          }]
+        }
+        contratoRequest(contrato);
+        
     }
 
 
@@ -119,7 +169,7 @@ class ModalDetalhesDoServico extends React.Component {
 
 
                                         <div className="modal-footer">
-                                            <button type="button" style={{fontSize: "16pt"}} className="btn sub1 btn-primary w-50 mt-4" disabled id="btnContratar" onClick={contratoRequest}>Contratar</button>
+                                            <button type="button" style={{fontSize: "16pt"}} className="btn sub1 btn-primary w-50 mt-4" disabled id="btnContratar" onClick={this.criarContrato}>Contratar</button>
                                             <button type="button" style={{fontSize: "16pt"}} className="btn sub1 btn-secondary w-50 mt-4" data-dismiss="modal">Fechar</button>
                                         </div>
 
