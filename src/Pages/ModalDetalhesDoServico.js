@@ -25,6 +25,7 @@ class ModalDetalhesDoServico extends React.Component {
         }
     }
 
+
     render() {
         return (
             <Fragment>
@@ -40,7 +41,7 @@ class ModalDetalhesDoServico extends React.Component {
                                 <div class="modal-content">
 
                                     <div class="modal-header">
-                                        <h3 class="modal-title sub ml-4" id="TituloModalCentralizado">{this.state.servico.nomeServico}</h3>
+                                        <h3 class="modal-title sub1 ml-5" id="TituloModalCentralizado" style={{fontSize: "16pt"}}>{this.state.servico.nomeServico}</h3>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -49,13 +50,13 @@ class ModalDetalhesDoServico extends React.Component {
                                     <div className="modal-body">
 
                                         <div className="row w-100 border-top-0" >
-                                            <span className="h4 ml-4 text-dark sub"><span className="text-secondary">Descrição do serviço:</span> {this.state.servico.descricaoServico}</span>
+                                            <span className="ml-4 mr-4 text-dark sub9"><span className="text-secondary">Descrição do serviço:</span> {this.state.servico.descricaoServico}</span>
                             
                                         </div>
 
                                         <div className="row w-100 border-top-50 mt-1 border-bottom" align="left">
-                                            <div className="col col-lg-6">
-                                                <label className="h4 sub text-secondary"> Localização: </label>
+                                            <div className="col col-lg-7">
+                                                <span className="sub9 text-secondary ml-4 mr-4"> Localização: </span>
 
                                                 {this.state.servico.localizacaoFixa == true ? <FixedLocation endereco={this.state.servico.endereco} /> : <label className="h4 sub text-primary"> Domicílio</label>}
                                             </div>
@@ -63,9 +64,9 @@ class ModalDetalhesDoServico extends React.Component {
 
                                         <div className="row w-100 border-bottom mb-4" align="left">
                                             <div className="col-lg-12">
-                                                <label className="h4 text-dark sub" style={{marginLeft: "42%"}}> Sobre o serviço </label><br />
-                                                <label className="h4 text-secondary sub">Valor: <span id="valor" className="text-primary">{'R$' + this.state.servico.precoServico}</span> </label><br/>
-                                                <label className="h4 text-secondary sub">Estimativa: <span id="valor" className="text-primary">{this.state.servico.tempoExecucao}</span> </label>
+                                                <span className="text-dark sub9" style={{marginLeft: "42%", fontSize: "16pt"}}> Sobre o serviço </span><br />
+                                                <span className="text-secondary sub9 ml-4">Valor: <span id="valor" className="text-primary">{'R$' + this.state.servico.precoServico}</span> </span><br/>
+                                                <span className="text-secondary sub9 ml-4">Estimativa: <span id="valor" className="text-primary">{this.state.servico.tempoExecucao}</span> </span>
                                             </div>
                                     
                                         </div>
@@ -74,7 +75,7 @@ class ModalDetalhesDoServico extends React.Component {
                                         {this.state.servico.imagem.lenght > 0 ?
                                             <div className="row w-100 border-top-50" align="left">
                                                 <div className="col col-lg-12">
-                                                <label className=" text-primary sub " style={{marginLeft: "45%", fontSize: "16pt"}}> Imagens </label><p />
+                                                <label className=" text-primary sub9" style={{marginLeft: "45%", fontSize: "16pt"}}> Imagens </label><p />
 
                                                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                                                         <div class="carousel-inner">
@@ -93,14 +94,14 @@ class ModalDetalhesDoServico extends React.Component {
                                             :
                                             <div className="row w-100 border-top-50" align="left">
                                                 <div className="col col-lg-12">
-                                                    <label className=" text-primary sub " style={{marginLeft: "45%", fontSize: "16pt"}}> Imagens </label><p />
+                                                    <span className=" text-primary sub9 " style={{marginLeft: "45%", fontSize: "16pt"}}> Imagens </span><p />
                                                     <img class="d-block w-50 h-75"  style={{marginLeft: "25%"}} src="https://static1.squarespace.com/static/5ae340fe31d4df5e5f0ed912/t/5b23f08d0e2e7291eacf0db8/1557291866488/?format=1500w" />
                                                 </div>
                                             </div>
                                         }
 
-                                        <div className="row w-100 justify-content-center mb-2"><a
-                                            style={{ fontSize: '12pt', cursor: 'pointer' }}
+                                        <div className="row w-100 sub9 justify-content-center mb-2"><a
+                                            style={{cursor: 'pointer' }}
                                             className="link text-danger" onClick={function (event) {
                                                 document.getElementById("datas").removeAttribute("class", "invisivel")
                                                 event.preventDefault();
@@ -118,8 +119,8 @@ class ModalDetalhesDoServico extends React.Component {
 
 
                                         <div className="modal-footer">
-                                            <button type="button" className="btn btn-primary w-50 mt-4" disabled id="btnContratar" onClick={contratoRequest}>Contratar</button>
-                                            <button type="button" className="btn btn-secondary w-50 mt-4" data-dismiss="modal">Fechar</button>
+                                            <button type="button" style={{fontSize: "16pt"}} className="btn sub1 btn-primary w-50 mt-4" disabled id="btnContratar" onClick={contratoRequest}>Contratar</button>
+                                            <button type="button" style={{fontSize: "16pt"}} className="btn sub1 btn-secondary w-50 mt-4" data-dismiss="modal">Fechar</button>
                                         </div>
 
                                     </div>
