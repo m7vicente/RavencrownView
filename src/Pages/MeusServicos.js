@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import Navbar from "../Pages/Components/Navbar";
 import meusServicosRequest from "../request/meusServicosRequest";
 import CardServicosAtivos from "./Components/CardServicosAtivos";
+import { Link } from "react-router-dom";
 
 class MeusServicos extends React.Component {
   state = {
@@ -54,8 +55,15 @@ class MeusServicos extends React.Component {
               })}
             </div>
           </div>
+        </div>
+        <div className="tab-content">
+          <Link to="/CadastroDeServico">
+            <i class="fas fa-plus-circle btnCad" style={{ fontSize: "40pt" }} />
+          </Link>
 
-          <div className="tab-pane" id="ServicosAgendados" />
+          <div className=" tab-pane active" id="ServicosAtivos">
+            <div className="tab-pane" id="ServicosAgendados" />
+          </div>
         </div>
       </Fragment>
     );
